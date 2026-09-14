@@ -39,7 +39,7 @@ export function Header() {
 
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-6 xl:flex"
         >
           {NAV_LINKS.map((link) => (
             <a
@@ -52,7 +52,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <a
             href={DEMO_URL}
             target="_blank"
@@ -78,7 +78,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-brand-white md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-brand-white xl:hidden"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
         >
@@ -97,7 +97,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-white/5 bg-brand-black md:hidden"
+            className="overflow-hidden border-t border-white/5 bg-brand-black xl:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {NAV_LINKS.map((link) => (
