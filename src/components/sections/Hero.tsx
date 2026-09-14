@@ -38,9 +38,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
         >
-          Deja el Excel y los grupos de WhatsApp.
+          La digitalización de la gestión de tu academia.
           {" "}
-          <span className="text-brand-yellow">Gestiona tu academia desde un panel.</span>
+          <span className="text-brand-yellow">Todo centralizado en un solo panel.</span>
         </motion.h1>
 
         <motion.p
