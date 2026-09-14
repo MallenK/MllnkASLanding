@@ -1,5 +1,7 @@
 import { Container } from "@/components/shared/Container";
-import { DEMO_URL, NAV_LINKS, SITE_SHORT_NAME } from "@/lib/constants";
+import { Logo } from "@/components/shared/Logo";
+import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
+import { NAV_LINKS, SITE_SHORT_NAME } from "@/lib/constants";
 
 const LEGAL_LINKS = [
   { label: "Privacidad", href: "#" },
@@ -11,22 +13,16 @@ export function Footer() {
   return (
     <footer className="border-t border-white/5 bg-brand-black">
       <Container className="flex flex-col gap-10 py-14">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <span className="text-lg font-extrabold tracking-tight text-brand-white">
-              {SITE_SHORT_NAME}
-              <span className="text-brand-yellow">.</span>{" "}
-              <span className="text-sm font-medium text-brand-gray">
-                Academy Software
-              </span>
-            </span>
-            <p className="mt-3 text-sm text-brand-gray">
+            <Logo variant="stacked" />
+            <p className="mt-4 text-sm text-brand-gray">
               La plataforma de gestión nacida en una academia de fútbol real,
               diseñada, desplegada y mantenida por una sola persona.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8">
             <div>
               <h3 className="text-sm font-semibold text-brand-white">
                 Producto
@@ -43,40 +39,9 @@ export function Footer() {
                   </li>
                 ))}
                 <li>
-                  <a
-                    href={DEMO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-brand-gray transition-colors hover:text-brand-white"
-                  >
+                  <GatedDemoButton className="text-sm text-brand-gray transition-colors hover:text-brand-white">
                     Demo en vivo
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-brand-white">
-                Sobre esto
-              </h3>
-              <ul className="mt-3 space-y-2">
-                <li>
-                  <a
-                    href="#historia"
-                    className="text-sm text-brand-gray transition-colors hover:text-brand-white"
-                  >
-                    La historia
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={DEMO_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-brand-gray transition-colors hover:text-brand-white"
-                  >
-                    Contacto
-                  </a>
+                  </GatedDemoButton>
                 </li>
               </ul>
             </div>

@@ -2,7 +2,8 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { DEMO_URL, STEPS } from "@/lib/constants";
+import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
+import { STEPS } from "@/lib/constants";
 
 export function HowItWorks() {
   return (
@@ -42,15 +43,10 @@ export function HowItWorks() {
         </div>
 
         <Reveal delay={0.3} className="mt-12 flex justify-center">
-          <a
-            href={DEMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-yellow transition-colors hover:text-brand-yellow-dim"
-          >
+          <GatedDemoButton className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-yellow transition-colors hover:text-brand-yellow-dim">
             Empezar por el paso 01: abrir la demo
             <ArrowUpRightIcon className="h-4 w-4" />
-          </a>
+          </GatedDemoButton>
         </Reveal>
       </Container>
     </section>

@@ -6,9 +6,9 @@ import { Container } from "@/components/shared/Container";
 import { AmbientOrbs } from "@/components/shared/AmbientOrbs";
 import { ProductMock } from "@/components/shared/ProductMock";
 import { Parallax } from "@/components/shared/Parallax";
+import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { DEMO_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -38,9 +38,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
         >
-          Construí el backoffice que mi academia
+          El backoffice que tu academia deportiva
           {" "}
-          <span className="text-brand-yellow">necesitaba de verdad</span>.
+          <span className="text-brand-yellow">necesita de verdad</span>.
         </motion.h1>
 
         <motion.p
@@ -61,10 +61,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
-          <a
-            href={DEMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <GatedDemoButton
             className={cn(
               buttonVariants({ size: "lg" }),
               "h-12 gap-2 bg-brand-yellow px-7 text-base font-semibold text-brand-black hover:bg-brand-yellow-dim",
@@ -72,7 +69,7 @@ export function Hero() {
           >
             Explorar demo en vivo
             <ArrowRightIcon className="h-4 w-4" />
-          </a>
+          </GatedDemoButton>
           <a
             href="#historia"
             className={cn(
@@ -90,7 +87,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-4 text-xs text-brand-gray"
         >
-          Sin registro · Elige rol y tipo de academia dentro de la demo · Soporte directo del creador
+          Solo tu email · Elige rol y tipo de academia dentro de la demo · Soporte directo del creador
         </motion.p>
 
         <Parallax offset={24} className="mt-16 w-full max-w-5xl">

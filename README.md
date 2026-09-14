@@ -41,18 +41,22 @@ src/
       SocialProof.tsx         # Stats animados + proof points (antes/ahora/resultado)
       CTASection.tsx
       FAQ.tsx                  # Accordion (shadcn/ui) + JSON-LD FAQPage
+      Contact.tsx               # Formulario de contacto (Web3Forms)
     shared/
-      Container.tsx, SectionHeading.tsx
+      Container.tsx, SectionHeading.tsx, Logo.tsx
       Reveal.tsx                # Wrapper de scroll-reveal (motion, whileInView)
       Parallax.tsx                # Wrapper de parallax continuo (motion, useScroll+useTransform)
       ScrollProgressBar.tsx
       AnimatedCounter.tsx          # Contador con animejs
       AmbientOrbs.tsx                # Orbes de fondo con animejs (loop continuo)
       ProductMock.tsx                 # Mock de producto en CSS (sustituir por capturas reales)
+      DemoGate.tsx                      # Contexto + modal: pide email antes de abrir la demo
+      GatedDemoButton.tsx                # Botón reutilizable que dispara el gate de email
     ui/                              # Componentes shadcn/ui generados
   lib/
     constants.ts                      # Copy real: nav, historia, features, stats, FAQ, SITE_URL
     og.tsx                             # JSX compartido por opengraph-image y twitter-image
+    web3forms.ts                        # Cliente del formulario (contacto + gate de demo)
     utils.ts                            # cn()
   types/
     index.ts
@@ -146,6 +150,34 @@ Todo lo de abajo usa únicamente convenciones nativas de Next.js (Metadata API,
 > `src/app/blog/[slug]/page.tsx` con contenido propio — eso, no las meta
 > tags, es lo que de verdad compite en Google a medio plazo.
 
+## Contacto y acceso a la demo (gratis, con Web3Forms)
+
+Dos piezas nuevas, ambas usando el mismo backend gratuito
+([web3forms.com](https://web3forms.com), sin servidor propio, sin límite
+mensual publicitado):
+
+- **Gate de email antes de la demo** (`DemoGate.tsx` + `GatedDemoButton.tsx`):
+  cualquier botón "Explorar demo en vivo" del sitio abre un modal que pide el
+  email antes de abrir `DEMO_URL` en una pestaña nueva. Una vez enviado, se
+  guarda una marca en `localStorage` del navegador para no volver a pedirlo
+  en visitas futuras desde el mismo dispositivo.
+- **Sección de contacto** (`Contact.tsx`, `#contacto`): formulario email +
+  mensaje, mismo backend.
+
+**Configuración obligatoria antes de desplegar** (gratis, ~2 minutos):
+1. Crea una cuenta en [web3forms.com](https://web3forms.com) con tu email —
+   ahí es donde llegarán los leads y mensajes de contacto.
+2. Copia tu "Access Key".
+3. En Vercel: Project Settings → Environment Variables → añade
+   `NEXT_PUBLIC_WEB3FORMS_KEY` con ese valor → redeploy.
+4. En local, copia `.env.example` a `.env.local` y pega la misma clave si
+   quieres probar los formularios con `npm run dev`.
+
+Sin esta variable configurada, el modal y el formulario de contacto se
+muestran igual, pero el envío falla con un aviso en pantalla — no hay un
+"modo simulado" silencioso, para que no publiques el sitio pensando que
+funciona sin haberlo comprobado.
+
 ## Wireframe de secciones
 
 1. **Hero** (`#inicio`) — badge + titular + subtítulo con la historia real →
@@ -155,9 +187,10 @@ Todo lo de abajo usa únicamente convenciones nativas de Next.js (Metadata API,
 3. **Features** (`#caracteristicas`) — los módulos reales de la plataforma + tarjeta de seguridad.
 4. **Cómo funciona** (`#como-funciona`) — 3 pasos, empezando por la demo.
 5. **Resultados** (`#resultados`) — stats honestas + proof points antes/ahora/resultado.
-6. **CTA principal** (`#cta`) — banner amarillo, ambos CTA llevan a la demo real.
+6. **CTA principal** (`#cta`) — banner amarillo: demo (con gate de email) + enlace a contacto.
 7. **FAQ** (`#faq`) — accordion + `FAQPage` JSON-LD.
-8. **Footer** — enlaces de producto, historia, contacto (demo), legal.
+8. **Contacto** (`#contacto`) — formulario email + mensaje (Web3Forms).
+9. **Footer** — logo, enlaces de producto, legal.
 
 ## Desarrollo
 
@@ -185,6 +218,9 @@ Import Git Repository) para despliegues automáticos en cada push.
 Antes de publicar:
 - Confirma que el nombre del proyecto en Vercel coincide con `SITE_URL`
   (o actualiza esa constante tras el primer deploy).
+- **Configura `NEXT_PUBLIC_WEB3FORMS_KEY` en Vercel** (ver sección de
+  Contacto arriba) — sin esto el gate de la demo y el formulario de
+  contacto no envían nada.
 - Sustituye `ProductMock.tsx` por capturas reales (`next/image`, con
   `width`/`height` explícitos para no introducir CLS).
 - Sigue la checklist de SEO de arriba (Search Console, sitemap, Rich Results Test).

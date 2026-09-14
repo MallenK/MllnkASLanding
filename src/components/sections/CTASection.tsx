@@ -2,9 +2,9 @@ import { ArrowRightIcon, ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { Parallax } from "@/components/shared/Parallax";
+import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { DEMO_URL } from "@/lib/constants";
 
 export function CTASection() {
   return (
@@ -24,16 +24,13 @@ export function CTASection() {
             Pruébalo tú mismo, sin hablar con nadie primero
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-balance text-brand-black/70">
-            Entra en la demo en vivo, elige tu rol y el tipo de academia.
-            Si encaja, hablamos directamente conmigo — sin comerciales de
-            por medio.
+            Deja tu email, entra en la demo en vivo, elige tu rol y el tipo
+            de academia. Si encaja, hablamos directamente conmigo — sin
+            comerciales de por medio.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <GatedDemoButton
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "h-12 gap-2 bg-brand-black px-7 text-base font-semibold text-brand-white hover:bg-brand-black-elevated",
@@ -41,18 +38,16 @@ export function CTASection() {
             >
               Explorar demo en vivo
               <ArrowRightIcon className="h-4 w-4" />
-            </a>
+            </GatedDemoButton>
             <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contacto"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "h-12 gap-2 border-brand-black/20 bg-transparent px-7 text-base font-semibold text-brand-black hover:bg-brand-black/10",
               )}
             >
               <ChatBubbleLeftEllipsisIcon className="h-4 w-4" />
-              Ir al formulario de contacto
+              Escribirme directamente
             </a>
           </div>
         </Reveal>

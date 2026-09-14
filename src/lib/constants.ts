@@ -44,6 +44,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Características", href: "#caracteristicas" },
   { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Preguntas", href: "#faq" },
+  { label: "Contacto", href: "#contacto" },
 ];
 
 export const STORY_STEPS: StoryStep[] = [
@@ -123,7 +124,7 @@ export const STEPS: Step[] = [
     number: "01",
     title: "Explora la demo en vivo",
     description:
-      "Entra como Dirección, Entrenador o Alumno y elige el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal. Sin registro.",
+      "Deja tu email, entra como Dirección, Entrenador o Alumno, y elige el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal.",
   },
   {
     number: "02",
@@ -171,7 +172,7 @@ export const FAQS: FaqItem[] = [
   {
     question: "¿Puedo probarlo sin hablar con nadie primero?",
     answer:
-      "Sí. La demo en vivo te deja explorar la plataforma como Dirección, Entrenador o Alumno, y elegir el tipo de academia (fútbol, refuerzo escolar, idiomas o entrenamiento personal), sin registro previo.",
+      "Sí. Solo pedimos tu email para abrir la demo (así puedo avisarte si mejoro algo o ayudarte con la migración). A partir de ahí exploras la plataforma libremente como Dirección, Entrenador o Alumno, eligiendo el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal.",
   },
   {
     question: "¿Esto es una plantilla genérica o un producto real?",

@@ -4,8 +4,10 @@ import { useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { ArrowUpRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Container } from "@/components/shared/Container";
+import { Logo } from "@/components/shared/Logo";
+import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
 import { buttonVariants } from "@/components/ui/button";
-import { DEMO_URL, NAV_LINKS, SITE_SHORT_NAME } from "@/lib/constants";
+import { DEMO_URL, NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -27,14 +29,8 @@ export function Header() {
       )}
     >
       <Container className="flex h-16 items-center justify-between sm:h-20">
-        <a href="#inicio" className="flex items-baseline gap-2">
-          <span className="text-lg font-extrabold tracking-tight text-brand-white sm:text-xl">
-            {SITE_SHORT_NAME}
-            <span className="text-brand-yellow">.</span>
-          </span>
-          <span className="hidden text-xs font-medium tracking-wide text-brand-gray sm:inline">
-            Academy Software
-          </span>
+        <a href="#inicio">
+          <Logo variant="inline" />
         </a>
 
         <nav
@@ -52,19 +48,8 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 xl:flex">
-          <a
-            href={DEMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-brand-gray transition-colors hover:text-brand-white"
-          >
-            Iniciar sesión
-          </a>
-          <a
-            href={DEMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="hidden items-center xl:flex">
+          <GatedDemoButton
             className={cn(
               buttonVariants({ size: "lg" }),
               "h-10 gap-1.5 bg-brand-yellow px-5 font-semibold text-brand-black hover:bg-brand-yellow-dim",
@@ -72,7 +57,7 @@ export function Header() {
           >
             Explorar demo en vivo
             <ArrowUpRightIcon className="h-4 w-4" />
-          </a>
+          </GatedDemoButton>
         </div>
 
         <button
@@ -115,6 +100,12 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
+                className="rounded-md px-2 py-3 text-base font-medium text-brand-gray transition-colors hover:bg-white/5 hover:text-brand-white"
+              >
+                Iniciar sesión
+              </a>
+              <GatedDemoButton
+                onBeforeOpen={() => setOpen(false)}
                 className={cn(
                   buttonVariants({ size: "lg" }),
                   "mt-2 h-10 gap-1.5 bg-brand-yellow px-5 font-semibold text-brand-black hover:bg-brand-yellow-dim",
@@ -122,7 +113,7 @@ export function Header() {
               >
                 Explorar demo en vivo
                 <ArrowUpRightIcon className="h-4 w-4" />
-              </a>
+              </GatedDemoButton>
             </Container>
           </motion.nav>
         )}
