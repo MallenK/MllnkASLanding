@@ -29,7 +29,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-brand-gray"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-          Nacida en una academia de fútbol real, en producción desde el día uno
+          Ya la usa una academia de fútbol en Barcelona
         </motion.span>
 
         <motion.h1
@@ -38,9 +38,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
         >
-          El backoffice que tu academia deportiva
+          Deja el Excel y los grupos de WhatsApp.
           {" "}
-          <span className="text-brand-yellow">necesita de verdad</span>.
+          <span className="text-brand-yellow">Gestiona tu academia desde un panel.</span>
         </motion.h1>
 
         <motion.p
@@ -49,10 +49,10 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-2xl text-balance text-base text-brand-gray sm:text-lg md:text-xl"
         >
-          Alumnos, calendario, bonos, documentación y comunicación en un solo
-          panel. Nació resolviendo el día a día de una academia de fútbol en
-          Barcelona y hoy lo diseño, despliego y mantengo yo, de forma
-          autónoma.
+          Alumnos, calendario, bonos, documentación y avisos, todo en el
+          mismo sitio. La construí para una academia de fútbol en Barcelona
+          porque no encontré nada que hiciera esto bien — y la sigo
+          llevando yo: la desarrollo, la despliego y respondo si algo falla.
         </motion.p>
 
         <motion.div
@@ -87,7 +87,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-4 text-xs text-brand-gray"
         >
-          Solo tu email · Elige rol y tipo de academia dentro de la demo · Soporte directo del creador
+          Solo tu email para entrar · Dentro eliges el rol y el tipo de academia · Te respondo yo, no un bot
         </motion.p>
 
         <Parallax offset={24} className="mt-16 w-full max-w-5xl">
