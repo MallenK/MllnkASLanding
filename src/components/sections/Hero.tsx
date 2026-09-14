@@ -6,6 +6,7 @@ import { Container } from "@/components/shared/Container";
 import { AmbientOrbs } from "@/components/shared/AmbientOrbs";
 import { ProductMock } from "@/components/shared/ProductMock";
 import { Parallax } from "@/components/shared/Parallax";
+import { Logo } from "@/components/shared/Logo";
 import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -22,10 +23,19 @@ export function Hero() {
       </Parallax>
 
       <Container className="relative flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8"
+        >
+          <Logo variant="stacked" className="items-center" />
+        </motion.div>
+
         <motion.span
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
           className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-brand-gray"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
@@ -36,7 +46,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
+          className="mt-6 max-w-3xl text-balance text-3xl font-extrabold leading-[1.1] tracking-tight text-brand-white sm:text-5xl md:text-6xl"
         >
           La digitalización de la gestión de tu academia.
           {" "}
