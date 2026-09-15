@@ -3,10 +3,8 @@
 import { motion } from "motion/react";
 import { ArrowRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Container } from "@/components/shared/Container";
-import { AmbientOrbs } from "@/components/shared/AmbientOrbs";
 import { ProductMock } from "@/components/shared/ProductMock";
 import { Parallax } from "@/components/shared/Parallax";
-import { Logo } from "@/components/shared/Logo";
 import { GatedDemoButton } from "@/components/shared/GatedDemoButton";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,117 +13,107 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-brand-black pt-32 pb-24 sm:pt-40 sm:pb-32"
+      className="relative overflow-hidden bg-brand-black pt-32 pb-24 sm:pt-40 sm:pb-28"
     >
-      <div className="bg-noise absolute inset-0 opacity-40" aria-hidden="true" />
-      <Parallax offset={40} className="absolute inset-0">
-        <AmbientOrbs />
-      </Parallax>
+      <div className="bg-pitch absolute inset-0" aria-hidden="true" />
+      <div className="bg-noise absolute inset-0 opacity-30" aria-hidden="true" />
 
-      <Container className="relative flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
-          <Logo variant="stacked" className="items-center" />
-        </motion.div>
-
-        <motion.span
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-brand-gray"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-          Ya la usa una academia de fútbol en Barcelona
-        </motion.span>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-3xl text-balance text-3xl font-extrabold leading-[1.1] tracking-tight text-brand-white sm:text-5xl md:text-6xl"
-        >
-          La digitalización de la gestión de tu academia.
-          {" "}
-          <span className="text-brand-yellow">Todo centralizado en un solo panel.</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-2xl text-balance text-base text-brand-gray sm:text-lg md:text-xl"
-        >
-          Alumnos, calendario, bonos, documentación y avisos, todo en el
-          mismo sitio. La construí para una academia de fútbol en Barcelona
-          porque no encontré nada que hiciera esto bien — y la sigo
-          llevando yo: la desarrollo, la despliego y respondo si algo falla.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
-        >
-          <GatedDemoButton
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "h-12 gap-2 bg-brand-yellow px-7 text-base font-semibold text-brand-black hover:bg-brand-yellow-dim",
-            )}
+      <Container className="relative grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+        <div className="flex flex-col items-start text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display text-balance text-5xl uppercase leading-[0.92] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
           >
-            Explorar demo en vivo
-            <ArrowRightIcon className="h-4 w-4" />
-          </GatedDemoButton>
-          <a
-            href="#historia"
-            className={cn(
-              buttonVariants({ variant: "outline", size: "lg" }),
-              "h-12 gap-2 border-white/15 bg-transparent px-7 text-base font-semibold text-brand-white hover:bg-white/5",
-            )}
+            La digitalización de tu academia,
+            {" "}
+            <span className="text-brand-yellow">centralizada en un panel.</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 max-w-xl text-balance text-base leading-relaxed text-brand-gray sm:text-lg"
           >
-            Ver la historia
-          </a>
-        </motion.div>
+            Alumnos, calendario, bonos, documentación y avisos, todo en el
+            mismo sitio. La construí para una academia de fútbol en Barcelona
+            porque no encontré nada que hiciera esto bien — y la sigo
+            llevando yo: la desarrollo, la despliego y respondo si algo falla.
+          </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-4 text-xs text-brand-gray"
-        >
-          Solo tu email para entrar · Dentro eliges el rol y el tipo de academia · Te respondo yo, no un bot
-        </motion.p>
-
-        <Parallax offset={24} className="mt-16 w-full max-w-5xl">
           <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
           >
+            <GatedDemoButton
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "h-12 gap-2 bg-brand-yellow px-7 text-base font-semibold text-brand-black hover:bg-brand-yellow-dim",
+              )}
+            >
+              Explorar demo en vivo
+              <ArrowRightIcon className="h-4 w-4" />
+            </GatedDemoButton>
+            <a
+              href="#historia"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "h-12 gap-2 border-white/15 bg-transparent px-7 text-base font-semibold text-brand-white hover:bg-white/5",
+              )}
+            >
+              Ver la historia
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-5 text-xs text-brand-gray sm:flex-row sm:items-center sm:gap-5"
+          >
+            <span className="inline-flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" aria-hidden="true" />
+              En uso real en una academia de fútbol en Barcelona
+            </span>
+            <span className="hidden sm:inline">·</span>
+            <span>Solo tu email para entrar</span>
+            <span className="hidden sm:inline">·</span>
+            <span>Te respondo yo, no un bot</span>
+          </motion.div>
+        </div>
+
+        <Parallax offset={20} className="relative w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 32, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="relative"
+          >
+            <div className="corner-cut-lg absolute -inset-3 -z-10 bg-brand-yellow/90" aria-hidden="true" />
             <ProductMock />
           </motion.div>
         </Parallax>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-14 flex flex-col items-center gap-2 text-brand-gray"
-          aria-hidden="true"
-        >
-          <span className="text-[11px] uppercase tracking-[0.3em]">Sigue bajando</span>
-          <motion.span
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDownIcon className="h-4 w-4" />
-          </motion.span>
-        </motion.div>
       </Container>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="relative mt-16 flex flex-col items-center gap-2 text-brand-gray"
+        aria-hidden="true"
+      >
+        <span className="text-[11px] uppercase tracking-[0.3em]">Sigue bajando</span>
+        <motion.span
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDownIcon className="h-4 w-4" />
+        </motion.span>
+      </motion.div>
     </section>
   );
 }

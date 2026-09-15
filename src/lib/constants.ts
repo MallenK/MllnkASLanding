@@ -52,7 +52,7 @@ export const STORY_STEPS: StoryStep[] = [
     tag: "El problema",
     title: "Una academia de fútbol real, ahogada en hojas de cálculo",
     description:
-      "JP Preparation, academia de tecnificación en Sant Vicenç dels Horts (Barcelona), llevaba alumnos, bonos y asistencia entre Excel, papel y WhatsApp. La información se perdía y nada escalaba.",
+      "Una escuela de tecnificación de fútbol en Sant Vicenç dels Horts (Barcelona) llevaba alumnos, bonos y asistencia entre Excel, papel y WhatsApp. La información se perdía y nada escalaba.",
   },
   {
     tag: "La construcción",

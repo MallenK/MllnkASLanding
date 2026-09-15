@@ -1,8 +1,8 @@
 # Mallen'k Academy Software — Landing Page
 
 Landing page de conversión para **Mallen'k Academy Software**: la plataforma
-de gestión nacida en JP Preparation (academia de tecnificación de fútbol,
-Barcelona) y ahora abierta a otras academias. Next.js 16 (App Router) +
+de gestión nacida en una escuela de tecnificación de fútbol (Barcelona) y
+ahora abierta a otras academias. Next.js 16 (App Router) +
 TypeScript + Tailwind CSS v4 + shadcn/ui + Motion (motion.dev) + anime.js.
 
 Demo en vivo del producto real: <https://plataforma-jp-1.onrender.com/>
@@ -137,7 +137,7 @@ Todo lo de abajo usa únicamente convenciones nativas de Next.js (Metadata API,
    medio plazo, no las meta tags): perfil en LinkedIn/Instagram del
    producto enlazando a la landing, alta en directorios gratuitos de SaaS
    (Product Hunt, BetaList, SaaSHub, alternativeto.net), y si quieres, un
-   post explicando la historia de JP Preparation en foros/comunidades de
+   post explicando la historia de esta escuela de tecnificación en foros/comunidades de
    entrenadores o clubes de base — contenido real, no spam de enlaces.
 7. **Opcional — `founder` en el schema**: en `src/lib/constants.ts`, la
    constante `ORGANIZATION.founder` está vacía a propósito para no inventar

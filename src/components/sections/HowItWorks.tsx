@@ -13,29 +13,27 @@ export function HowItWorks() {
     >
       <Container>
         <SectionHeading
-          eyebrow="Cómo funciona"
           title="De curiosear la demo a operar en producción"
           description="Sin implementaciones eternas ni comerciales de por medio: empiezas probando tú mismo."
         />
 
-        <div className="relative mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div
-            aria-hidden="true"
-            className="absolute left-0 right-0 top-8 hidden h-px bg-gradient-to-r from-transparent via-white/10 to-transparent md:block"
-          />
+        <div className="mt-4 grid grid-cols-1 divide-y divide-white/10 border-b border-white/10 md:grid-cols-3 md:divide-x md:divide-y-0">
           {STEPS.map((step, index) => (
             <Reveal
               key={step.number}
-              delay={index * 0.12}
-              className="relative flex flex-col items-start gap-4"
+              delay={index * 0.1}
+              className="relative flex flex-col gap-3 py-9 md:px-8 md:first:pl-0 md:last:pr-0"
             >
-              <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-brand-black text-xl font-extrabold text-brand-yellow">
+              <span
+                aria-hidden="true"
+                className="font-display pointer-events-none select-none text-6xl leading-none text-brand-yellow/15 sm:text-7xl"
+              >
                 {step.number}
               </span>
-              <h3 className="text-xl font-bold text-brand-white">
+              <h3 className="font-display -mt-2 text-2xl uppercase leading-none tracking-tight text-brand-white sm:text-3xl">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed text-brand-gray">
+              <p className="max-w-sm text-sm leading-relaxed text-brand-gray">
                 {step.description}
               </p>
             </Reveal>
@@ -44,7 +42,7 @@ export function HowItWorks() {
 
         <Reveal delay={0.3} className="mt-12 flex justify-center">
           <GatedDemoButton className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-yellow transition-colors hover:text-brand-yellow-dim">
-            Empezar por el paso 01: abrir la demo
+            Empezar por el paso {STEPS[0]?.number}: abrir la demo
             <ArrowUpRightIcon className="h-4 w-4" />
           </GatedDemoButton>
         </Reveal>

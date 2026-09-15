@@ -10,10 +10,10 @@ export function Logo({ variant = "inline", className }: LogoProps) {
   if (variant === "stacked") {
     return (
       <div className={cn("inline-flex flex-col items-start", className)}>
-        <span className="text-3xl font-extrabold uppercase leading-none tracking-tight text-brand-white sm:text-4xl">
+        <span className="font-display text-4xl uppercase leading-none tracking-tight text-brand-white sm:text-5xl">
           {SITE_SHORT_NAME}
         </span>
-        <span className="mt-3 h-[3px] w-full bg-brand-yellow" aria-hidden="true" />
+        <span className="mt-3 h-[3px] w-14 bg-brand-yellow" aria-hidden="true" />
         <span className="mt-2 text-xs font-medium uppercase tracking-[0.35em] text-brand-gray">
           Academy Software
         </span>
@@ -23,11 +23,11 @@ export function Logo({ variant = "inline", className }: LogoProps) {
 
   return (
     <span className={cn("inline-flex items-baseline gap-2", className)}>
-      <span className="text-lg font-extrabold tracking-tight text-brand-white sm:text-xl">
+      <span className="font-display text-xl uppercase leading-none tracking-tight text-brand-white sm:text-2xl">
         {SITE_SHORT_NAME}
         <span className="text-brand-yellow">.</span>
       </span>
-      <span className="hidden text-xs font-medium tracking-wide text-brand-gray sm:inline">
+      <span className="hidden text-xs font-medium uppercase tracking-[0.2em] text-brand-gray sm:inline">
         Academy Software
       </span>
     </span>

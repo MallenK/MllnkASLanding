@@ -24,7 +24,7 @@ export function Footer() {
 
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h3 className="text-sm font-semibold text-brand-white">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-white">
                 Producto
               </h3>
               <ul className="mt-3 space-y-2">
@@ -47,7 +47,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-brand-white">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-white">
                 Legal
               </h3>
               <ul className="mt-3 space-y-2">

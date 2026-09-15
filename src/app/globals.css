@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat);
   --font-heading: var(--font-montserrat);
+  --font-display: var(--font-oswald);
   --color-brand-black: #111111;
   --color-brand-black-soft: #1a1a1a;
   --color-brand-black-elevated: #212121;
@@ -97,6 +98,9 @@
     @apply font-sans scroll-smooth;
     color-scheme: dark;
   }
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
   body {
     @apply bg-background text-foreground antialiased;
   }
@@ -131,5 +135,30 @@
       transparent 0
     );
     background-size: 22px 22px;
+  }
+
+  /* Tactics-board marking: a quiet centre line + circle, not decoration for
+     its own sake — it is the one recurring "pitch" motif the whole system
+     is built around. Kept faint enough to read as texture, not graphic. */
+  .bg-pitch {
+    background-image:
+      radial-gradient(circle at 50% 50%, transparent 0, transparent 118px, rgba(255, 255, 255, 0.05) 119px, rgba(255, 255, 255, 0.05) 120px, transparent 121px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      100% 50%;
+    background-position:
+      center,
+      center;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  /* Folded-corner notch: the one recurring shape signature, standing in for
+     the rounded-card default everywhere a surface needs an edge. */
+  .corner-cut {
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+  }
+  .corner-cut-lg {
+    clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
   }
 }

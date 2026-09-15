@@ -30,16 +30,13 @@ export function FAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Container className="max-w-3xl">
-        <SectionHeading
-          eyebrow="Preguntas frecuentes"
-          title="Todo lo que necesitas saber"
-        />
+        <SectionHeading align="center" title="Todo lo que necesitas saber" />
 
-        <Reveal className="mt-14 rounded-2xl border border-white/10 bg-brand-black px-6 sm:px-8">
+        <Reveal className="mt-14 border-t border-white/10">
           <Accordion>
             {FAQS.map((faq, index) => (
               <AccordionItem key={faq.question} value={`item-${index}`}>
-                <AccordionTrigger className="py-5 text-base font-semibold text-brand-white hover:no-underline sm:text-lg">
+                <AccordionTrigger className="py-6 text-base font-semibold text-brand-white hover:no-underline sm:text-lg">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm leading-relaxed text-brand-gray sm:text-base">

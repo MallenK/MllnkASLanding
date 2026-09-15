@@ -28,6 +28,7 @@ export function Header() {
           : "border-transparent bg-brand-black/40",
       )}
     >
+      <div className="h-[3px] w-full bg-brand-yellow" aria-hidden="true" />
       <Container className="flex h-16 items-center justify-between sm:h-20">
         <a href="#inicio">
           <Logo variant="inline" />
@@ -41,7 +42,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-brand-gray transition-colors hover:text-brand-white"
+              className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.08em] text-brand-gray transition-colors hover:text-brand-white"
             >
               {link.label}
             </a>

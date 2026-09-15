@@ -19,12 +19,11 @@ export function Story() {
     <section id="historia" className="bg-brand-black-soft py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="La historia"
           title="De un problema real a una plataforma en producción"
           description="No partió de una plantilla en blanco. Partió de una academia de fútbol real que necesitaba dejar de perder información en hojas de cálculo."
         />
 
-        <div ref={trackRef} className="relative mx-auto mt-16 max-w-2xl pl-10 sm:pl-14">
+        <div ref={trackRef} className="relative mt-16 max-w-3xl pl-10 sm:pl-14">
           <div
             aria-hidden="true"
             className="absolute left-[7px] top-1 bottom-1 w-px bg-white/10 sm:left-[9px]"
@@ -43,16 +42,14 @@ export function Story() {
                 delay={index * 0.05}
                 className="relative"
               >
-                <span className="absolute -left-10 top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-brand-yellow bg-brand-black-soft sm:-left-14">
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-                </span>
+                <span className="absolute -left-10 top-1.5 flex h-3.5 w-3.5 items-center justify-center bg-brand-yellow sm:-left-14" />
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-yellow">
-                  {step.tag}
+                  {String(index + 1).padStart(2, "0")} — {step.tag}
                 </span>
-                <h3 className="mt-2 text-xl font-bold text-brand-white sm:text-2xl">
+                <h3 className="font-display mt-2 text-2xl uppercase leading-none tracking-tight text-brand-white sm:text-3xl">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-brand-gray sm:text-base">
+                <p className="mt-3 max-w-xl text-sm leading-relaxed text-brand-gray sm:text-base">
                   {step.description}
                 </p>
               </Reveal>

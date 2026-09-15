@@ -119,7 +119,7 @@ export function DemoGateProvider({ children }: { children: ReactNode }) {
               exit={{ opacity: 0, y: 16, scale: 0.97 }}
               transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-sm rounded-2xl border border-white/10 bg-brand-black-soft p-6 sm:p-7"
+              className="corner-cut w-full max-w-sm border border-white/10 bg-brand-black-soft p-6 sm:p-7"
             >
               <div className="flex items-start justify-between gap-4">
                 <h2
@@ -155,13 +155,13 @@ export function DemoGateProvider({ children }: { children: ReactNode }) {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu@email.com"
                   autoFocus
-                  className="h-11 rounded-lg border border-white/15 bg-brand-black px-4 text-sm text-brand-white outline-none placeholder:text-brand-gray/60 focus:border-brand-yellow"
+                  className="h-11 border border-white/15 bg-brand-black px-4 text-sm text-brand-white outline-none placeholder:text-brand-gray/60 focus:border-brand-yellow"
                 />
                 {error ? <p className="text-xs text-red-400">{error}</p> : null}
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="h-11 rounded-lg bg-brand-yellow text-sm font-semibold text-brand-black transition-colors hover:bg-brand-yellow-dim disabled:opacity-60"
+                  className="h-11 bg-brand-yellow text-sm font-semibold text-brand-black transition-colors hover:bg-brand-yellow-dim disabled:opacity-60"
                 >
                   {status === "loading" ? "Enviando..." : "Acceder a la demo"}
                 </button>

@@ -15,7 +15,7 @@ export function ProductMock({ className }: ProductMockProps) {
   return (
     <div
       className={cn(
-        "aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-brand-black-soft shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)]",
+        "corner-cut-lg aspect-[16/10] w-full overflow-hidden border border-white/10 bg-brand-black-soft shadow-[0_40px_120px_-30px_rgba(0,0,0,0.85)]",
         className,
       )}
     >
