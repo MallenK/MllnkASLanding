@@ -30,7 +30,7 @@ export function OgImageContent() {
 
       <div style={{ display: "flex", alignItems: "baseline" }}>
         <span style={{ fontSize: 68, fontWeight: 800, color: "#ffffff" }}>
-          Mallen&apos;k
+          URPA
         </span>
         <span style={{ fontSize: 68, fontWeight: 800, color: "#ffd21f" }}>
           .
@@ -39,7 +39,7 @@ export function OgImageContent() {
       <div
         style={{ display: "flex", fontSize: 30, color: "#a3a3a3", marginTop: 4 }}
       >
-        Academy Software
+        Academia Software
       </div>
 
       <div

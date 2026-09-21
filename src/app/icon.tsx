@@ -18,7 +18,7 @@ export default function Icon() {
         }}
       >
         <span style={{ fontSize: 20, fontWeight: 800, color: "#ffd21f" }}>
-          M
+          U
         </span>
       </div>
     ),

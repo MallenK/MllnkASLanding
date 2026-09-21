@@ -16,8 +16,8 @@ import type {
   StoryStep,
 } from "@/types";
 
-export const SITE_NAME = "Mallen'k Academy Software";
-export const SITE_SHORT_NAME = "Mallen'k";
+export const SITE_NAME = "URPA Academia Software";
+export const SITE_SHORT_NAME = "URPA";
 // Dominio gratuito de Vercel. Si más adelante compras un dominio propio,
 // cambia solo esta constante: toda la metadata (canonical, OG, sitemap,
 // JSON-LD) se recalcula sola a partir de aquí.
@@ -34,7 +34,7 @@ export const SITE_TAGLINE =
 // schema simplemente omite el campo.
 export const ORGANIZATION = {
   name: SITE_NAME,
-  legalName: "Mallen'k Academy Software",
+  legalName: "URPA Academia Software",
   founder: "",
   foundingLocation: "Sant Vicenç dels Horts, Barcelona, España",
 };

@@ -20,7 +20,7 @@ export function Contact() {
     try {
       await submitToWeb3Forms({
         email,
-        subject: "Nuevo contacto — Mallen'k Academy Software",
+        subject: "Nuevo contacto — URPA Academia Software",
         message,
       });
       setStatus("sent");

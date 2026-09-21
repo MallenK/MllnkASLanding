@@ -58,7 +58,7 @@ export function Features() {
 
           <motion.li
             variants={rowVariants}
-            className="grid grid-cols-[3rem_1fr] items-start gap-x-5 gap-y-2 bg-brand-yellow py-7 pl-4 pr-4 sm:grid-cols-[4rem_auto_1fr] sm:items-center sm:gap-x-8 sm:pl-0"
+            className="grid grid-cols-[3rem_1fr] items-start gap-x-5 gap-y-2 bg-brand-yellow px-4 py-7 sm:grid-cols-[4rem_auto_1fr] sm:items-center sm:gap-x-8 sm:px-6"
           >
             <span className="font-display text-3xl leading-none text-brand-black/25 sm:text-4xl">
               {String(FEATURES.length + 1).padStart(2, "0")}
