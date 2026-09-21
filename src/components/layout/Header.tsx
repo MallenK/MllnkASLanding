@@ -49,7 +49,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center 2xl:flex">
+        <div className="hidden items-center 2xl:ml-10 2xl:flex">
           <GatedDemoButton
             className={cn(
               buttonVariants({ size: "lg" }),
