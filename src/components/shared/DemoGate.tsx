@@ -77,7 +77,7 @@ export function DemoGateProvider({ children }: { children: ReactNode }) {
     try {
       await submitToWeb3Forms({
         email,
-        subject: "Nuevo acceso a la demo — URPA Academia Software",
+        subject: "Nuevo acceso a la demo — URPA Academy Software",
         message: "Alguien ha solicitado acceso a la demo en vivo desde la landing.",
       });
       try {

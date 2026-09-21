@@ -20,7 +20,7 @@ export function Logo({ variant = "inline", className }: LogoProps) {
         />
         <span className="mt-3 h-[3px] w-14 bg-brand-yellow" aria-hidden="true" />
         <span className="mt-2 text-xs font-medium uppercase tracking-[0.35em] text-brand-gray">
-          Academia Software
+          Academy Software
         </span>
       </div>
     );
@@ -37,7 +37,7 @@ export function Logo({ variant = "inline", className }: LogoProps) {
         className="h-6 w-auto sm:h-7"
       />
       <span className="hidden text-xs font-medium uppercase tracking-[0.2em] text-brand-gray sm:inline">
-        Academia Software
+        Academy Software
       </span>
     </span>
   );

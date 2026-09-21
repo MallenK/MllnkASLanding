@@ -39,7 +39,7 @@ export function OgImageContent() {
       <div
         style={{ display: "flex", fontSize: 30, color: "#a3a3a3", marginTop: 4 }}
       >
-        Academia Software
+        Academy Software
       </div>
 
       <div

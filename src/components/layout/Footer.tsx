@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 border-t border-white/5 pt-6 text-sm text-brand-gray sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {SITE_SHORT_NAME} Academia Software.
+            © {new Date().getFullYear()} {SITE_SHORT_NAME} Academy Software.
             Todos los derechos reservados.
           </p>
           <p>Construido y mantenido por su creador, sin agencias de por medio.</p>
