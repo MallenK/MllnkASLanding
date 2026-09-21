@@ -21,7 +21,7 @@ export const SITE_SHORT_NAME = "URPA";
 // Dominio gratuito de Vercel. Si más adelante compras un dominio propio,
 // cambia solo esta constante: toda la metadata (canonical, OG, sitemap,
 // JSON-LD) se recalcula sola a partir de aquí.
-export const SITE_URL = "https://mallenk-academy-software.vercel.app";
+export const SITE_URL = "https://academiasoftware.vercel.app";
 export const DEMO_URL = "https://plataforma-jp-1.onrender.com/";
 export const SITE_DESCRIPTION =
   "Software de gestión para academias deportivas: alumnos, calendario de clases, bonos y comunicación en un solo panel. Nacido en una academia de fútbol real, en producción desde el primer día.";
