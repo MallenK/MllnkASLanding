@@ -13,8 +13,8 @@ export function Logo({ variant = "inline", className }: LogoProps) {
         <Image
           src="/brand-assets/logo/urpa-logo.png"
           alt="URPA"
-          width={797}
-          height={322}
+          width={892}
+          height={245}
           priority
           className="h-9 w-auto sm:h-11"
         />
@@ -31,8 +31,8 @@ export function Logo({ variant = "inline", className }: LogoProps) {
       <Image
         src="/brand-assets/logo/urpa-logo.png"
         alt="URPA"
-        width={797}
-        height={322}
+        width={892}
+        height={245}
         priority
         className="h-6 w-auto sm:h-7"
       />
