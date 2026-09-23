@@ -51,7 +51,7 @@ export const LEGAL = {
   taxId: "",
   address: ORGANIZATION.foundingLocation,
   contactEmail: "mllnkacademiasoftware@gmail.com",
-  lastUpdated: "2026-09-21",
+  lastUpdated: "2026-09-24",
 };
 
 export const CONTACT_EMAIL = "mllnkacademiasoftware@gmail.com";

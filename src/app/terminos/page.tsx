@@ -37,6 +37,17 @@ export default function TerminosPage() {
         </ul>
       </LegalSection>
 
+      <LegalSection heading="Estado del proyecto (fase beta)">
+        <p>
+          Este sitio web y la plataforma se encuentran en fase beta. A día de
+          hoy no se comercializa ningún servicio de pago a través de esta web:
+          su finalidad es informar sobre el producto y permitir probar la
+          demo. Cuando se inicie la actividad comercial, los datos de
+          identificación fiscal de esta sección se completarán y esta página
+          se actualizará.
+        </p>
+      </LegalSection>
+
       <LegalSection heading="Objeto">
         <p>
           Estos términos regulan el acceso y uso de esta web, incluida la

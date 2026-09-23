@@ -23,31 +23,25 @@ export function Hero() {
 
       <Container className="relative grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <div className="flex flex-col items-start text-left">
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-balance text-5xl uppercase leading-[0.92] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
+          <h1
+            style={{ animationDelay: "0.05s" }}
+            className="hero-in font-display text-balance text-5xl uppercase leading-[0.92] tracking-tight text-brand-white sm:text-6xl md:text-7xl"
           >
             {t("titleLine1")}
             {" "}
             <span className="text-brand-yellow">{t("titleHighlight")}</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 max-w-xl text-balance text-base leading-relaxed text-brand-gray sm:text-lg"
+          <p
+            style={{ animationDelay: "0.15s" }}
+            className="hero-in mt-6 max-w-xl text-balance text-base leading-relaxed text-brand-gray sm:text-lg"
           >
             {t("description")}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
+          <div
+            style={{ animationDelay: "0.25s" }}
+            className="hero-in mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
           >
             <GatedDemoButton
               className={cn(
@@ -67,13 +61,11 @@ export function Hero() {
             >
               {t("ctaSecondary")}
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-5 text-xs text-brand-gray sm:flex-row sm:items-center sm:gap-5"
+          <div
+            style={{ animationDelay: "0.4s" }}
+            className="hero-in mt-8 flex flex-col gap-2 border-t border-white/10 pt-5 text-xs text-brand-gray sm:flex-row sm:items-center sm:gap-5"
           >
             <span className="inline-flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" aria-hidden="true" />
@@ -83,27 +75,23 @@ export function Hero() {
             <span>{t("badgeEmail")}</span>
             <span className="hidden sm:inline">·</span>
             <span>{t("badgeBot")}</span>
-          </motion.div>
+          </div>
         </div>
 
         <Parallax offset={20} className="relative w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 32, scale: 0.97 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+          <div
+            style={{ animationDelay: "0.3s" }}
+            className="hero-in relative"
           >
             <div className="corner-cut-lg absolute -inset-3 -z-10 bg-brand-yellow/90" aria-hidden="true" />
             <ProductMock alt={t("mockAlt")} />
-          </motion.div>
+          </div>
         </Parallax>
       </Container>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
-        className="relative mt-16 flex flex-col items-center gap-2 text-brand-gray"
+      <div
+            style={{ animationDelay: "0.9s" }}
+            className="hero-in relative mt-16 flex flex-col items-center gap-2 text-brand-gray"
         aria-hidden="true"
       >
         <span className="text-[11px] uppercase tracking-[0.3em]">{t("scrollHint")}</span>
@@ -113,7 +101,7 @@ export function Hero() {
         >
           <ChevronDownIcon className="h-4 w-4" />
         </motion.span>
-      </motion.div>
+      </div>
     </section>
   );
 }
