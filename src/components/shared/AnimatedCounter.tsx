@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useInView } from "motion/react";
-import { animate } from "animejs";
+import { animate, useInView } from "motion/react";
 
 interface AnimatedCounterProps {
   value: number;
@@ -22,18 +21,19 @@ export function AnimatedCounter({
   useEffect(() => {
     if (!isInView || !ref.current) return;
     const el = ref.current;
-    const counter = { count: 0 };
 
-    animate(counter, {
-      count: value,
-      duration,
-      ease: "outExpo",
-      onUpdate: () => {
+    // Misma curva "outExpo" que usaba anime.js, ahora con motion (ya en el
+    // bundle) para poder prescindir de una dependencia entera.
+    const controls = animate(0, value, {
+      duration: duration / 1000,
+      ease: [0.16, 1, 0.3, 1],
+      onUpdate: (latest) => {
         el.textContent = `${
-          hasDecimals ? counter.count.toFixed(1) : Math.round(counter.count)
+          hasDecimals ? latest.toFixed(1) : Math.round(latest)
         }${suffix}`;
       },
     });
+    return () => controls.stop();
   }, [isInView, value, suffix, duration, hasDecimals]);
 
   return (

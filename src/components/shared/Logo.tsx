@@ -16,6 +16,7 @@ export function Logo({ variant = "inline", className }: LogoProps) {
           width={892}
           height={245}
           priority
+          sizes="(min-width: 640px) 160px, 130px"
           className="h-9 w-auto sm:h-11"
         />
         <span className="mt-3 h-[3px] w-14 bg-brand-yellow" aria-hidden="true" />
@@ -34,6 +35,7 @@ export function Logo({ variant = "inline", className }: LogoProps) {
         width={892}
         height={245}
         priority
+        sizes="(min-width: 640px) 102px, 88px"
         className="h-6 w-auto sm:h-7"
       />
       <span className="hidden text-xs font-medium uppercase tracking-[0.2em] text-brand-gray sm:inline">
