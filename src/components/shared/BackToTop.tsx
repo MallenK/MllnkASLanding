@@ -33,11 +33,11 @@ export function BackToTop() {
           exit={{ opacity: 0, y: 12 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "fixed left-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-brand-yellow ring-4 ring-brand-black transition-transform hover:scale-105 sm:left-6 sm:h-14 sm:w-14",
-            bannerVisible ? "bottom-40 sm:bottom-32" : "bottom-20 sm:bottom-24",
+            "fixed left-3 z-40 flex h-10 w-10 items-center justify-center rounded-full bg-brand-yellow ring-2 ring-brand-black transition-transform hover:scale-105 sm:left-5 sm:h-12 sm:w-12",
+            bannerVisible ? "bottom-36 sm:bottom-28" : "bottom-4 sm:bottom-5",
           )}
         >
-          <ChevronUpIcon aria-hidden="true" className="h-6 w-6 text-brand-black" />
+          <ChevronUpIcon aria-hidden="true" className="h-5 w-5 text-brand-black" />
         </motion.button>
       ) : null}
     </AnimatePresence>

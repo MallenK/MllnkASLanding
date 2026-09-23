@@ -91,7 +91,13 @@ const jsonLd = {
       legalName: ORGANIZATION.legalName,
       url: SITE_URL,
       ...(ORGANIZATION.founder
-        ? { founder: { "@type": "Person", name: ORGANIZATION.founder } }
+        ? {
+            founder: {
+              "@type": "Person",
+              name: ORGANIZATION.founder,
+              url: ORGANIZATION.founderUrl,
+            },
+          }
         : {}),
       foundingLocation: ORGANIZATION.foundingLocation,
       sameAs: SOCIAL_LINKS.map((link) => link.href),

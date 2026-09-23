@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Librerías de skills de marketing, no forman parte del sitio.
+    "agent/**",
+    ".agents/**",
+    ".claude/**",
+    ".gstack/**",
   ]),
 ]);
 

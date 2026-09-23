@@ -13,6 +13,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { DEMO_URL } from "@/lib/constants";
+import { trackLead } from "@/lib/leads";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 
 const STORAGE_KEY = "mk_demo_access";
@@ -82,6 +83,7 @@ export function DemoGateProvider({ children }: { children: ReactNode }) {
         subject: "Nuevo acceso a la demo — URPA Academy Software",
         message: "Alguien ha solicitado acceso a la demo en vivo desde la landing.",
       });
+      trackLead("demo_gate");
       try {
         localStorage.setItem(STORAGE_KEY, "1");
       } catch {

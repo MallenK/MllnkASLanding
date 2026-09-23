@@ -4,6 +4,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
+import { trackLead } from "@/lib/leads";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 
 const DRAFT_KEY = "mk_contact_draft";
@@ -29,8 +30,11 @@ export function Contact() {
       const raw = localStorage.getItem(DRAFT_KEY);
       if (!raw) return;
       const draft: Draft = JSON.parse(raw);
+      // Sincroniza con localStorage (sistema externo) solo tras el montaje.
+      /* eslint-disable react-hooks/set-state-in-effect */
       if (draft.email) setEmail(draft.email);
       if (draft.message) setMessage(draft.message);
+      /* eslint-enable react-hooks/set-state-in-effect */
     } catch {
       // Sin localStorage disponible o JSON corrupto: se empieza en blanco.
     }
@@ -59,6 +63,7 @@ export function Contact() {
         subject: "Nuevo contacto — URPA Academy Software",
         message,
       });
+      trackLead("contact_form");
       setStatus("sent");
       setEmail("");
       setMessage("");

@@ -21,14 +21,12 @@ export const DEMO_URL = "https://plataforma-jp-1.onrender.com/";
 export const SITE_TAGLINE =
   "La plataforma de gestión para tu academia deportiva";
 
-// `founder` se deja vacío a propósito: no hay que inventar un nombre en datos
-// estructurados. Rellénalo con tu nombre real si quieres la señal E-E-A-T de
-// "quién hay detrás" en Google (recomendado y gratis), o déjalo así y el
-// schema simplemente omite el campo.
+// Desarrollador del producto (señal E-E-A-T de "quién hay detrás" en Google).
 export const ORGANIZATION = {
   name: SITE_NAME,
   legalName: "URPA Academy Software",
-  founder: "",
+  founder: "MallenK",
+  founderUrl: "https://mallenk.github.io/Portfolio/",
   foundingLocation: "Sant Vicenç dels Horts, Barcelona, España",
 };
 

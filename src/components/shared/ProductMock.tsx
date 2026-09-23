@@ -15,7 +15,7 @@ export function ProductMock({ className }: ProductMockProps) {
   return (
     <div
       className={cn(
-        "corner-cut-lg aspect-[16/10] w-full overflow-hidden border border-white/10 bg-brand-black-soft shadow-[0_40px_120px_-30px_rgba(0,0,0,0.85)]",
+        "corner-cut-lg w-full sm:aspect-[16/10] overflow-hidden border border-white/10 bg-brand-black-soft shadow-[0_40px_120px_-30px_rgba(0,0,0,0.85)]",
         className,
       )}
     >
@@ -26,7 +26,7 @@ export function ProductMock({ className }: ProductMockProps) {
         <span className="ml-4 h-4 w-40 rounded-full bg-white/5" />
       </div>
 
-      <div className="grid h-[calc(100%-2.25rem)] grid-cols-[minmax(0,12rem)_1fr]">
+      <div className="grid grid-cols-1 sm:h-[calc(100%-2.25rem)] sm:grid-cols-[minmax(0,12rem)_1fr]">
         <div className="hidden flex-col gap-2 border-r border-white/5 p-4 sm:flex">
           <div className="mb-3 h-6 w-24 rounded-md bg-brand-yellow/90" />
           {["Alumnos", "Calendario", "Bonos", "Documentación", "Notificaciones"].map(
@@ -46,8 +46,8 @@ export function ProductMock({ className }: ProductMockProps) {
           )}
         </div>
 
-        <div className="flex flex-col gap-3 p-4">
-          <div className="grid grid-cols-3 gap-3">
+        <div className="flex min-w-0 flex-col gap-3 p-3 sm:p-4">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3">
             {[
               { label: "Sesiones esta semana", value: "34" },
               { label: "Alumnos activos", value: "128" },
@@ -55,9 +55,9 @@ export function ProductMock({ className }: ProductMockProps) {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-lg border border-white/5 bg-white/[0.03] p-3"
+                className="min-w-0 rounded-lg border border-white/5 bg-white/[0.03] p-2 sm:p-3"
               >
-                <p className="text-[10px] uppercase tracking-wide text-brand-gray">
+                <p className="text-[9px] uppercase leading-tight tracking-normal text-brand-gray [overflow-wrap:anywhere] sm:text-[10px] sm:tracking-wide">
                   {stat.label}
                 </p>
                 <p className="mt-1 text-sm font-bold text-brand-white sm:text-base">
@@ -67,35 +67,38 @@ export function ProductMock({ className }: ProductMockProps) {
             ))}
           </div>
 
-          <div className="flex-1 rounded-lg border border-white/5 bg-white/[0.02] p-3">
+          <div className="min-w-0 flex-1 rounded-lg border border-white/5 bg-white/[0.02] p-3">
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-xs font-semibold text-brand-white">
+              <span className="truncate text-xs font-semibold text-brand-white">
                 Alumnos recientes
               </span>
-              <span className="text-[10px] text-brand-gray">Ver todos</span>
+              <span className="whitespace-nowrap text-[10px] text-brand-gray">Ver todos</span>
             </div>
             <div className="space-y-1.5">
-              {ROWS.map((row) => (
+              {ROWS.map((row, i) => (
                 <div
                   key={row.name}
-                  className="flex items-center justify-between rounded-md px-2 py-1.5 text-xs hover:bg-white/[0.03]"
+                  className={cn(
+                    "items-center justify-between gap-2 rounded-md px-2 py-1.5 text-xs hover:bg-white/[0.03]",
+                    i === ROWS.length - 1 ? "hidden sm:flex" : "flex",
+                  )}
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-yellow/20 text-[10px] font-bold text-brand-yellow">
+                  <div className="flex min-w-0 items-center gap-2">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-yellow/20 text-[10px] font-bold text-brand-yellow">
                       {row.name
                         .split(" ")
                         .map((n) => n[0])
                         .join("")}
                     </span>
-                    <div>
-                      <p className="font-medium text-brand-white">{row.name}</p>
-                      <p className="text-[10px] text-brand-gray">{row.group}</p>
+                    <div className="min-w-0">
+                      <p className="truncate font-medium text-brand-white">{row.name}</p>
+                      <p className="truncate text-[10px] text-brand-gray">{row.group}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex shrink-0 items-center gap-3">
                     <span
                       className={cn(
-                        "rounded-full px-2 py-0.5 text-[10px] font-medium",
+                        "whitespace-nowrap rounded-full px-2 py-0.5 text-[10px] font-medium",
                         row.status === "Bono activo"
                           ? "bg-emerald-400/10 text-emerald-400"
                           : "bg-brand-yellow/10 text-brand-yellow",
