@@ -72,6 +72,14 @@ export async function generateMetadata(): Promise<Metadata> {
     // (no hace falta acceso a DNS, funciona igual en un subdominio vercel.app).
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      // Bing Webmaster Tools (etiqueta meta). Para cambiarlo sin tocar código:
+      // NEXT_PUBLIC_BING_SITE_VERIFICATION en Vercel. El archivo
+      // public/BingSiteAuth.xml es el método alternativo de verificación.
+      other: {
+        "msvalidate.01":
+          process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ||
+          "AAA8467CB417C37971716E785B1D851C",
+      },
     },
   };
 }
