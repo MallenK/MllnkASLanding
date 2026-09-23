@@ -31,6 +31,7 @@
     "ca": "CA"
   },
   "hero": {
+    "mockAlt": "Panell d'administració d'URPA Academy Software amb calendari, alumnes actius i properes classes",
     "titleLine1": "La digitalització de la teva acadèmia,",
     "titleHighlight": "centralitzada en un panell.",
     "description": "Alumnes, calendari, bons, documentació i avisos, tot en un mateix lloc. La vaig construir per a una acadèmia de futbol a Barcelona perquè no vaig trobar res que ho fes bé — i la continuo portant jo: la desenvolupo, la desplego i responc si alguna cosa falla.",

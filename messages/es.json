@@ -31,6 +31,7 @@
     "ca": "CA"
   },
   "hero": {
+    "mockAlt": "Panel de administración de URPA Academy Software con calendario, alumnos activos y próximas clases",
     "titleLine1": "La digitalización de tu academia,",
     "titleHighlight": "centralizada en un panel.",
     "description": "Alumnos, calendario, bonos, documentación y avisos, todo en el mismo sitio. La construí para una academia de fútbol en Barcelona porque no encontré nada que hiciera esto bien — y la sigo llevando yo: la desarrollo, la despliego y respondo si algo falla.",

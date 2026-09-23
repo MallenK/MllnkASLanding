@@ -94,7 +94,7 @@ export function Hero() {
             className="relative"
           >
             <div className="corner-cut-lg absolute -inset-3 -z-10 bg-brand-yellow/90" aria-hidden="true" />
-            <ProductMock />
+            <ProductMock alt={t("mockAlt")} />
           </motion.div>
         </Parallax>
       </Container>

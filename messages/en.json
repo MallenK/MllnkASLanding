@@ -31,6 +31,7 @@
     "ca": "CA"
   },
   "hero": {
+    "mockAlt": "URPA Academy Software admin dashboard showing the calendar, active students and upcoming classes",
     "titleLine1": "Your academy, fully digitized,",
     "titleHighlight": "centralized in one dashboard.",
     "description": "Students, schedules, class passes, documents and notices, all in one place. I built it for a football academy in Barcelona because nothing out there did this well — and I still run it myself: I develop it, deploy it, and answer if something breaks.",
