@@ -96,7 +96,24 @@
     "security": {
       "title": "Real security, not a marketing line",
       "description": "Active CSRF protection, login attempt limits, bcrypt-hashed passwords and role-based permissions since the very first deployment. Audited, not just promised."
-    }
+    },
+    "screens": [
+      {
+        "title": "Students",
+        "caption": "Records, status and search for every student in one table.",
+        "alt": "Student list with search, status and full profile"
+      },
+      {
+        "title": "Classes",
+        "caption": "Monthly calendar with recurring and one-to-one sessions.",
+        "alt": "Class calendar with recurring sessions"
+      },
+      {
+        "title": "Passes",
+        "caption": "Remaining sessions and alerts for exhausted passes.",
+        "alt": "Pass management panel with remaining sessions and alerts"
+      }
+    ]
   },
   "comparison": {
     "title": "What actually changes, point by point",
@@ -159,10 +176,18 @@
     "title": "What changed once we stopped improvising",
     "description": "No inflated numbers from a company backed by investors: this is what actually got fixed in the academy where the platform was born.",
     "stats": [
-      { "label": "modules integrated in one dashboard" },
-      { "label": "academy types supported" },
-      { "label": "roles with their own permissions" },
-      { "label": "designed and maintained by its creator" }
+      {
+        "label": "modules integrated in one dashboard"
+      },
+      {
+        "label": "academy types supported"
+      },
+      {
+        "label": "roles with their own permissions"
+      },
+      {
+        "label": "designed and maintained by its creator"
+      }
     ],
     "proofPoints": [
       {

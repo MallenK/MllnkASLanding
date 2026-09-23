@@ -1,10 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { FEATURE_ICONS, SECURITY_FEATURE_ICON } from "@/lib/constants";
+
+interface ScreenCopy {
+  title: string;
+  caption: string;
+  alt: string;
+}
+
+const SCREEN_SRCS = [
+  "/screens/alumnos.png",
+  "/screens/clases.png",
+  "/screens/bonos.png",
+];
 
 interface FeatureCopy {
   title: string;
@@ -29,11 +42,36 @@ export function Features() {
   const t = useTranslations("features");
   const items = t.raw("items") as FeatureCopy[];
   const security = t.raw("security") as FeatureCopy;
+  const screens = t.raw("screens") as ScreenCopy[];
 
   return (
     <section id="caracteristicas" className="bg-brand-black py-24 sm:py-32">
       <Container>
         <SectionHeading title={t("title")} description={t("description")} />
+
+        <ul className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {screens.map((screen, i) => (
+            <li key={SCREEN_SRCS[i]}>
+              <figure className="h-full overflow-hidden border border-white/10 bg-brand-black-soft">
+                <Image
+                  src={SCREEN_SRCS[i]}
+                  alt={screen.alt}
+                  width={1440}
+                  height={900}
+                  loading="lazy"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="h-auto w-full"
+                />
+                <figcaption className="border-t border-white/10 p-4">
+                  <p className="text-sm font-bold text-brand-white">{screen.title}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-brand-gray">
+                    {screen.caption}
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
 
         <motion.ol
           initial="hidden"

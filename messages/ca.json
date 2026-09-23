@@ -96,7 +96,24 @@
     "security": {
       "title": "Seguretat real, no d'anunci",
       "description": "CSRF actiu, límit d'intents d'accés, contrasenyes amb bcrypt i permisos per rol des del primer desplegament. Auditada, no promesa."
-    }
+    },
+    "screens": [
+      {
+        "title": "Alumnes",
+        "caption": "Fitxes, estats i cerca de tot l'alumnat en una sola taula.",
+        "alt": "Llistat d'alumnes amb cercador, estat i fitxa completa"
+      },
+      {
+        "title": "Classes",
+        "caption": "Calendari mensual amb sessions recurrents i individuals.",
+        "alt": "Calendari de classes amb sessions recurrents"
+      },
+      {
+        "title": "Bons",
+        "caption": "Control de sessions restants i alertes de bons esgotats.",
+        "alt": "Panell de bons amb sessions restants i alertes d'esgotats"
+      }
+    ]
   },
   "comparison": {
     "title": "El que canvia, punt per punt",
@@ -159,10 +176,18 @@
     "title": "El que va canviar en deixar d'improvisar",
     "description": "Res de xifres inflades d'una empresa amb inversors darrere: això és el que es va resoldre de veritat a l'acadèmia on va néixer la plataforma.",
     "stats": [
-      { "label": "mòduls integrats en un panell" },
-      { "label": "tipus d'acadèmia suportats" },
-      { "label": "rols amb permisos propis" },
-      { "label": "dissenyat i mantingut pel seu creador" }
+      {
+        "label": "mòduls integrats en un panell"
+      },
+      {
+        "label": "tipus d'acadèmia suportats"
+      },
+      {
+        "label": "rols amb permisos propis"
+      },
+      {
+        "label": "dissenyat i mantingut pel seu creador"
+      }
     ],
     "proofPoints": [
       {

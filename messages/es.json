@@ -96,7 +96,24 @@
     "security": {
       "title": "Seguridad real, no de anuncio",
       "description": "CSRF activo, límite de intentos de acceso, contraseñas con bcrypt y permisos por rol desde el primer despliegue. Auditada, no prometida."
-    }
+    },
+    "screens": [
+      {
+        "title": "Alumnos",
+        "caption": "Fichas, estados y búsqueda de todo el alumnado en una sola tabla.",
+        "alt": "Listado de alumnos de la plataforma con buscador, estado y ficha completa"
+      },
+      {
+        "title": "Clases",
+        "caption": "Calendario mensual con sesiones recurrentes e individuales.",
+        "alt": "Calendario de clases de la plataforma con sesiones recurrentes"
+      },
+      {
+        "title": "Bonos",
+        "caption": "Control de sesiones restantes y alertas de bonos agotados.",
+        "alt": "Panel de bonos con sesiones restantes y alertas de agotados"
+      }
+    ]
   },
   "comparison": {
     "title": "Lo que cambia, punto por punto",
@@ -159,10 +176,18 @@
     "title": "Lo que cambió al dejar de improvisar",
     "description": "Nada de cifras infladas de una empresa con inversores detrás: esto es lo que se resolvió de verdad en la academia donde nació la plataforma.",
     "stats": [
-      { "label": "módulos integrados en un panel" },
-      { "label": "tipos de academia soportados" },
-      { "label": "roles con permisos propios" },
-      { "label": "diseñado y mantenido por su creador" }
+      {
+        "label": "módulos integrados en un panel"
+      },
+      {
+        "label": "tipos de academia soportados"
+      },
+      {
+        "label": "roles con permisos propios"
+      },
+      {
+        "label": "diseñado y mantenido por su creador"
+      }
     ],
     "proofPoints": [
       {
