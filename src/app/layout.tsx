@@ -1,16 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Montserrat, Oswald } from "next/font/google";
-import Script from "next/script";
+import { getTranslations } from "next-intl/server";
 import "./globals.css";
-import {
-  DEMO_URL,
-  ORGANIZATION,
-  SITE_DESCRIPTION,
-  SITE_NAME,
-  SITE_TAGLINE,
-  SITE_URL,
-} from "@/lib/constants";
+import { DEMO_URL, ORGANIZATION, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "@/lib/constants";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -26,60 +19,62 @@ const oswald = Oswald({
   display: "swap",
 });
 
-const TITLE = `${SITE_NAME} — ${SITE_TAGLINE}`;
+// Metadata "base" del sitio: se usa tal cual en las páginas que quedan
+// fuera del árbol [locale] (legales, 404), y como fallback antes de que
+// generateMetadata de [locale]/page.tsx la sobrescriba con la versión
+// traducida correspondiente. Usa un locale explícito ("es"), no el de la
+// petición, para que este layout se mantenga estático (ver [locale]/layout.tsx
+// para la parte dinámica por idioma).
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations({ locale: "es", namespace: "meta" });
+  const title = t("title");
+  const description = t("description");
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: TITLE,
-    template: `%s | ${SITE_NAME}`,
-  },
-  description: SITE_DESCRIPTION,
-  keywords: [
-    "software gestión academia deportiva",
-    "software gestión academia de fútbol",
-    "software gestión club deportivo",
-    "control de asistencia academia",
-    "gestión de bonos y cuotas",
-    "backoffice academia de fútbol",
-    "programa para escuela de fútbol",
-  ],
-  authors: [{ name: SITE_NAME }],
-  creator: SITE_NAME,
-  publisher: SITE_NAME,
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    locale: "es_ES",
-    url: SITE_URL,
-    siteName: SITE_NAME,
-    title: TITLE,
-    description: SITE_DESCRIPTION,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: TITLE,
-    description: SITE_DESCRIPTION,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: title,
+      template: `%s | ${SITE_NAME}`,
+    },
+    description,
+    keywords: t.raw("keywords") as string[],
+    authors: [{ name: SITE_NAME }],
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      type: "website",
+      locale: "es_ES",
+      url: SITE_URL,
+      siteName: SITE_NAME,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-  // Verificación gratuita de Google Search Console: cuando crees la
-  // propiedad, pega aquí el código que te da la opción "etiqueta HTML"
-  // (no hace falta acceso a DNS, funciona igual en un subdominio vercel.app).
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-  },
-};
+    // Verificación gratuita de Google Search Console: cuando crees la
+    // propiedad, pega aquí el código que te da la opción "etiqueta HTML"
+    // (no hace falta acceso a DNS, funciona igual en un subdominio vercel.app).
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#111111",
@@ -99,15 +94,7 @@ const jsonLd = {
         ? { founder: { "@type": "Person", name: ORGANIZATION.founder } }
         : {}),
       foundingLocation: ORGANIZATION.foundingLocation,
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      url: SITE_URL,
-      name: SITE_NAME,
-      description: SITE_DESCRIPTION,
-      inLanguage: "es-ES",
-      publisher: { "@id": `${SITE_URL}/#organization` },
+      sameAs: SOCIAL_LINKS.map((link) => link.href),
     },
     {
       "@type": "SoftwareApplication",
@@ -115,7 +102,6 @@ const jsonLd = {
       name: SITE_NAME,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      description: SITE_DESCRIPTION,
       url: SITE_URL,
       sameAs: [DEMO_URL],
       publisher: { "@id": `${SITE_URL}/#organization` },
@@ -127,7 +113,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${oswald.variable} h-full`}>
+    <html
+      lang="es"
+      data-scroll-behavior="smooth"
+      className={`${montserrat.variable} ${oswald.variable} h-full`}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -135,17 +125,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-brand-black font-sans antialiased">
+        <a
+          href="#main-content"
+          className="fixed left-4 top-4 z-[100] -translate-y-20 bg-brand-yellow px-4 py-2 text-sm font-semibold text-brand-black transition-transform focus:translate-y-0"
+        >
+          Saltar al contenido principal
+        </a>
         {children}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-BNMNF931TY"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-BNMNF931TY');`}
-        </Script>
       </body>
     </html>
   );

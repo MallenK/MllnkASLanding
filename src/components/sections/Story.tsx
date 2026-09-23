@@ -2,10 +2,16 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { STORY_STEPS } from "@/lib/constants";
+
+interface StoryStep {
+  tag: string;
+  title: string;
+  description: string;
+}
 
 export function Story() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -14,14 +20,13 @@ export function Story() {
     offset: ["start 0.8", "end 0.65"],
   });
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const t = useTranslations("story");
+  const steps = t.raw("steps") as StoryStep[];
 
   return (
     <section id="historia" className="bg-brand-black-soft py-24 sm:py-32">
       <Container>
-        <SectionHeading
-          title="De un problema real a una plataforma en producción"
-          description="No partió de una plantilla en blanco. Partió de una academia de fútbol real que necesitaba dejar de perder información en hojas de cálculo."
-        />
+        <SectionHeading title={t("title")} description={t("description")} />
 
         <div ref={trackRef} className="relative mt-16 max-w-3xl pl-10 sm:pl-14">
           <div
@@ -35,7 +40,7 @@ export function Story() {
           />
 
           <ol className="flex flex-col gap-14">
-            {STORY_STEPS.map((step, index) => (
+            {steps.map((step, index) => (
               <Reveal
                 as="li"
                 key={step.tag}

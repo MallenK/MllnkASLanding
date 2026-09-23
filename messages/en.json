@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "URPA Academy Software — The management platform for your sports academy",
+    "description": "Management software for sports academies: students, class schedules, session passes and communication in a single dashboard. Born inside a real football academy, in production from day one.",
+    "keywords": [
+      "sports academy management software",
+      "football academy management software",
+      "sports club management software",
+      "academy attendance tracking",
+      "class pass and membership management",
+      "football academy backoffice",
+      "software for football schools"
+    ]
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "history": "The story",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "demo": "Explore the live demo",
+    "login": "Log in",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "es": "ES",
+    "en": "EN",
+    "ca": "CA"
+  },
+  "hero": {
+    "titleLine1": "Your academy, fully digitized,",
+    "titleHighlight": "centralized in one dashboard.",
+    "description": "Students, schedules, class passes, documents and notices, all in one place. I built it for a football academy in Barcelona because nothing out there did this well — and I still run it myself: I develop it, deploy it, and answer if something breaks.",
+    "ctaPrimary": "Explore the live demo",
+    "ctaSecondary": "Read the story",
+    "badgeLive": "Actually running a football academy in Barcelona",
+    "badgeEmail": "Just your email to get in",
+    "badgeBot": "You get a reply from me, not a bot",
+    "scrollHint": "Keep scrolling"
+  },
+  "story": {
+    "title": "From a real problem to a platform in production",
+    "description": "It didn't start from a blank template. It started with a real football academy that needed to stop losing information in spreadsheets.",
+    "steps": [
+      {
+        "tag": "The problem",
+        "title": "A real football academy, drowning in spreadsheets",
+        "description": "A football skills academy in Sant Vicenç dels Horts (Barcelona) tracked students, session passes and attendance across Excel, paper and WhatsApp. Information got lost and nothing scaled."
+      },
+      {
+        "tag": "The build",
+        "title": "I designed and built a custom backoffice",
+        "description": "Roles for management, coaches and students. Class scheduling, passes that deduct themselves at roll call, permission-based documentation, internal messaging and notifications. No generic templates."
+      },
+      {
+        "tag": "The proof",
+        "title": "Today it runs the real day-to-day, on its own",
+        "description": "The platform is in production, running the academy's daily operations. I design, build, deploy, secure and maintain it myself — no agencies, no outside teams involved."
+      },
+      {
+        "tag": "The product",
+        "title": "Now, the same platform for your academy",
+        "description": "What started by solving my own problem is now open to football academies, tutoring centers, language schools and personal training studios that need the same thing: a single dashboard that actually works."
+      }
+    ]
+  },
+  "features": {
+    "title": "The modules running a real academy",
+    "description": "None of this is a showcase demo: these are the modules running the day-to-day of a real football skills academy, ready for yours.",
+    "items": [
+      {
+        "title": "Students and coaches",
+        "description": "Profiles, tracking, categories and groups. Every profile reachable in one click, with permissions based on the viewer's role."
+      },
+      {
+        "title": "Class scheduling",
+        "description": "One-off and recurring sessions, coach assignment and overlap control, so there are never double bookings."
+      },
+      {
+        "title": "Passes and memberships",
+        "description": "They deduct themselves automatically at roll call. No parallel spreadsheets, no manually chasing who still has sessions left."
+      },
+      {
+        "title": "Documents and messaging",
+        "description": "Folder-level permissions and internal chat between management, coaches and students, all inside the same platform."
+      },
+      {
+        "title": "Notifications and support",
+        "description": "Individual or group notices and an internal ticketing system to resolve issues without losing track."
+      }
+    ],
+    "security": {
+      "title": "Real security, not a marketing line",
+      "description": "Active CSRF protection, login attempt limits, bcrypt-hashed passwords and role-based permissions since the very first deployment. Audited, not just promised."
+    }
+  },
+  "comparison": {
+    "title": "What actually changes, point by point",
+    "description": "No generic comparison against 'the competition' here: this is exactly what the platform replaces in an academy's real day-to-day.",
+    "before": "Before",
+    "after": "Now",
+    "rows": [
+      {
+        "label": "Students and profiles",
+        "before": "Loose spreadsheets per group, no version control",
+        "after": "One dashboard with profiles, categories and role-based permissions"
+      },
+      {
+        "label": "Attendance",
+        "before": "Paper on the sideline, transcribed by hand later (if there's time)",
+        "after": "Roll call from your phone, logged instantly"
+      },
+      {
+        "label": "Passes and fees",
+        "before": "Manually chasing who still has sessions pending",
+        "after": "Deducted automatically at roll call, nothing to reconcile by hand"
+      },
+      {
+        "label": "Communication",
+        "before": "Notices scattered across WhatsApp groups, lost in the noise",
+        "after": "Messaging and notifications inside the same platform"
+      },
+      {
+        "label": "Documentation",
+        "before": "Loose files with no control over who can see them",
+        "after": "Folders with role-based permissions, fully traceable"
+      },
+      {
+        "label": "Support",
+        "before": "No fixed channel, depends on who you can reach",
+        "after": "Internal ticketing + direct contact with the person who builds the platform"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "From poking around the demo to running in production",
+    "description": "No endless onboarding, no sales calls: you start by trying it yourself.",
+    "steps": [
+      {
+        "title": "Explore the live demo",
+        "description": "Leave your email, log in as Management, Coach or Student, and pick the academy type: football, tutoring, languages or personal training."
+      },
+      {
+        "title": "We set up your academy",
+        "description": "We migrate students, groups, schedules and passes. The platform adapts to how you work, not the other way around."
+      },
+      {
+        "title": "Start running on it",
+        "description": "Scheduling, passes, documentation and communication working from day one, with direct support from the person who builds it."
+      }
+    ],
+    "cta": "Start at step {number}: open the demo"
+  },
+  "socialProof": {
+    "title": "What changed once we stopped improvising",
+    "description": "No inflated numbers from a company backed by investors: this is what actually got fixed in the academy where the platform was born.",
+    "stats": [
+      { "label": "modules integrated in one dashboard" },
+      { "label": "academy types supported" },
+      { "label": "roles with their own permissions" },
+      { "label": "designed and maintained by its creator" }
+    ],
+    "proofPoints": [
+      {
+        "label": "Before",
+        "title": "Excel, paper and WhatsApp",
+        "description": "Student profiles in loose spreadsheets, attendance on paper by the pitch, and notices scattered across WhatsApp groups."
+      },
+      {
+        "label": "Now",
+        "title": "One operational dashboard",
+        "description": "Students, passes and attendance centralized. Passes deduct themselves at roll call, no parallel spreadsheets to reconcile by hand."
+      },
+      {
+        "label": "Result",
+        "title": "Full traceability per student",
+        "description": "A complete history per student and per group, permission-based documentation, and a single communication channel with coaches and families."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Try it yourself, no need to talk to anyone first",
+    "description": "Leave your email, enter the live demo, pick your role and academy type. If it fits, we talk directly — no salespeople involved.",
+    "primary": "Explore the live demo",
+    "secondary": "Write to me directly"
+  },
+  "faq": {
+    "title": "Everything you need to know",
+    "items": [
+      {
+        "question": "Can I try it without talking to anyone first?",
+        "answer": "Yes. We only ask for your email to open the demo (so I can reach you if I ship an improvement or help with a migration). From there you explore the platform freely as Management, Coach or Student, picking the academy type: football, tutoring, languages or personal training."
+      },
+      {
+        "question": "Is this a generic template or a real product?",
+        "answer": "It's a platform in real production: it was born to run a football academy's day-to-day and still operates there today, alongside opening up to other academies."
+      },
+      {
+        "question": "Who maintains the platform?",
+        "answer": "I design, build, deploy and maintain it directly. There's no agency or outside team involved, so changes and support reach you without middlemen."
+      },
+      {
+        "question": "How does it handle student data security?",
+        "answer": "Active CSRF protection, login attempt limits per account and IP, bcrypt-hashed passwords and role-based permissions on every route. It's not a last-minute add-on — it's part of the design from the start."
+      },
+      {
+        "question": "Does it work for academies that aren't football?",
+        "answer": "Yes. The demo lets you explore four verticals: football academies, tutoring, languages and personal training. The roles, passes and scheduling model adapt to each one."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Write to me directly",
+    "description": "No salespeople, no forms that vanish into a CRM: the message reaches me, and I reply myself.",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "you@email.com",
+    "messageLabel": "Tell me about your academy",
+    "messagePlaceholder": "What kind of academy you run, how many students, what you're using right now...",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "sentTitle": "Message sent",
+    "sentDescription": "Thanks — I'll reply to the email you left as soon as I read it.",
+    "genericError": "Couldn't send it. Please try again."
+  },
+  "footer": {
+    "description": "The management platform born inside a real football academy, designed, deployed and maintained by one person.",
+    "productHeading": "Product",
+    "legalHeading": "Legal",
+    "contactHeading": "Contact",
+    "demo": "Live demo",
+    "legalPrivacy": "Privacy",
+    "legalTerms": "Terms",
+    "legalCookies": "Cookies",
+    "legalEsOnlyHint": "(Spanish only)",
+    "copyright": "© {year} {siteName}. All rights reserved.",
+    "builtBy": "Built and maintained by its creator, no agencies involved.",
+    "share": "Share",
+    "shareCopied": "Link copied"
+  },
+  "cookieConsent": {
+    "text": "We use our own and analytics cookies (Google Analytics) to understand how this site is used. The contact form works the same whether you accept them or not. More information in our <link>Cookie Policy</link>.",
+    "reject": "Reject",
+    "accept": "Accept"
+  },
+  "demoGate": {
+    "title": "Before you enter the demo",
+    "description": "Leave your email and we'll open the live demo right away. No spam: we only use it to let you know about improvements or help you migrate your academy if you're interested.",
+    "emailPlaceholder": "you@email.com",
+    "submit": "Enter the demo",
+    "submitting": "Sending...",
+    "genericError": "Couldn't send it. Please try again.",
+    "close": "Close"
+  },
+  "whatsapp": {
+    "ariaLabel": "Message us on WhatsApp"
+  },
+  "backToTop": {
+    "ariaLabel": "Back to top"
+  }
+}

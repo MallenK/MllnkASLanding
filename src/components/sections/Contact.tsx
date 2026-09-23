@@ -1,17 +1,53 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/shared/Container";
 import { Reveal } from "@/components/shared/Reveal";
 import { submitToWeb3Forms } from "@/lib/web3forms";
 
+const DRAFT_KEY = "mk_contact_draft";
+
+interface Draft {
+  email: string;
+  message: string;
+}
+
 export function Contact() {
+  const t = useTranslations("contact");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
     "idle",
   );
   const [error, setError] = useState("");
+
+  // Restaura el borrador guardado (si lo hay) al montar, para no perder lo
+  // escrito si se cierra la pestaña o se navega por error.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(DRAFT_KEY);
+      if (!raw) return;
+      const draft: Draft = JSON.parse(raw);
+      if (draft.email) setEmail(draft.email);
+      if (draft.message) setMessage(draft.message);
+    } catch {
+      // Sin localStorage disponible o JSON corrupto: se empieza en blanco.
+    }
+  }, []);
+
+  useEffect(() => {
+    if (status === "sent") return;
+    try {
+      if (!email && !message) {
+        localStorage.removeItem(DRAFT_KEY);
+        return;
+      }
+      localStorage.setItem(DRAFT_KEY, JSON.stringify({ email, message }));
+    } catch {
+      // Persistencia best-effort: si falla, simplemente no hay autosave.
+    }
+  }, [email, message, status]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -26,11 +62,14 @@ export function Contact() {
       setStatus("sent");
       setEmail("");
       setMessage("");
+      try {
+        localStorage.removeItem(DRAFT_KEY);
+      } catch {
+        // No crítico: el borrador quedará vacío en la próxima visita igual.
+      }
     } catch (err) {
       setStatus("error");
-      setError(
-        err instanceof Error ? err.message : "No se pudo enviar. Inténtalo de nuevo.",
-      );
+      setError(err instanceof Error ? err.message : t("genericError"));
     }
   };
 
@@ -40,11 +79,10 @@ export function Contact() {
         <div className="grid grid-cols-1 gap-12 border-t border-white/10 pt-14 md:grid-cols-[1fr_1.1fr] md:gap-16">
           <Reveal variant="slide-right" className="flex flex-col">
             <h2 className="font-display text-balance text-4xl uppercase leading-[0.95] tracking-tight text-brand-white sm:text-5xl">
-              Escríbeme directamente
+              {t("title")}
             </h2>
             <p className="mt-5 max-w-sm text-balance text-base leading-relaxed text-brand-gray sm:text-lg">
-              Sin comerciales ni formularios que se pierden en un CRM: el
-              mensaje me llega a mí y te respondo yo mismo.
+              {t("description")}
             </p>
           </Reveal>
 
@@ -52,11 +90,10 @@ export function Contact() {
             {status === "sent" ? (
               <div className="border-l-2 border-brand-yellow py-2 pl-6">
                 <p className="text-lg font-bold text-brand-white">
-                  Mensaje enviado
+                  {t("sentTitle")}
                 </p>
                 <p className="mt-2 text-sm text-brand-gray">
-                  Gracias — te responderé al email que has dejado en cuanto
-                  lo lea.
+                  {t("sentDescription")}
                 </p>
               </div>
             ) : (
@@ -66,7 +103,7 @@ export function Contact() {
                     htmlFor="contact-email"
                     className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-brand-gray"
                   >
-                    Tu email
+                    {t("emailLabel")}
                   </label>
                   <input
                     id="contact-email"
@@ -74,7 +111,7 @@ export function Contact() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="tu@email.com"
+                    placeholder={t("emailPlaceholder")}
                     className="h-11 w-full border border-white/15 bg-brand-black px-4 text-sm text-brand-white outline-none placeholder:text-brand-gray/60 focus:border-brand-yellow"
                   />
                 </div>
@@ -83,7 +120,7 @@ export function Contact() {
                     htmlFor="contact-message"
                     className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-brand-gray"
                   >
-                    Cuéntame sobre tu academia
+                    {t("messageLabel")}
                   </label>
                   <textarea
                     id="contact-message"
@@ -91,7 +128,7 @@ export function Contact() {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Qué tipo de academia llevas, cuántos alumnos, qué usas ahora mismo..."
+                    placeholder={t("messagePlaceholder")}
                     className="w-full resize-none border border-white/15 bg-brand-black px-4 py-3 text-sm text-brand-white outline-none placeholder:text-brand-gray/60 focus:border-brand-yellow"
                   />
                 </div>
@@ -101,7 +138,7 @@ export function Contact() {
                   disabled={status === "loading"}
                   className="h-11 bg-brand-yellow text-sm font-semibold text-brand-black transition-colors hover:bg-brand-yellow-dim disabled:opacity-60"
                 >
-                  {status === "loading" ? "Enviando..." : "Enviar mensaje"}
+                  {status === "loading" ? t("submitting") : t("submit")}
                 </button>
               </form>
             )}

@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "URPA Academy Software — La plataforma de gestión para tu academia deportiva",
+    "description": "Software de gestión para academias deportivas: alumnos, calendario de clases, bonos y comunicación en un solo panel. Nacido en una academia de fútbol real, en producción desde el primer día.",
+    "keywords": [
+      "software gestión academia deportiva",
+      "software gestión academia de fútbol",
+      "software gestión club deportivo",
+      "control de asistencia academia",
+      "gestión de bonos y cuotas",
+      "backoffice academia de fútbol",
+      "programa para escuela de fútbol"
+    ]
+  },
+  "nav": {
+    "ariaLabel": "Navegación principal",
+    "history": "La historia",
+    "features": "Características",
+    "howItWorks": "Cómo funciona",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "demo": "Explorar demo en vivo",
+    "login": "Iniciar sesión",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "es": "ES",
+    "en": "EN",
+    "ca": "CA"
+  },
+  "hero": {
+    "titleLine1": "La digitalización de tu academia,",
+    "titleHighlight": "centralizada en un panel.",
+    "description": "Alumnos, calendario, bonos, documentación y avisos, todo en el mismo sitio. La construí para una academia de fútbol en Barcelona porque no encontré nada que hiciera esto bien — y la sigo llevando yo: la desarrollo, la despliego y respondo si algo falla.",
+    "ctaPrimary": "Explorar demo en vivo",
+    "ctaSecondary": "Ver la historia",
+    "badgeLive": "En uso real en una academia de fútbol en Barcelona",
+    "badgeEmail": "Solo tu email para entrar",
+    "badgeBot": "Te respondo yo, no un bot",
+    "scrollHint": "Sigue bajando"
+  },
+  "story": {
+    "title": "De un problema real a una plataforma en producción",
+    "description": "No partió de una plantilla en blanco. Partió de una academia de fútbol real que necesitaba dejar de perder información en hojas de cálculo.",
+    "steps": [
+      {
+        "tag": "El problema",
+        "title": "Una academia de fútbol real, ahogada en hojas de cálculo",
+        "description": "Una escuela de tecnificación de fútbol en Sant Vicenç dels Horts (Barcelona) llevaba alumnos, bonos y asistencia entre Excel, papel y WhatsApp. La información se perdía y nada escalaba."
+      },
+      {
+        "tag": "La construcción",
+        "title": "Diseñé y desarrollé un backoffice a medida",
+        "description": "Roles para dirección, entrenadores y alumnos. Calendario de clases, bonos que se descuentan solos al pasar lista, documentación con permisos, mensajería interna y notificaciones. Sin plantillas genéricas."
+      },
+      {
+        "tag": "La prueba",
+        "title": "Hoy gestiona el día a día real, de forma autónoma",
+        "description": "La plataforma está en producción llevando la operación diaria de la academia. La diseño, desarrollo, despliego, aseguro y mantengo yo — sin agencias ni equipos externos de por medio."
+      },
+      {
+        "tag": "El producto",
+        "title": "Ahora, la misma plataforma para tu academia",
+        "description": "Lo que empezó resolviendo un problema propio se abre a academias de fútbol, refuerzo escolar, idiomas y entrenamiento personal que necesitan lo mismo: un único panel que funciona de verdad."
+      }
+    ]
+  },
+  "features": {
+    "title": "Los módulos que llevan la academia real",
+    "description": "Nada de esto es una demo de escaparate: son los módulos que gestionan el día a día de una escuela de tecnificación real, listos para tu academia.",
+    "items": [
+      {
+        "title": "Alumnos y entrenadores",
+        "description": "Fichas, seguimiento, categorías y grupos. Cada perfil accesible en un clic, con permisos según el rol de quien lo consulta."
+      },
+      {
+        "title": "Calendario de clases",
+        "description": "Sesiones individuales y recurrentes, asignación de entrenadores y control de solapamientos, sin dobles reservas."
+      },
+      {
+        "title": "Bonos y membresías",
+        "description": "Se descuentan solos al pasar lista. Sin hojas de cálculo paralelas ni persecuciones manuales para saber quién tiene sesiones pendientes."
+      },
+      {
+        "title": "Documentación y mensajería",
+        "description": "Material con permisos por carpeta y chat interno entre dirección, entrenadores y alumnos, todo dentro de la misma plataforma."
+      },
+      {
+        "title": "Notificaciones y soporte",
+        "description": "Avisos individuales o grupales y un sistema de tickets interno para resolver incidencias sin perder el hilo."
+      }
+    ],
+    "security": {
+      "title": "Seguridad real, no de anuncio",
+      "description": "CSRF activo, límite de intentos de acceso, contraseñas con bcrypt y permisos por rol desde el primer despliegue. Auditada, no prometida."
+    }
+  },
+  "comparison": {
+    "title": "Lo que cambia, punto por punto",
+    "description": "Nada de comparativas genéricas contra 'la competencia': esto es exactamente lo que sustituye la plataforma en el día a día real de una academia.",
+    "before": "Antes",
+    "after": "Ahora",
+    "rows": [
+      {
+        "label": "Alumnos y fichas",
+        "before": "Hojas de cálculo sueltas por grupo, sin control de versiones",
+        "after": "Un panel único con fichas, categorías y permisos por rol"
+      },
+      {
+        "label": "Asistencia",
+        "before": "Papel a pie de campo, se traspasa a mano (si da tiempo)",
+        "after": "Se pasa lista desde el móvil y queda registrada al instante"
+      },
+      {
+        "label": "Bonos y cuotas",
+        "before": "Persecución manual para saber quién tiene sesiones pendientes",
+        "after": "Se descuentan solos al pasar lista, sin cuadrar nada a mano"
+      },
+      {
+        "label": "Comunicación",
+        "before": "Avisos dispersos en grupos de WhatsApp, se pierden entre mensajes",
+        "after": "Mensajería y notificaciones dentro de la misma plataforma"
+      },
+      {
+        "label": "Documentación",
+        "before": "Archivos sueltos sin control de quién puede verlos",
+        "after": "Carpetas con permisos por rol, todo trazable"
+      },
+      {
+        "label": "Soporte",
+        "before": "Sin canal fijo, dependes de a quién encuentres",
+        "after": "Ticket interno + contacto directo con quien construye la plataforma"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "De curiosear la demo a operar en producción",
+    "description": "Sin implementaciones eternas ni comerciales de por medio: empiezas probando tú mismo.",
+    "steps": [
+      {
+        "title": "Explora la demo en vivo",
+        "description": "Deja tu email, entra como Dirección, Entrenador o Alumno, y elige el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal."
+      },
+      {
+        "title": "Configuramos tu academia",
+        "description": "Migramos alumnos, grupos, horarios y bonos. La plataforma se adapta a cómo trabajas tú, no al revés."
+      },
+      {
+        "title": "Empieza a operar",
+        "description": "Calendario, bonos, documentación y comunicación funcionando desde el día uno, con soporte directo de quien la construye."
+      }
+    ],
+    "cta": "Empezar por el paso {number}: abrir la demo"
+  },
+  "socialProof": {
+    "title": "Lo que cambió al dejar de improvisar",
+    "description": "Nada de cifras infladas de una empresa con inversores detrás: esto es lo que se resolvió de verdad en la academia donde nació la plataforma.",
+    "stats": [
+      { "label": "módulos integrados en un panel" },
+      { "label": "tipos de academia soportados" },
+      { "label": "roles con permisos propios" },
+      { "label": "diseñado y mantenido por su creador" }
+    ],
+    "proofPoints": [
+      {
+        "label": "Antes",
+        "title": "Excel, papel y WhatsApp",
+        "description": "Fichas de alumnos en hojas de cálculo sueltas, asistencia en papel a pie de campo y avisos dispersos en grupos de WhatsApp."
+      },
+      {
+        "label": "Ahora",
+        "title": "Un único panel operativo",
+        "description": "Alumnos, bonos y asistencia centralizados. Los bonos se descuentan solos al pasar lista, sin hojas paralelas que cuadrar a mano."
+      },
+      {
+        "label": "Resultado",
+        "title": "Trazabilidad de cada alumno",
+        "description": "Historial completo por alumno y por grupo, documentación con permisos y un canal único de comunicación con entrenadores y familias."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pruébalo tú mismo, sin hablar con nadie primero",
+    "description": "Deja tu email, entra en la demo en vivo, elige tu rol y el tipo de academia. Si encaja, hablamos directamente conmigo — sin comerciales de por medio.",
+    "primary": "Explorar demo en vivo",
+    "secondary": "Escribirme directamente"
+  },
+  "faq": {
+    "title": "Todo lo que necesitas saber",
+    "items": [
+      {
+        "question": "¿Puedo probarlo sin hablar con nadie primero?",
+        "answer": "Sí. Solo pedimos tu email para abrir la demo (así puedo avisarte si mejoro algo o ayudarte con la migración). A partir de ahí exploras la plataforma libremente como Dirección, Entrenador o Alumno, eligiendo el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal."
+      },
+      {
+        "question": "¿Esto es una plantilla genérica o un producto real?",
+        "answer": "Es una plataforma en producción real: nació para gestionar el día a día de una academia de fútbol y hoy sigue operando ahí, además de abrirse a otras academias."
+      },
+      {
+        "question": "¿Quién mantiene la plataforma?",
+        "answer": "La diseño, desarrollo, despliego y mantengo yo directamente. No hay agencia ni equipo externo de por medio, así que los cambios y el soporte llegan sin intermediarios."
+      },
+      {
+        "question": "¿Cómo gestiona la seguridad de los datos de alumnos?",
+        "answer": "Protección CSRF activa, límite de intentos de acceso por cuenta e IP, contraseñas con bcrypt y permisos por rol en cada ruta. No es un añadido de última hora, es parte del diseño desde el principio."
+      },
+      {
+        "question": "¿Sirve para academias que no son de fútbol?",
+        "answer": "Sí. La demo permite explorar cuatro verticales: academias de fútbol, refuerzo escolar, idiomas y entrenamiento personal. El modelo de roles, bonos y calendario se adapta a cada una."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Escríbeme directamente",
+    "description": "Sin comerciales ni formularios que se pierden en un CRM: el mensaje me llega a mí y te respondo yo mismo.",
+    "emailLabel": "Tu email",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Cuéntame sobre tu academia",
+    "messagePlaceholder": "Qué tipo de academia llevas, cuántos alumnos, qué usas ahora mismo...",
+    "submit": "Enviar mensaje",
+    "submitting": "Enviando...",
+    "sentTitle": "Mensaje enviado",
+    "sentDescription": "Gracias — te responderé al email que has dejado en cuanto lo lea.",
+    "genericError": "No se pudo enviar. Inténtalo de nuevo."
+  },
+  "footer": {
+    "description": "La plataforma de gestión nacida en una academia de fútbol real, diseñada, desplegada y mantenida por una sola persona.",
+    "productHeading": "Producto",
+    "legalHeading": "Legal",
+    "contactHeading": "Contacto",
+    "demo": "Demo en vivo",
+    "legalPrivacy": "Privacidad",
+    "legalTerms": "Términos",
+    "legalCookies": "Cookies",
+    "legalEsOnlyHint": "(solo en español)",
+    "copyright": "© {year} {siteName}. Todos los derechos reservados.",
+    "builtBy": "Construido y mantenido por su creador, sin agencias de por medio.",
+    "share": "Compartir",
+    "shareCopied": "Enlace copiado"
+  },
+  "cookieConsent": {
+    "text": "Usamos cookies propias y de análisis (Google Analytics) para entender cómo se usa esta web. El formulario de contacto funciona igual las aceptes o no. Más información en la <link>Política de Cookies</link>.",
+    "reject": "Rechazar",
+    "accept": "Aceptar"
+  },
+  "demoGate": {
+    "title": "Antes de entrar a la demo",
+    "description": "Déjanos tu email y te abrimos la demo en vivo al momento. Sin spam: solo lo usamos para avisarte de novedades o ayudarte a migrar tu academia si te interesa.",
+    "emailPlaceholder": "tu@email.com",
+    "submit": "Acceder a la demo",
+    "submitting": "Enviando...",
+    "genericError": "No se pudo enviar. Inténtalo de nuevo.",
+    "close": "Cerrar"
+  },
+  "whatsapp": {
+    "ariaLabel": "Escribir por WhatsApp"
+  },
+  "backToTop": {
+    "ariaLabel": "Volver arriba"
+  }
+}

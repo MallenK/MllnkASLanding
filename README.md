@@ -22,16 +22,25 @@ Demo en vivo del producto real: <https://plataforma-jp-1.onrender.com/>
 
 ```
 src/
+  proxy.ts               # Middleware de next-intl: detecta idioma y redirige "/" -> /es|/en|/ca
+  i18n/
+    routing.ts             # Locales soportados, locale por defecto, prefijo siempre visible
+    navigation.ts            # Link/usePathname/useRouter conscientes del locale
+    request.ts                 # Carga messages/<locale>.json según la petición
   app/
-    layout.tsx           # Fuentes, metadata SEO, JSON-LD (@graph), tema oscuro fijo
-    page.tsx              # Ensambla todas las secciones
+    layout.tsx           # Fuentes, metadata SEO base (es), JSON-LD, tema oscuro fijo — 100% estático
+    [locale]/
+      layout.tsx           # NextIntlClientProvider + GlobalWidgets (por locale, sigue siendo estático)
+      page.tsx               # Home: ensambla todas las secciones, generateMetadata por idioma
+    not-found.tsx / error.tsx  # 404 y error runtime con la identidad de marca (siempre en español)
     globals.css            # Tokens de color de marca, utilidades, reduced-motion
     sitemap.ts / robots.ts / manifest.ts
     icon.tsx / apple-icon.tsx           # Favicon + apple-touch-icon generados
     opengraph-image.tsx / twitter-image.tsx  # Imagen social generada (1200×630)
+    privacidad/ · terminos/ · cookies/ page.tsx  # Páginas legales, SIEMPRE en español (ver sección Legal)
   components/
     layout/
-      Header.tsx          # Nav sticky, cambia de transparente a sólido con el scroll
+      Header.tsx          # Nav sticky + selector de idioma, cambia de transparente a sólido con el scroll
       Footer.tsx
     sections/
       Hero.tsx             # Parallax en orbes y mock de producto
@@ -52,14 +61,22 @@ src/
       ProductMock.tsx                 # Mock de producto en CSS (sustituir por capturas reales)
       DemoGate.tsx                      # Contexto + modal: pide email antes de abrir la demo
       GatedDemoButton.tsx                # Botón reutilizable que dispara el gate de email
+      CookieConsent.tsx                   # Banner de aceptar/rechazar cookies analíticas
+      Analytics.tsx                        # Carga GA4 solo si hay consentimiento aceptado
+      GlobalWidgets.tsx                     # Agrupa CookieConsent + BackToTop + WhatsApp + Analytics
+      LanguageSwitcher.tsx                   # Selector ES/EN/CA (cambia de idioma sin perder la ruta)
+      LegalLayout.tsx                       # Layout + tipografía compartidos por las 3 páginas legales
     ui/                              # Componentes shadcn/ui generados
   lib/
-    constants.ts                      # Copy real: nav, historia, features, stats, FAQ, SITE_URL
+    constants.ts                      # Solo datos estructurales no traducibles: iconos, ids, SITE_URL, LEGAL
+    consent.ts                          # Store de consentimiento de cookies (useSyncExternalStore-friendly)
     og.tsx                             # JSX compartido por opengraph-image y twitter-image
     web3forms.ts                        # Cliente del formulario (contacto + gate de demo)
     utils.ts                            # cn()
   types/
     index.ts
+messages/
+  es.json / en.json / ca.json          # Todo el copy traducible del sitio, por idioma
 ```
 
 ## Sistema de colores (Tailwind v4, `@theme` en `globals.css`)
@@ -177,6 +194,58 @@ Sin esta variable configurada, el modal y el formulario de contacto se
 muestran igual, pero el envío falla con un aviso en pantalla — no hay un
 "modo simulado" silencioso, para que no publiques el sitio pensando que
 funciona sin haberlo comprobado.
+
+## Legal y consentimiento de cookies
+
+- **Páginas legales reales**: `/privacidad`, `/terminos`, `/cookies`
+  (antes eran enlaces muertos `href="#"` en el footer). Comparten layout y
+  tipografía vía `LegalLayout.tsx`.
+- **Datos de identificación** (`LEGAL` en `constants.ts`): `taxId` se deja
+  vacío a propósito para no inventar un NIF/CIF. **Rellénalo con el real
+  antes de publicar en producción** — mientras esté vacío, la página de
+  Términos simplemente omite esa línea.
+- **Las páginas legales son siempre en español**, sin prefijo de idioma
+  (`/privacidad`, no `/es/privacidad` ni `/en/privacidad`) — decisión de
+  producto, no una limitación técnica. Desde `/en` o `/ca`, el footer añade
+  un aviso "(Spanish only)" / "(només en castellà)" junto a esos enlaces.
+- **Banner de cookies** (`CookieConsent.tsx` + `consent.ts`): aparece en la
+  primera visita, guarda la elección en `localStorage`
+  (`mk_cookie_consent`). Google Analytics (`Analytics.tsx`) **solo se
+  carga si el visitante pulsa "Aceptar"** — antes se cargaba siempre, sin
+  consentimiento previo.
+- **404 y error runtime** (`not-found.tsx`, `error.tsx`): páginas con la
+  identidad de marca en vez de las genéricas de Next.js. Viven fuera del
+  árbol `[locale]`, así que también se muestran siempre en español.
+
+## Idiomas (Español / English / Català)
+
+- **Rutas con prefijo siempre visible**: `/es`, `/en`, `/ca` (via `next-intl`,
+  `localePrefix: "always"` en `src/i18n/routing.ts`). Un visitante que entra
+  por `/` recibe un `307` hacia el idioma detectado en `Accept-Language`
+  (con fallback a `/es`) — lo hace `src/proxy.ts` (el middleware de
+  next-intl; en Next.js 16 esta convención se llama "proxy", no
+  "middleware", y **debe vivir en `src/` cuando el proyecto usa `src/app`**,
+  no en la raíz del repo).
+- **Todo el copy vive en `messages/{es,en,ca}.json`**, organizado por
+  sección (`hero`, `story`, `features`, `faq`, `cookieConsent`, etc.).
+  `src/lib/constants.ts` ya solo guarda lo que NO se traduce: iconos, ids,
+  slugs de sección y valores numéricos.
+- **Selector de idioma** (`LanguageSwitcher.tsx`, en el header desktop y en
+  el menú móvil): cambia de ruta preservando la página actual
+  (`/en#faq` → `/ca#faq`), usando `usePathname`/`useRouter` de
+  `src/i18n/navigation.ts`.
+- **Rendimiento**: las 3 versiones de la home (`/es`, `/en`, `/ca`) se
+  prerrenderizan como HTML estático en build (`generateStaticParams` +
+  `setRequestLocale` en `[locale]/layout.tsx`) — **no uses `getLocale()` ni
+  `getMessages()` en el layout raíz** (`src/app/layout.tsx`): eso lee la
+  negociación de idioma de la petición y fuerza renderizado dinámico en
+  *todas* las rutas del sitio, legales incluidas. Ese provider vive en
+  `[locale]/layout.tsx`, y las páginas legales tienen su propio
+  `NextIntlClientProvider` estático con `messages/es.json` importado
+  directamente (ver `LegalLayout.tsx`).
+- **SEO multi-idioma**: `[locale]/page.tsx` genera `alternates.languages`
+  (hreflang) por idioma + `x-default`, y `sitemap.ts` lista las 3 URLs de
+  home con sus alternates.
 
 ## Wireframe de secciones
 

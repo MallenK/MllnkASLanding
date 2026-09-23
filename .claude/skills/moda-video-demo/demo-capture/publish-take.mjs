@@ -1,0 +1,269 @@
+// Steps 4-6 of the skill, for a take that already exists. Same sequence and the
+// split out so a Claude-driven capture can publish without the authoring loop
+// without re-running the autonomous authoring loop.
+import { execFileSync } from 'node:child_process';
+import { existsSync, readFileSync, writeFileSync, copyFileSync, rmSync } from 'node:fs';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const { brandCard, compositeOutro } = require('./src/outro.js');
+const { recordIsMeasured } = require('./src/measured.js');
+import { homedir } from 'node:os';
+
+const outDir = process.argv[2], id = process.argv[3], name = process.argv[4];
+// `--no-zoom` publishes the same take with captions and narration but NO camera.
+// Worth having as a lane rather than a one-off: every punch-in on a sidebar or
+// menu demo clamps (measured at 2.2/1.8/1.6/1.4 — the targets sit at x=0.11, and
+// nothing can centre those), so whether the camera earns its place on this shape
+// of demo is a question to answer by looking, not by tuning.
+const noZoom = process.argv.includes('--no-zoom');
+// A branded closing card. Unanimous across the references — all three end on a
+// logo and a CTA — and the one intro/outro question that is not a design call.
+const brandId = process.env.DEMO_BRAND || null;
+const sh = (c, a, o = {}) => execFileSync(c, a, { encoding: 'utf8', maxBuffer: 64 << 20, ...o });
+const moda = (argv) => {
+  let raw;
+  try {
+    raw = sh('moda', [...argv, '--json']);
+  } catch (e) {
+    // A NON-ZERO EXIT still carries the CLI's error JSON, and it is on STDOUT —
+    // `execFileSync` puts only stderr in `e.message`, so the branch below never
+    // saw it and the failure reached the user as a dumped exception object
+    // (`pid`, `output`, `signal`) with the actual reason buried in it. The same
+    // stdout/stderr split defeated a retry in this file once before.
+    raw = `${e.stdout ?? ''}`;
+    if (!raw.trim()) throw e;
+  }
+  const line = raw.trim().split('\n').filter((l) => l.trim().startsWith('{')).pop();
+  if (!line) throw new Error(`moda ${argv.join(' ')} produced no JSON:\n${raw.slice(0, 400)}`);
+  const out = JSON.parse(line);
+  if (out.ok === false) {
+    const err = out.error ?? {};
+    const detail = err.details?.error?.details?.[0];
+    throw new Error(
+      `moda ${argv.slice(0, 2).join(' ')} failed: ${err.code ?? 'error'} — ${err.message ?? ''}` +
+      (detail ? `\n  ${detail.path?.join('.')}: ${detail.message}` : '') +
+      (err.request_id ? `\n  request_id ${err.request_id}` : '')
+    );
+  }
+  return out;
+};
+const docPath = `${outDir}/${id}.moda.json`;
+const doc = JSON.parse(readFileSync(docPath, 'utf8'));
+
+console.log('[4] uploading');
+// The NARRATED cut when one exists. Audio reaches the exported mp4 because the
+// clip is placed as an un-muted video fill (AGENT_VIDEO_FILL_MUTED = false) and
+// the server executor muxes audible video-fill audio unconditionally — so the
+// voiceover rides the recording rather than needing a composition audio clip,
+// which would need the main_edit export scope nothing can request yet.
+// Most finished first: scored (music + any voice) > narrated > silent.
+const scored = `${outDir}/${id}.scored.mp4`;
+const narrated = `${outDir}/${id}.narrated.mp4`;
+const source = existsSync(scored) ? scored : existsSync(narrated) ? narrated : `${outDir}/${id}.mp4`;
+console.log(`    source: ${source.replace(/^.*\.(\w+)\.mp4$|^.*\.mp4$/, (m, k) => k || 'silent')}`);
+// Extend the tail BEFORE upload so the card has ground to sit on; the nodes
+// themselves go on the canvas afterwards, so the outro stays editable.
+let uploadSource = source;
+let card = null;
+let compileDocPath = docPath;
+if (brandId) {
+  card = brandCard(brandId);
+  // The hold is chosen from the CLIP's length, so read it back rather than
+  // assuming a constant — the doc has to be extended by exactly what the mux
+  // added or the page ends mid-card.
+  const outro = await compositeOutro({
+    mp4: source, outDir, id, card,
+    // Set only when a closing line extended the clip past its footage.
+    startAtSec: doc.footageEndSec,
+  });
+  uploadSource = outro.path;
+  // The page is exactly `durationSec` long, so an mp4 that is now longer than
+  // the doc exports with the card cut off the end — the whole card, since it is
+  // the last thing in the file. Extend the doc the compiler sees. The actions
+  // keep their original timestamps, so the camera and captions are untouched;
+  // the page simply holds the clip's own tail for the card's duration.
+  compileDocPath = `${outDir}/${id}.moda.outro.json`;
+  writeFileSync(compileDocPath, JSON.stringify({ ...doc, durationSec: doc.durationSec + outro.seconds }, null, 2));
+  console.log(`    outro: ${outro.seconds}s card on ${card.background}${card.logoUrl ? ' with mark' : ''}` +
+    ` · page ${doc.durationSec.toFixed(2)}s -> ${(doc.durationSec + outro.seconds).toFixed(2)}s`);
+}
+
+const up = moda(['file', 'upload', uploadSource]);
+// The `file_` id is the only form needed: the verb takes it and mints its own
+// signed URL server-side, and the readiness poll below reads the RECORD rather
+// than fetching bytes. `up.uploads[0].url` (the byte proxy) is deliberately not
+// bound here — reaching for it is what made the old poll watch the wrong fact.
+const fileId = up.uploads[0].file_id;
+// WAIT FOR THE RECORD TO BE MEASURED, NOT FOR THE BYTES TO EXIST (ENG-6103).
+//
+// Placement needs the File record's width/height. Those are probed from the
+// container ASYNCHRONOUSLY, some seconds after the upload returns; until they
+// land, `demo publish` dies with MARKUP_PARSE_ERROR ("no stored dimensions"),
+// which is a browser-side parser error the caller cannot act on.
+//
+// This poll used to `curl -r 0-0` the byte-proxy URL and break on anything but
+// a 404. That is true the INSTANT the canonical copy exists, so it cleared on
+// its first iteration and published ~35s early — the 45s budget it was given
+// was ample, it was just spent watching the wrong thing. Measured on the run
+// that filed ENG-6103: bytes at 17:56:03.6, dimensions at 17:56:41.1.
+//
+// `file show` reports width/height as null until the probe writes them, so the
+// signal is now the same fact placement will demand. Dimensions present also
+// implies the bytes are readable — the probe had to read them — so nothing is
+// lost by dropping the byte check.
+const MEASURE_TIMEOUT_MS = 120_000;
+const deadline = Date.now() + MEASURE_TIMEOUT_MS;
+let lastErr = null;
+for (let n = 1; ; n++) {
+  // TOLERANT BY DESIGN. `moda()` throws on any non-zero exit or `ok: false`, and
+  // this loop's whole job is waiting out an eventually-consistent backend — so a
+  // 502, a token refresh or a network blip must cost one iteration, not the whole
+  // take. The poll this replaced got that for free (a failed `curl` exited 0 and
+  // fell through to the sleep); doing it by hand is the price of asking a real
+  // question instead of an easy one. A persistent failure still surfaces: the
+  // last error rides the deadline throw, so a scope or auth problem is not
+  // mistaken for a slow probe.
+  let rec = {};
+  try {
+    rec = moda(['file', 'show', fileId]).file ?? {};
+    lastErr = null;
+  } catch (err) {
+    lastErr = err;
+  }
+  if (recordIsMeasured(rec)) {
+    if (n > 1) console.log(`    measured: ${rec.width}x${rec.height}`);
+    break;
+  }
+  if (Date.now() > deadline) {
+    throw new Error(
+      `recording never measured: ${fileId} still has no width/height after ` +
+      `${Math.round(MEASURE_TIMEOUT_MS / 1000)}s. The container probe runs in the background after ` +
+      'upload, and covers MP4/QuickTime only — a WebM, or a container it cannot parse, never ' +
+      'gets dimensions and cannot be placed. Re-encode to H.264 in an MP4 and retry: the SAME ' +
+      'bytes deduplicate onto this record, and while that does re-dispatch the enrichment, its ' +
+      'gate declines a record that already has a poster, so the outcome is unchanged.' +
+      (lastErr ? `\n  last error from \`file show\`: ${lastErr.message}` : '')
+    );
+  }
+  if (n === 1) console.log('    waiting for the recording to be measured…');
+  await new Promise((r) => setTimeout(r, 2000));
+}
+// ONE VERB. Everything between the upload and the export — compile the markup,
+// create the canvas, apply it, read the clip's node id back, emit the camera
+// against that id, time the captions, apply both in a single edit, export the
+// mp4 — is what `moda demo publish` does, server-side, in one call.
+//
+// This file used to do all of it by hand. That was not a design choice: the
+// endpoint behind the verb passed an invalid `layout_mode` and so had never
+// once succeeded, and the hand-rolled path was the only one that worked. With
+// that fixed the duplication is just duplication, and it was the whole reason
+// the pipeline needed a studio checkout — `compile.py` imports the compiler
+// from `backend/app/services/demo_video`, which nobody outside the monorepo
+// has. (ENG-5982.)
+//
+// What stays here is what genuinely cannot move: the outro composite and the
+// upload, because both are ffmpeg on local bytes.
+console.log('[5] publishing');
+const args = ['demo', 'publish', '--timeline', compileDocPath, '--video', fileId, '--name', name];
+const finalMp4 = `${outDir}/${id}.final.mp4`;
+args.push('-o', finalMp4);
+// A punch-in planned from an INFERRED low-confidence click is not written
+// unless its index is accepted. The capture's clicks are observed, so this
+// passes the located set rather than leaving the camera silently dropped.
+const located = (doc.actions ?? []).filter((a) => a.clickX != null).map((a) => a.index);
+if (!noZoom && located.length) args.push('--accept-zoom', located.join(','));
+
+const published = moda(args);
+
+// KEEP THE CAMERA THE SERVER JUST EMITTED, so the shot checks can grade it.
+//
+// `src/shot-check.js` reads the camera out of a file. The loop writes its own
+// (`<id>.motion.js`, from the local compiler or `moda demo camera`); this is the
+// program the CANVAS received, which is a different thing and gets its own name.
+//
+// This is the program APPLIED to the canvas, returned verbatim, so the checks
+// grade what the renderer will do rather than a re-derivation.
+//
+// The loop tunes the camera before it gets here, planning it through the same
+// planner (locally with a checkout, otherwise `moda demo camera`). What this adds
+// is the verdict on the program the canvas ACTUALLY received — the loop grades a
+// plan, this grades the publish.
+const cameraProgram = published.camera_program ?? [];
+//: NOT `<id>.motion.js`. That name is `iterate`'s, and its file describes a
+//: different thing: the plan for the cut the loop was last working on, which is
+//: not necessarily the cut that was published. Keeping them apart is what lets
+//: each be graded against its own program.
+const publishedMotion = `${outDir}/${id}.published.motion.js`;
+// Authoritative BOTH ways. Writing only on success leaves a file that outlives
+// the camera it describes: publish once with a camera, let iterate suppress every
+// punch-in, publish again — no write happens and the grading below reads the
+// earlier publish's program, reporting punch-ins this canvas does not contain.
+if (cameraProgram.length) writeFileSync(publishedMotion, cameraProgram.join('\n') + '\n');
+else rmSync(publishedMotion, { force: true });
+
+const desktop = `${homedir()}/Desktop/moda-demo${noZoom ? '-nozoom' : ''}.mp4`;
+copyFileSync(finalMp4, desktop);
+
+const url = published.editor_url ?? published.canvas?.editor_url ?? `(canvas ${published.canvas_id ?? published.canvas?.id})`;
+console.log(`\ncanvas  ${url}\nvideo   ${desktop}`);
+for (const w of published.warnings ?? []) console.log(`  · ${String(w).slice(0, 170)}`);
+
+// GRADE THE CAMERA THAT WAS JUST PUBLISHED.
+//
+// Unconditional, and it always prints. Reporting only failures made silence mean
+// three different things — the camera is fine, there is no camera at all, or
+// nothing ran — and `noCamera` is one of the four checks this exists to unblind:
+// a published take with no punch-ins is a FLAT one, which shot-check classifies
+// as a finding, not a gap. Matches critique-take's shape: every check gets a
+// line, and an unmeasured check never reads as a clean one.
+try {
+  const { checkShots } = require('./src/shot-check.js');
+  // `publishedMotion` UNCONDITIONALLY. Falling back to checkShots' default would
+  // grade `<id>.motion.js`, and that file is not stale — `src/camera-emit.js`
+  // keeps it authoritative — it is a DIFFERENT program: the plan for the cut the
+  // loop was last working on, which is not necessarily the cut that went out.
+  // Grading it here would report framing for punch-ins the published canvas does
+  // not contain. A path that does not exist makes `readCamera` return null, which
+  // is the honest answer for "this publish wrote no camera".
+  // WHY there is no camera decides whether this is a defect, and the server
+  // already distinguishes the causes — hardcoding "attempted" turned every one of
+  // them into "the compiler planned NO punch-ins".
+  //
+  // `--no-zoom`, and punch-ins held awaiting confirmation, both yield an empty
+  // program on purpose. Reporting those as a flat-take finding tells an agent
+  // that just applied `disable_zoom` the take it deliberately shipped flat is
+  // unframeable, and contradicts the remedy the server prescribed in the same
+  // report. An older server that says nothing at all must stay UNMEASURED rather
+  // than become a confirmed defect.
+  const toldUs = published.camera_program !== undefined;
+  const held = (published.warnings ?? []).some((w) => String(w).startsWith('zoom_awaiting_confirmation'));
+  const onPurpose = noZoom || held;
+  const shots = checkShots({
+    doc, outDir, id,
+    motionPath: publishedMotion,
+    cameraWasAttempted: toldUs && !onPurpose,
+  });
+  const say = (label, r, describe) => {
+    if (!r) return console.log(`    ${label}: not measured (the check did not run)`);
+    if (!r.measured) return console.log(`    ${label}: not measured (${r.reason})`);
+    if (!r.bad) return console.log(`    ${label}: ok`);
+    for (const line of describe(r)) console.log(`    ⚠ ${label}: ${line}`);
+  };
+  console.log('\n  camera:');
+  if (!cameraProgram.length && onPurpose) {
+    console.log(`    no camera: none written on purpose — ${noZoom ? '--no-zoom' : 'punch-ins are awaiting confirmation (see the warning above)'}`);
+  } else {
+    say('no camera', shots.noCamera, (r) => [r.reason]);
+  }
+  say('zoom sync', shots.zoomSync, (r) => r.offenders.map((o) => `action ${o.action} peaks ${o.offSec}s off the click`));
+  say('framing', shots.zoomFraming, (r) => r.offenders.map((o) => o.outOfFrame
+    ? `action ${o.action}: THE CLICK IS OUTSIDE THE SHOT (looking at ${o.lookingAt.join(',')}, clicked ${o.clickAt.join(',')})`
+    : `action ${o.action}: the click sits ${(o.slack * 100).toFixed(1)}% from the frame edge — barely in shot`));
+  say('release', shots.zoomRelease, (r) => r.offenders.map((o) => `action ${o.action}: the camera left ${o.earlyBySec}s before the typing finished`));
+} catch (err) {
+  // Never fail a publish that already succeeded over grading it — but say so,
+  // because a silent catch here is exactly how a check stops running.
+  console.log(`  · could not grade the published camera: ${err.message}`);
+}
+

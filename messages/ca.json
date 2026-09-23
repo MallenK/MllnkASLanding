@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "URPA Academy Software — La plataforma de gestió per a la teva acadèmia esportiva",
+    "description": "Software de gestió per a acadèmies esportives: alumnes, calendari de classes, bons i comunicació en un sol panell. Nascut en una acadèmia de futbol real, en producció des del primer dia.",
+    "keywords": [
+      "software gestió acadèmia esportiva",
+      "software gestió acadèmia de futbol",
+      "software gestió club esportiu",
+      "control d'assistència acadèmia",
+      "gestió de bons i quotes",
+      "backoffice acadèmia de futbol",
+      "programa per a escola de futbol"
+    ]
+  },
+  "nav": {
+    "ariaLabel": "Navegació principal",
+    "history": "La història",
+    "features": "Característiques",
+    "howItWorks": "Com funciona",
+    "faq": "Preguntes",
+    "contact": "Contacte",
+    "demo": "Explora la demo en directe",
+    "login": "Inicia sessió",
+    "openMenu": "Obre el menú",
+    "closeMenu": "Tanca el menú"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "es": "ES",
+    "en": "EN",
+    "ca": "CA"
+  },
+  "hero": {
+    "titleLine1": "La digitalització de la teva acadèmia,",
+    "titleHighlight": "centralitzada en un panell.",
+    "description": "Alumnes, calendari, bons, documentació i avisos, tot en un mateix lloc. La vaig construir per a una acadèmia de futbol a Barcelona perquè no vaig trobar res que ho fes bé — i la continuo portant jo: la desenvolupo, la desplego i responc si alguna cosa falla.",
+    "ctaPrimary": "Explora la demo en directe",
+    "ctaSecondary": "Llegeix la història",
+    "badgeLive": "En ús real en una acadèmia de futbol a Barcelona",
+    "badgeEmail": "Només el teu email per entrar",
+    "badgeBot": "Et responc jo, no un bot",
+    "scrollHint": "Continua baixant"
+  },
+  "story": {
+    "title": "D'un problema real a una plataforma en producció",
+    "description": "No va partir d'una plantilla en blanc. Va partir d'una acadèmia de futbol real que necessitava deixar de perdre informació en fulls de càlcul.",
+    "steps": [
+      {
+        "tag": "El problema",
+        "title": "Una acadèmia de futbol real, ofegada en fulls de càlcul",
+        "description": "Una escola de tecnificació de futbol a Sant Vicenç dels Horts (Barcelona) portava alumnes, bons i assistència entre Excel, paper i WhatsApp. La informació es perdia i res escalava."
+      },
+      {
+        "tag": "La construcció",
+        "title": "Vaig dissenyar i desenvolupar un backoffice a mida",
+        "description": "Rols per a direcció, entrenadors i alumnes. Calendari de classes, bons que es descompten sols en passar llista, documentació amb permisos, missatgeria interna i notificacions. Sense plantilles genèriques."
+      },
+      {
+        "tag": "La prova",
+        "title": "Avui gestiona el dia a dia real, de manera autònoma",
+        "description": "La plataforma és en producció portant l'operació diària de l'acadèmia. La dissenyo, desenvolupo, desplego, aseguro i mantinc jo — sense agències ni equips externs de per mig."
+      },
+      {
+        "tag": "El producte",
+        "title": "Ara, la mateixa plataforma per a la teva acadèmia",
+        "description": "El que va començar resolent un problema propi s'obre a acadèmies de futbol, reforç escolar, idiomes i entrenament personal que necessiten el mateix: un únic panell que funciona de veritat."
+      }
+    ]
+  },
+  "features": {
+    "title": "Els mòduls que porten l'acadèmia real",
+    "description": "Res d'això és una demo d'aparador: són els mòduls que gestionen el dia a dia d'una escola de tecnificació real, a punt per a la teva acadèmia.",
+    "items": [
+      {
+        "title": "Alumnes i entrenadors",
+        "description": "Fitxes, seguiment, categories i grups. Cada perfil accessible en un clic, amb permisos segons el rol de qui el consulta."
+      },
+      {
+        "title": "Calendari de classes",
+        "description": "Sessions individuals i recurrents, assignació d'entrenadors i control de solapaments, sense dobles reserves."
+      },
+      {
+        "title": "Bons i membresies",
+        "description": "Es descompten sols en passar llista. Sense fulls de càlcul paral·lels ni persecucions manuals per saber qui té sessions pendents."
+      },
+      {
+        "title": "Documentació i missatgeria",
+        "description": "Material amb permisos per carpeta i xat intern entre direcció, entrenadors i alumnes, tot dins de la mateixa plataforma."
+      },
+      {
+        "title": "Notificacions i suport",
+        "description": "Avisos individuals o grupals i un sistema de tiquets intern per resoldre incidències sense perdre el fil."
+      }
+    ],
+    "security": {
+      "title": "Seguretat real, no d'anunci",
+      "description": "CSRF actiu, límit d'intents d'accés, contrasenyes amb bcrypt i permisos per rol des del primer desplegament. Auditada, no promesa."
+    }
+  },
+  "comparison": {
+    "title": "El que canvia, punt per punt",
+    "description": "Res de comparatives genèriques contra 'la competència': això és exactament el que substitueix la plataforma en el dia a dia real d'una acadèmia.",
+    "before": "Abans",
+    "after": "Ara",
+    "rows": [
+      {
+        "label": "Alumnes i fitxes",
+        "before": "Fulls de càlcul solts per grup, sense control de versions",
+        "after": "Un panell únic amb fitxes, categories i permisos per rol"
+      },
+      {
+        "label": "Assistència",
+        "before": "Paper al peu del camp, es traspassa a mà (si hi ha temps)",
+        "after": "Es passa llista des del mòbil i queda registrada a l'instant"
+      },
+      {
+        "label": "Bons i quotes",
+        "before": "Persecució manual per saber qui té sessions pendents",
+        "after": "Es descompten sols en passar llista, sense quadrar res a mà"
+      },
+      {
+        "label": "Comunicació",
+        "before": "Avisos dispersos en grups de WhatsApp, es perden entre missatges",
+        "after": "Missatgeria i notificacions dins de la mateixa plataforma"
+      },
+      {
+        "label": "Documentació",
+        "before": "Arxius solts sense control de qui els pot veure",
+        "after": "Carpetes amb permisos per rol, tot traçable"
+      },
+      {
+        "label": "Suport",
+        "before": "Sense canal fix, depens de qui trobis",
+        "after": "Tiquet intern + contacte directe amb qui construeix la plataforma"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "De tafanejar la demo a operar en producció",
+    "description": "Sense implementacions eternes ni comercials de per mig: comences provant-ho tu mateix.",
+    "steps": [
+      {
+        "title": "Explora la demo en directe",
+        "description": "Deixa el teu email, entra com a Direcció, Entrenador o Alumne, i tria el tipus d'acadèmia: futbol, reforç escolar, idiomes o entrenament personal."
+      },
+      {
+        "title": "Configurem la teva acadèmia",
+        "description": "Migrem alumnes, grups, horaris i bons. La plataforma s'adapta a com treballes tu, no a l'inrevés."
+      },
+      {
+        "title": "Comença a operar",
+        "description": "Calendari, bons, documentació i comunicació funcionant des del dia u, amb suport directe de qui la construeix."
+      }
+    ],
+    "cta": "Comença pel pas {number}: obre la demo"
+  },
+  "socialProof": {
+    "title": "El que va canviar en deixar d'improvisar",
+    "description": "Res de xifres inflades d'una empresa amb inversors darrere: això és el que es va resoldre de veritat a l'acadèmia on va néixer la plataforma.",
+    "stats": [
+      { "label": "mòduls integrats en un panell" },
+      { "label": "tipus d'acadèmia suportats" },
+      { "label": "rols amb permisos propis" },
+      { "label": "dissenyat i mantingut pel seu creador" }
+    ],
+    "proofPoints": [
+      {
+        "label": "Abans",
+        "title": "Excel, paper i WhatsApp",
+        "description": "Fitxes d'alumnes en fulls de càlcul solts, assistència en paper al peu del camp i avisos dispersos en grups de WhatsApp."
+      },
+      {
+        "label": "Ara",
+        "title": "Un únic panell operatiu",
+        "description": "Alumnes, bons i assistència centralitzats. Els bons es descompten sols en passar llista, sense fulls paral·lels que quadrar a mà."
+      },
+      {
+        "label": "Resultat",
+        "title": "Traçabilitat de cada alumne",
+        "description": "Historial complet per alumne i per grup, documentació amb permisos i un canal únic de comunicació amb entrenadors i famílies."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prova-ho tu mateix, sense parlar amb ningú primer",
+    "description": "Deixa el teu email, entra a la demo en directe, tria el teu rol i el tipus d'acadèmia. Si encaixa, parlem directament — sense comercials de per mig.",
+    "primary": "Explora la demo en directe",
+    "secondary": "Escriu-me directament"
+  },
+  "faq": {
+    "title": "Tot el que necessites saber",
+    "items": [
+      {
+        "question": "Puc provar-ho sense parlar amb ningú primer?",
+        "answer": "Sí. Només demanem el teu email per obrir la demo (així et puc avisar si milloro alguna cosa o ajudar-te amb la migració). A partir d'aquí explores la plataforma lliurement com a Direcció, Entrenador o Alumne, triant el tipus d'acadèmia: futbol, reforç escolar, idiomes o entrenament personal."
+      },
+      {
+        "question": "Això és una plantilla genèrica o un producte real?",
+        "answer": "És una plataforma en producció real: va néixer per gestionar el dia a dia d'una acadèmia de futbol i avui continua operant-hi, a més d'obrir-se a altres acadèmies."
+      },
+      {
+        "question": "Qui manté la plataforma?",
+        "answer": "La dissenyo, desenvolupo, desplego i mantinc jo directament. No hi ha agència ni equip extern de per mig, així que els canvis i el suport arriben sense intermediaris."
+      },
+      {
+        "question": "Com gestiona la seguretat de les dades dels alumnes?",
+        "answer": "Protecció CSRF activa, límit d'intents d'accés per compte i IP, contrasenyes amb bcrypt i permisos per rol a cada ruta. No és un afegit d'última hora, és part del disseny des del principi."
+      },
+      {
+        "question": "Serveix per a acadèmies que no són de futbol?",
+        "answer": "Sí. La demo permet explorar quatre verticals: acadèmies de futbol, reforç escolar, idiomes i entrenament personal. El model de rols, bons i calendari s'adapta a cadascuna."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Escriu-me directament",
+    "description": "Sense comercials ni formularis que es perden en un CRM: el missatge m'arriba a mi i et responc jo mateix.",
+    "emailLabel": "El teu email",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Explica'm sobre la teva acadèmia",
+    "messagePlaceholder": "Quin tipus d'acadèmia portes, quants alumnes, què fas servir ara mateix...",
+    "submit": "Envia el missatge",
+    "submitting": "Enviant...",
+    "sentTitle": "Missatge enviat",
+    "sentDescription": "Gràcies — et respondré a l'email que has deixat tan bon punt el llegeixi.",
+    "genericError": "No s'ha pogut enviar. Torna-ho a provar."
+  },
+  "footer": {
+    "description": "La plataforma de gestió nascuda en una acadèmia de futbol real, dissenyada, desplegada i mantinguda per una sola persona.",
+    "productHeading": "Producte",
+    "legalHeading": "Legal",
+    "contactHeading": "Contacte",
+    "demo": "Demo en directe",
+    "legalPrivacy": "Privacitat",
+    "legalTerms": "Termes",
+    "legalCookies": "Cookies",
+    "legalEsOnlyHint": "(només en castellà)",
+    "copyright": "© {year} {siteName}. Tots els drets reservats.",
+    "builtBy": "Construït i mantingut pel seu creador, sense agències de per mig.",
+    "share": "Comparteix",
+    "shareCopied": "Enllaç copiat"
+  },
+  "cookieConsent": {
+    "text": "Fem servir cookies pròpies i d'anàlisi (Google Analytics) per entendre com es fa servir aquesta web. El formulari de contacte funciona igual tant si les acceptes com si no. Més informació a la <link>Política de Cookies</link>.",
+    "reject": "Rebutja",
+    "accept": "Accepta"
+  },
+  "demoGate": {
+    "title": "Abans d'entrar a la demo",
+    "description": "Deixa'ns el teu email i t'obrim la demo en directe a l'instant. Sense spam: només l'fem servir per avisar-te de novetats o ajudar-te a migrar la teva acadèmia si t'interessa.",
+    "emailPlaceholder": "tu@email.com",
+    "submit": "Accedeix a la demo",
+    "submitting": "Enviant...",
+    "genericError": "No s'ha pogut enviar. Torna-ho a provar.",
+    "close": "Tanca"
+  },
+  "whatsapp": {
+    "ariaLabel": "Escriu-nos per WhatsApp"
+  },
+  "backToTop": {
+    "ariaLabel": "Torna a dalt"
+  }
+}
