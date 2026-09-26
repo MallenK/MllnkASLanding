@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1350">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Tokens: brand kit "Mallen'k Academy Software" (Moda), modo oscuro */
+      :root {
+        --bg: #111111;
+        --bg-2: #1e1c13;
+        --text: #ffffff;
+        --text-soft: #cfcfcf;
+        --text-muted: #9e9e9e;
+        --accent: #ffd21f;
+        --serif: "Instrument Serif", Georgia, serif;
+        --sans: "Bricolage Grotesque", "Inter", ui-sans-serif, system-ui, sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      #root {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: var(--sans);
+      }
+
+      /* ---------- Fondo: anillos concentricos ---------- */
+      #bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .ring {
+        position: absolute;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid rgba(255, 210, 31, 0.26);
+        box-shadow: inset 0 0 160px rgba(255, 210, 31, 0.20), 0 0 60px rgba(0, 0, 0, 0.55);
+      }
+      .ring .sheen {
+        position: absolute;
+        inset: -10%;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg, rgba(255, 210, 31, 0) 0deg, rgba(255, 210, 31, 0.38) 40deg, rgba(255, 210, 31, 0) 95deg, rgba(255, 210, 31, 0) 200deg, rgba(247, 211, 111, 0.26) 250deg, rgba(255, 210, 31, 0) 300deg);
+      }
+      #r6 { width: 2840px; height: 2840px; left: -1160px; top: -20px;  background: radial-gradient(circle, #15140d 0%, #0c0c0a 100%); }
+      #r5 { width: 2320px; height: 2320px; left: -890px;  top: 240px;  background: radial-gradient(circle, #1a190f 0%, #0e0e0b 100%); }
+      #r4 { width: 1840px; height: 1840px; left: -650px;  top: 480px;  background: radial-gradient(circle, #1d1b10 0%, #111110 100%); }
+      #r3 { width: 1380px; height: 1380px; left: -420px;  top: 710px;  background: radial-gradient(circle, #24210f 0%, #141410 100%); }
+      #r2 { width: 940px;  height: 940px;  left: -200px;  top: 930px;  background: radial-gradient(circle, #2b2710 0%, #171610 100%); }
+      #r1 { width: 520px;  height: 520px;  left: 10px;    top: 1140px; background: radial-gradient(circle, #3a3310 0%, #1c1a10 100%); }
+      #shade {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(10, 10, 8, 0.62) 0%, rgba(10, 10, 8, 0.18) 55%, rgba(10, 10, 8, 0.55) 100%);
+      }
+
+      /* ---------- Contenido ---------- */
+      #content {
+        position: absolute;
+        inset: 0;
+        padding: 0 84px;
+      }
+      #label {
+        position: absolute;
+        left: 84px;
+        top: 118px;
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--accent);
+        white-space: nowrap;
+      }
+      #headline {
+        position: absolute;
+        left: 84px;
+        right: 84px;
+        top: 200px;
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 140px;
+        line-height: 1.02;
+        letter-spacing: -0.01em;
+        color: var(--text);
+      }
+      .line {
+        display: block;
+        overflow: hidden;
+        padding: 0.03em 0 0.18em;
+        margin-bottom: -0.12em;
+        white-space: nowrap;
+      }
+      .line > span {
+        display: block;
+      }
+      .gold {
+        font-style: italic;
+        color: var(--accent);
+      }
+      #rule {
+        position: absolute;
+        left: 84px;
+        right: 84px;
+        top: 972px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.18);
+        transform-origin: left center;
+      }
+      #sub {
+        position: absolute;
+        left: 84px;
+        right: 84px;
+        top: 1010px;
+        font-family: var(--sans);
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 1.5;
+        color: var(--text-soft);
+      }
+      #sub span {
+        display: block;
+        white-space: nowrap;
+      }
+      #footer {
+        position: absolute;
+        left: 84px;
+        bottom: 84px;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+      #badge {
+        width: 68px;
+        height: 68px;
+        border-radius: 16px;
+        background: #1b1a14;
+        border: 2px solid rgba(255, 210, 31, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 42px;
+        color: var(--accent);
+      }
+      #url {
+        font-family: var(--sans);
+        font-size: 32px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-199x" id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1350">
+      <div data-hf-id="hf-pf0e" id="bg" class="clip" data-start="0" data-duration="10" data-track-index="0">
+        <div data-hf-id="hf-w81g" id="r6" class="ring"><div data-hf-id="hf-x5sz" class="sheen"></div></div>
+        <div data-hf-id="hf-4vxb" id="r5" class="ring"><div data-hf-id="hf-4p7n" class="sheen"></div></div>
+        <div data-hf-id="hf-0xta" id="r4" class="ring"><div data-hf-id="hf-4awm" class="sheen"></div></div>
+        <div data-hf-id="hf-9lp5" id="r3" class="ring"><div data-hf-id="hf-3wll" class="sheen"></div></div>
+        <div data-hf-id="hf-8u1c" id="r2" class="ring"><div data-hf-id="hf-3iak" class="sheen"></div></div>
+        <div data-hf-id="hf-jpiz" id="r1" class="ring"><div data-hf-id="hf-33zj" class="sheen"></div></div>
+        <div data-hf-id="hf-pwjg" id="shade"></div>
+      </div>
+
+      <div data-hf-id="hf-6xbd" id="content" class="clip" data-start="0" data-duration="10" data-track-index="1">
+        <div data-hf-id="hf-4dht" id="label">URPA Academy Software</div>
+
+        <h1 data-hf-id="hf-1vgv" id="headline">
+          <span data-hf-id="hf-6c9z" class="line"><span data-hf-id="hf-kcay">No encontré nada</span></span>
+          <span data-hf-id="hf-tvt3" class="line"><span data-hf-id="hf-cv3d">que gestionara bien</span></span>
+          <span data-hf-id="hf-thi2" class="line"><span data-hf-id="hf-nhpw">una academia.</span></span>
+          <span data-hf-id="hf-h18n" class="line gold"><span data-hf-id="hf-s93a" id="gold">Así que la hice yo.</span></span>
+        </h1>
+
+        <div data-hf-id="hf-8e4z" id="rule"></div>
+
+        <p data-hf-id="hf-wejy" id="sub">
+          <span data-hf-id="hf-0cks">Alumnos, entrenadores, calendario, bonos y</span>
+          <span data-hf-id="hf-ul5f">mensajería en un solo panel. En producción real en</span>
+          <span data-hf-id="hf-gvy6">una academia de fútbol de Barcelona.</span>
+        </p>
+
+        <div data-hf-id="hf-yo4s" id="footer">
+          <div data-hf-id="hf-6605" id="badge">M</div>
+          <div data-hf-id="hf-nos0" id="url">academiasoftware.vercel.app</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Fondo: anillos entran de dentro hacia fuera, luego respiran lento
+      tl.fromTo(
+        ".ring",
+        { scale: 0.55, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1.6, ease: "power3.out", stagger: { each: 0.12, from: "end" } },
+        0
+      );
+      tl.fromTo("#bg", { scale: 1 }, { scale: 1.05, duration: 10, ease: "none" }, 0);
+      tl.fromTo(".sheen", { rotation: 0 }, { rotation: 70, duration: 10, ease: "none" }, 0);
+
+      // Etiqueta
+      tl.fromTo("#label", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }, 0.4);
+
+      // Titular en tres lineas blancas
+      const whiteLines = document.querySelectorAll("#headline .line:not(.gold) > span");
+      tl.fromTo(whiteLines, { yPercent: 115 }, { yPercent: 0, duration: 0.95, ease: "power4.out", stagger: 0.32 }, 1.0);
+
+      // Remate dorado: llega tras una pausa
+      tl.fromTo("#gold", { yPercent: 120, x: -24 }, { yPercent: 0, x: 0, duration: 1.05, ease: "power4.out" }, 3.4);
+      tl.to("#gold", { textShadow: "0 0 46px rgba(255, 210, 31, 0.55)", duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, 4.7);
+
+      // Regla y texto de apoyo
+      tl.fromTo("#rule", { scaleX: 0 }, { scaleX: 1, duration: 1.0, ease: "power3.inOut" }, 5.5);
+      tl.fromTo("#sub span", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", stagger: 0.2 }, 6.0);
+
+      // Cierre: logo + URL
+      tl.fromTo("#badge", { scale: 0.55, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.8)" }, 8.0);
+      tl.fromTo("#url", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" }, 8.25);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
