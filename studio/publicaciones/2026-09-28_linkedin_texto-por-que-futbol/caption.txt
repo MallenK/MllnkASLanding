@@ -1,0 +1,11 @@
+Hace unos días presenté URPA. Hoy te cuento por qué empecé por las escuelas de fútbol.
+
+[Tu motivo real: qué viste, en qué escuela, qué pasaba a diario — 2–3 frases.]
+
+Lo que más se repite: convocatorias por WhatsApp, cuotas de las familias perseguidas por mensaje, entrenadores que no saben quién falta y un Excel que solo entiende una persona.
+
+No piden más funcionalidades. Piden dejar de tener la información repartida en cinco sitios.
+
+Voy a ir compartiendo aquí cómo lo construyo: lo que aprendo, lo que cambio y lo que no funciona.
+
+Si diriges o coordinas una escuela de fútbol, ¿cuántas herramientas usas hoy para llevarla?

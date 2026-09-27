@@ -50,3 +50,4 @@ studio/**/snapshots/
 studio/**/.thumbnails/
 studio/**/assets/music-candidates/
 studio/**/render-log*.txt
+studio/publicaciones/**/*.mp4

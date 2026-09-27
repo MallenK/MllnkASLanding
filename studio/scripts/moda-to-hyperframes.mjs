@@ -16,6 +16,7 @@
  *   --music-vol <0-1>      volumen de la música (0.4; los efectos no cambian)
  *   --copy <json>          sustituye líneas de texto: {"línea original":"línea nueva"} (no toca la canvas de Moda)
  *   --no-logo              sin logo URPA fijo (arriba a la izquierda, todo el vídeo)
+ *   --no-bar               sin barra de progreso inferior (para exportar imágenes fijas)
  *   --dump                 imprime las líneas exactas de cada página (para preparar --copy)
  *   --dry                  solo muestra las páginas interpretadas
  *
@@ -49,6 +50,7 @@ const MUSIC_OFFSET = Number(opt("music-offset", 0.43));
 const WITH_AUDIO = !flag("no-music");
 const MUSIC_VOL = Number(opt("music-vol", 0.4));
 const WITH_LOGO = !flag("no-logo");
+const WITH_BAR = !flag("no-bar");
 const COPY = opt("copy") ? JSON.parse(fs.readFileSync(path.resolve(opt("copy")), "utf8")) : {};
 const LOGO_GOLD = path.join(STUDIO, "brand/assets/urpa-logo-gold.png"); // sobre fondos oscuros
 const LOGO_BLACK = path.join(STUDIO, "brand/assets/urpa-logo-black.png"); // sobre fondos claros
@@ -162,7 +164,7 @@ function renderPage(page, i, N) {
             ${ctaHtml}
           </div>
           ${footerHtml}
-          <div class="track" style="background:${track}"><div id="bar${i}" class="fill" style="background:${fg}"></div></div>
+          ${WITH_BAR ? `<div class="track" style="background:${track}"><div id="bar${i}" class="fill" style="background:${fg}"></div></div>` : ""}
         </div>`;
 }
 
@@ -252,7 +254,7 @@ const SCRIPT = `
         if (t.badge) tl.fromTo(id + " .badge", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)" }, t.t0 + 0.06);
         if (t.foot) tl.fromTo(id + " .foot", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, t.t0 + 0.5);
         if (${WITH_LOGO}) { tl.set("#logo", { opacity: t.light ? 0 : 1 }, t.t0); tl.set("#logob", { opacity: t.light ? 1 : 0 }, t.t0); }
-        tl.fromTo("#bar" + i, { scaleX: i / N }, { scaleX: (i + 1) / N, duration: t.t1 - t.t0, ease: "none" }, t.t0);
+        if (${WITH_BAR}) tl.fromTo("#bar" + i, { scaleX: i / N }, { scaleX: (i + 1) / N, duration: t.t1 - t.t0, ease: "none" }, t.t0);
       });
       window.__timelines["main"] = tl;
       tl.seek(0);`;

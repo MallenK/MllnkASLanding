@@ -1,0 +1,15 @@
+¿Cuántas herramientas usas para gestionar 150 jugadores?
+
+Un Excel para las inscripciones.
+Un grupo de WhatsApp por cada equipo o categoría.
+Un calendario compartido para entrenos y partidos.
+Una hoja aparte para las cuotas.
+Y una carpeta de mensajes sueltos para todo lo que no encaja en ningún sitio.
+
+Ninguna herramienta está mal. El problema es que ninguna habla con las demás.
+
+Así que cuando falta un entrenador, nadie tiene la visión completa. Cuando una familia pregunta por un pago, hay que buscar en tres sitios. Y cuando la escuela crece, el sistema no crece con ella: se rompe.
+
+No es un problema de organización. Es un problema de herramientas pensadas para una sola cosa, no para el día a día completo de una escuela de fútbol.
+
+Es exactamente el problema para el que estoy construyendo URPA.

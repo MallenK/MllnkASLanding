@@ -1,0 +1,192 @@
+[
+  {
+    "fecha": "2026-09-28",
+    "canal": "linkedin",
+    "slug": "texto-por-que-futbol",
+    "titulo": "Texto: por qué empecé por las escuelas de fútbol",
+    "estado": "Borrador (falta tu motivo real)",
+    "caption": "Hace unos días presenté URPA. Hoy te cuento por qué empecé por las escuelas de fútbol.\n\n[Tu motivo real: qué viste, en qué escuela, qué pasaba a diario — 2–3 frases.]\n\nLo que más se repite: convocatorias por WhatsApp, cuotas de las familias perseguidas por mensaje, entrenadores que no saben quién falta y un Excel que solo entiende una persona.\n\nNo piden más funcionalidades. Piden dejar de tener la información repartida en cinco sitios.\n\nVoy a ir compartiendo aquí cómo lo construyo: lo que aprendo, lo que cambio y lo que no funciona.\n\nSi diriges o coordinas una escuela de fútbol, ¿cuántas herramientas usas hoy para llevarla?",
+    "archivos": []
+  },
+  {
+    "fecha": "2026-09-29",
+    "canal": "instagram",
+    "slug": "reel-3-senales",
+    "titulo": "Reel «3 señales»",
+    "estado": "Listo sin música (con música: bloqueado por licencia)",
+    "caption": "¿Gestionas tu escuela de fútbol con más de 3 herramientas?\n\nUn Excel Y varios grupos de WhatsApp para convocatorias y pagos. Cuando falta un entrenador, nadie tiene la vista completa. Y cobrar la cuota del mes implica perseguir a las familias por mensaje.\n\nSi te suena, no es un problema tuyo: es un problema de sistema.\n\nTe enseño cómo lo resuelvo → escríbeme por DM.\n\n#EscuelaDeFútbol #FútbolBase #GestiónDeportiva #ClubesDeFútbol #EntrenadoresDeFútbol",
+    "archivos": [
+      {
+        "origen": "hf-reel-3-senales/renders/reel-3-senales-v2-sin-musica.mp4",
+        "nombre": "reel-3-senales_SIN-MUSICA.mp4"
+      },
+      {
+        "origen": "hf-reel-3-senales/renders/reel-3-senales-v2-musica-baja.mp4",
+        "nombre": "reel-3-senales_CON-MUSICA_bloqueado-por-licencia.mp4"
+      }
+    ]
+  },
+  {
+    "fecha": "2026-09-30",
+    "canal": "linkedin",
+    "slug": "texto-150-jugadores",
+    "titulo": "Texto: ¿Cuántas herramientas usas para gestionar 150 jugadores?",
+    "estado": "Borrador escrito (revisar)",
+    "caption": "¿Cuántas herramientas usas para gestionar 150 jugadores?\n\nUn Excel para las inscripciones.\nUn grupo de WhatsApp por cada equipo o categoría.\nUn calendario compartido para entrenos y partidos.\nUna hoja aparte para las cuotas.\nY una carpeta de mensajes sueltos para todo lo que no encaja en ningún sitio.\n\nNinguna herramienta está mal. El problema es que ninguna habla con las demás.\n\nAsí que cuando falta un entrenador, nadie tiene la visión completa. Cuando una familia pregunta por un pago, hay que buscar en tres sitios. Y cuando la escuela crece, el sistema no crece con ella: se rompe.\n\nNo es un problema de organización. Es un problema de herramientas pensadas para una sola cosa, no para el día a día completo de una escuela de fútbol.\n\nEs exactamente el problema para el que estoy construyendo URPA.",
+    "archivos": []
+  },
+  {
+    "fecha": "2026-10-01",
+    "canal": "instagram",
+    "slug": "carrusel-5-cosas",
+    "titulo": "Carrusel «5 cosas» (7 imágenes)",
+    "estado": "Listo",
+    "caption": "5 cosas que deberías poder ver de un vistazo cada semana en tu escuela de fútbol (desliza) →\n\nJugadores activos y bajas · asistencia por equipo · cuotas de las familias pendientes · entrenadores con horas descuadradas o entrenos sin cubrir · equipos con plazas libres vs. lista de espera.\n\nSi para saber alguna tienes que preguntar, buscar en un Excel o escribir por WhatsApp, tu escuela ya necesita un sistema, no más hojas de cálculo.\n\nGuárdalo para tu próxima reunión de temporada.\n\n#EscuelaDeFútbol #FútbolBase #GestiónDeportiva #ClubesDeFútbol",
+    "archivos": [
+      {
+        "origen": "exports/ig-carrusel-5-cosas/01.png",
+        "nombre": "01.png"
+      },
+      {
+        "origen": "exports/ig-carrusel-5-cosas/02.png",
+        "nombre": "02.png"
+      },
+      {
+        "origen": "exports/ig-carrusel-5-cosas/03.png",
+        "nombre": "03.png"
+      },
+      {
+        "origen": "exports/ig-carrusel-5-cosas/04.png",
+        "nombre": "04.png"
+      },
+      {
+        "origen": "exports/ig-carrusel-5-cosas/05.png",
+        "nombre": "05.png"
+      },
+      {
+        "origen": "exports/ig-carrusel-5-cosas/06.png",
+        "nombre": "06.png"
+      },
+      {
+        "origen": "exports/ig-carrusel-5-cosas/07.png",
+        "nombre": "07.png"
+      }
+    ]
+  },
+  {
+    "fecha": "2026-10-02",
+    "canal": "linkedin",
+    "slug": "carrusel-pdf-5-senales",
+    "titulo": "Carrusel PDF «5 señales»",
+    "estado": "Listo",
+    "caption": "5 señales de que tu escuela de fútbol ha crecido más rápido que tu sistema de gestión (desliza) →\n\nNinguna de estas señales significa que lo estés haciendo mal. Significa que la escuela ha crecido y las herramientas se han quedado atrás.\n\n¿Cuántas de las 5 te suenan?\n\n#GestiónDeportiva #FútbolBase #EscuelasDeFútbol\n\n(El enlace, en el primer comentario. Título del documento: \"5 señales de que tu escuela de fútbol ha crecido más rápido que tu sistema de gestión\".)",
+    "archivos": [
+      {
+        "origen": "exports/li-5-senales-futbol-sin-marca.pdf",
+        "nombre": "5-senales-escuela-de-futbol.pdf"
+      }
+    ]
+  },
+  {
+    "fecha": "2026-10-03",
+    "canal": "instagram",
+    "slug": "stories-sobre-urpa",
+    "titulo": "Stories «Sobre URPA» (14 tarjetas)",
+    "estado": "Listo",
+    "nota": "Publicar las 14 tarjetas en orden (01 a 14). En la última, sticker de mensaje con «Pídenos una demo».",
+    "archivos": [
+      {
+        "origen": "exports/stories-urpa/01.png",
+        "nombre": "01.png"
+      },
+      {
+        "origen": "exports/stories-urpa/02.png",
+        "nombre": "02.png"
+      },
+      {
+        "origen": "exports/stories-urpa/03.png",
+        "nombre": "03.png"
+      },
+      {
+        "origen": "exports/stories-urpa/04.png",
+        "nombre": "04.png"
+      },
+      {
+        "origen": "exports/stories-urpa/05.png",
+        "nombre": "05.png"
+      },
+      {
+        "origen": "exports/stories-urpa/06.png",
+        "nombre": "06.png"
+      },
+      {
+        "origen": "exports/stories-urpa/07.png",
+        "nombre": "07.png"
+      },
+      {
+        "origen": "exports/stories-urpa/08.png",
+        "nombre": "08.png"
+      },
+      {
+        "origen": "exports/stories-urpa/09.png",
+        "nombre": "09.png"
+      },
+      {
+        "origen": "exports/stories-urpa/10.png",
+        "nombre": "10.png"
+      },
+      {
+        "origen": "exports/stories-urpa/11.png",
+        "nombre": "11.png"
+      },
+      {
+        "origen": "exports/stories-urpa/12.png",
+        "nombre": "12.png"
+      },
+      {
+        "origen": "exports/stories-urpa/13.png",
+        "nombre": "13.png"
+      },
+      {
+        "origen": "exports/stories-urpa/14.png",
+        "nombre": "14.png"
+      }
+    ]
+  },
+  {
+    "fecha": "2026-10-08",
+    "canal": "instagram",
+    "slug": "reel-convocatorias",
+    "titulo": "Reel «¿Cómo convocas a tu equipo para el sábado?»",
+    "estado": "Listo sin música (con música: bloqueado por licencia)",
+    "caption": "¿Cómo convocas a tu equipo para el sábado?\n\nPublicas la convocatoria en el grupo y se pierde entre decenas de mensajes. Unos confirman en el grupo, otros por privado y otros no confirman. Y el sábado por la mañana nadie sabe con cuántos jugadores cuentas.\n\nNo es falta de compromiso. Es un problema de sistema.\n\nTe enseño cómo lo resuelvo → escríbenos por DM o entra en el enlace del perfil.\n\n#EscuelaDeFútbol #FútbolBase #Convocatorias #EntrenadoresDeFútbol #GestiónDeportiva",
+    "archivos": [
+      {
+        "origen": "hf-reel-convocatorias/renders/hf-reel-convocatorias-sin-musica.mp4",
+        "nombre": "reel-convocatorias_SIN-MUSICA.mp4"
+      },
+      {
+        "origen": "hf-reel-convocatorias/renders/hf-reel-convocatorias.mp4",
+        "nombre": "reel-convocatorias_CON-MUSICA_bloqueado-por-licencia.mp4"
+      }
+    ]
+  },
+  {
+    "fecha": "2026-10-17",
+    "canal": "instagram",
+    "slug": "reel-cuantas-apps",
+    "titulo": "Reel «¿Cuántas apps usas hoy para gestionar tu escuela?»",
+    "estado": "Listo sin música (con música: bloqueado por licencia)",
+    "caption": "¿Cuántas apps usas hoy para gestionar tu escuela de fútbol?\n\nWhatsApp para convocatorias y avisos. Excel para jugadores y cuotas. Un calendario para entrenos y partidos.\n\nTres sitios. Ninguno habla con los demás.\n\nTe enseño cómo lo resuelvo → escríbenos por DM o entra en el enlace del perfil.\n\n#EscuelaDeFútbol #FútbolBase #GestiónDeportiva #ClubesDeFútbol",
+    "archivos": [
+      {
+        "origen": "hf-reel-cuantas-apps/renders/hf-reel-cuantas-apps-sin-musica.mp4",
+        "nombre": "reel-cuantas-apps_SIN-MUSICA.mp4"
+      },
+      {
+        "origen": "hf-reel-cuantas-apps/renders/hf-reel-cuantas-apps.mp4",
+        "nombre": "reel-cuantas-apps_CON-MUSICA_bloqueado-por-licencia.mp4"
+      }
+    ]
+  }
+]
