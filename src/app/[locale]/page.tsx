@@ -11,6 +11,7 @@ import { Comparison } from "@/components/sections/Comparison";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { CTASection } from "@/components/sections/CTASection";
+import { WebServices } from "@/components/sections/WebServices";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { SITE_URL } from "@/lib/constants";
@@ -83,6 +84,7 @@ export default async function Home({ params }: PageProps) {
         <HowItWorks />
         <SocialProof />
         <CTASection />
+        <WebServices />
         <FAQ />
         <Contact />
       </main>

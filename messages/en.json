@@ -19,7 +19,7 @@
     "howItWorks": "How it works",
     "faq": "FAQ",
     "contact": "Contact",
-    "demo": "Explore the live demo",
+    "demo": "Book demo",
     "login": "Log in",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
@@ -32,13 +32,13 @@
   },
   "hero": {
     "mockAlt": "URPA Academy Software admin dashboard showing the calendar, active students and upcoming classes",
-    "titleLine1": "Your academy, fully digitized,",
-    "titleHighlight": "centralized in one dashboard.",
-    "description": "Students, schedules, class passes, documents and notices, all in one place. I built it for a football academy in Barcelona because nothing out there did this well — and I still run it myself: I develop it, deploy it, and answer if something breaks.",
-    "ctaPrimary": "Explore the live demo",
+    "titleLine1": "Your football academy,",
+    "titleHighlight": "without WhatsApp or spreadsheets.",
+    "description": "Students, schedules, passes, coach notes and video files, all in one place. I built it for a football academy in Barcelona because nothing out there did this well — and I still run it myself: I develop it, deploy it, and answer if something breaks.",
+    "ctaPrimary": "Book your 15-min demo",
     "ctaSecondary": "Read the story",
     "badgeLive": "Actually running a football academy in Barcelona",
-    "badgeEmail": "Just your email to get in",
+    "badgeEmail": "Guided 15-min demo",
     "badgeBot": "You get a reply from me, not a bot",
     "scrollHint": "Keep scrolling"
   },
@@ -79,6 +79,14 @@
       {
         "title": "Class scheduling",
         "description": "One-off and recurring sessions, coach assignment and overlap control, so there are never double bookings."
+      },
+      {
+        "title": "Coach observations",
+        "description": "Personal notes and comments from the coach for each session. Every player's history is logged and accessible to management."
+      },
+      {
+        "title": "Videos and files",
+        "description": "Upload training or match videos for the coach to review with families or players. Everything organised by team and session."
       },
       {
         "title": "Passes and memberships",
@@ -158,8 +166,8 @@
     "description": "No endless onboarding, no sales calls: you start by trying it yourself.",
     "steps": [
       {
-        "title": "Explore the live demo",
-        "description": "Leave your email, log in as Management, Coach or Student, and pick the academy type: football, tutoring, languages or personal training."
+        "title": "Book your 15-min demo",
+        "description": "Pick a date and time from the website. I'll walk you through the platform in a guided session tailored to your academy — no self-serve access, so you see the real value from minute one."
       },
       {
         "title": "We set up your academy",
@@ -167,10 +175,10 @@
       },
       {
         "title": "Start running on it",
-        "description": "Scheduling, passes, documentation and communication working from day one, with direct support from the person who builds it."
+        "description": "Scheduling, passes, coach observations, videos and communication working from day one, with direct support from the person who builds it."
       }
     ],
-    "cta": "Start at step {number}: open the demo"
+    "cta": "Start at step {number}: book demo"
   },
   "socialProof": {
     "title": "What changed once we stopped improvising",
@@ -208,17 +216,37 @@
     ]
   },
   "cta": {
-    "title": "Try it yourself, no need to talk to anyone first",
-    "description": "Leave your email, enter the live demo, pick your role and academy type. If it fits, we talk directly — no salespeople involved.",
-    "primary": "Explore the live demo",
+    "title": "Book your 15-minute demo",
+    "description": "I'll walk you through the platform in a guided session tailored to your academy. No salespeople — we talk directly.",
+    "primary": "Book demo",
     "secondary": "Write to me directly"
+  },
+  "webServices": {
+    "title": "We also design and build your website",
+    "description": "Your academy needs more than a backoffice — it needs a professional online presence that builds trust with families. We build it for you.",
+    "items": [
+      {
+        "title": "Custom professional website",
+        "description": "Designed for your academy, with your brand and your tone. It's not a WordPress template: it's a fast, modern site optimised so families find you on Google."
+      },
+      {
+        "title": "Mobile-first",
+        "description": "Over 80% of families search from their phone. Your site will look perfect on any screen, with instant load times."
+      },
+      {
+        "title": "Ready to convert",
+        "description": "Contact forms, WhatsApp integration, local SEO and a services page. Everything so families find you and reach out."
+      }
+    ],
+    "combo": "Management platform + professional website: the complete solution for your academy.",
+    "cta": "Let's talk about your website"
   },
   "faq": {
     "title": "Everything you need to know",
     "items": [
       {
-        "question": "Can I try it without talking to anyone first?",
-        "answer": "Yes. We only ask for your email to open the demo (so I can reach you if I ship an improvement or help with a migration). From there you explore the platform freely as Management, Coach or Student, picking the academy type: football, tutoring, languages or personal training."
+        "question": "How can I see the platform?",
+        "answer": "Book a guided 15-minute demo from the website. I'll walk you through the platform in a session tailored to your academy, so you can see how it fits your real day-to-day. No salespeople — we talk directly."
       },
       {
         "question": "Is this a generic template or a real product?",
@@ -235,6 +263,10 @@
       {
         "question": "Does it work for academies that aren't football?",
         "answer": "Yes. The demo lets you explore four verticals: football academies, tutoring, languages and personal training. The roles, passes and scheduling model adapt to each one."
+      },
+      {
+        "question": "Do you also build websites?",
+        "answer": "Yes. We design and develop professional websites for academies: fast, mobile-first, with local SEO and ready to attract families. If you get the platform and the website together, you have the complete solution with no third parties involved."
       }
     ]
   },
@@ -272,10 +304,10 @@
     "accept": "Accept"
   },
   "demoGate": {
-    "title": "Before you enter the demo",
-    "description": "Leave your email and we'll open the live demo right away. No spam: we only use it to let you know about improvements or help you migrate your academy if you're interested.",
+    "title": "Book your 15-min demo",
+    "description": "Book a guided session to see the platform tailored to your academy. No spam: we only contact you for the demo and updates.",
     "emailPlaceholder": "you@email.com",
-    "submit": "Enter the demo",
+    "submit": "Book demo",
     "submitting": "Sending...",
     "genericError": "Couldn't send it. Please try again.",
     "close": "Close"

@@ -1,10 +1,14 @@
 Hace unos días presenté URPA. Hoy te cuento por qué empecé por las escuelas de fútbol.
 
-[Tu motivo real: qué viste, en qué escuela, qué pasaba a diario — 2–3 frases.]
+Un amigo dirige una academia de tecnificación en Barcelona. Me pidió ayuda para digitalizar la gestión: convocatorias por WhatsApp, cuotas perseguidas por mensaje, un Excel que solo entendía él. Le construí una solución a medida y el cambio en su forma de trabajar fue inmediato.
 
-Lo que más se repite: convocatorias por WhatsApp, cuotas de las familias perseguidas por mensaje, entrenadores que no saben quién falta y un Excel que solo entiende una persona.
+Está contento. Yo estoy orgulloso del resultado. Y lo que vi es que su problema no era único.
+
+Convocatorias por WhatsApp, cuotas de las familias perseguidas por mensaje, entrenadores que no saben quién falta y un Excel que solo entiende una persona. Se repite en cada escuela.
 
 No piden más funcionalidades. Piden dejar de tener la información repartida en cinco sitios.
+
+Así que decidí lanzarlo como producto. La idea es seguir implementando y mejorando URPA para crecer junto con mis clientes.
 
 Voy a ir compartiendo aquí cómo lo construyo: lo que aprendo, lo que cambio y lo que no funciona.
 

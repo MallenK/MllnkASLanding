@@ -10,8 +10,17 @@
     "updated_at": "2026-09-21T15:44:08.044077",
     "company_name": "URPA Academy Software",
     "company_url": "https://academiasoftware.vercel.app",
-    "company_description": "Mallen'k Academy Software es una plataforma de gesti├│n para academias deportivas y educativas. Centraliza alumnos, entrenadores, calendarios, bonos, documentaci├│n, mensajer├¡a y notificaciones en un ├║nico panel. Nacida de las necesidades reales de una academia de f├║tbol en Barcelona, est├í dise├▒ada, desplegada y mantenida directamente por su creador.",
-    "tagline": "La gesti├│n de tu academia, centralizada",
+    "company_description": "URPA Academy Software ayuda a directores de academias de fútbol a centralizar la gestión, pagos y comunicación de la escuela sin depender de grupos de WhatsApp ni hojas de Excel dispersas. Nacida de las necesidades reales de una academia de tecnificación en Barcelona.",
+    "tagline": "Centraliza tu academia de fútbol — sin WhatsApp ni Excel",
+    "brand_hierarchy": {
+      "parent_brand": "URPA",
+      "parent_description": "Marca paraguas de soluciones digitales",
+      "product": "URPA Academy Software",
+      "services": ["Desarrollo web para academias"],
+      "future_lines": ["URPA Camping Software"]
+    },
+    "value_proposition": "Ayudamos a directores de academias de fútbol a centralizar la gestión, pagos y comunicación de la escuela sin depender de grupos de WhatsApp ni hojas de Excel dispersas — y si necesitan presencia online, también les diseñamos y desarrollamos la web.",
+    "icp_summary": "Directores, fundadores o administradores de academias de fútbol y escuelas de tecnificación, 30 a 300 alumnos",
     "brand_values": [
       "practicidad",
       "transparencia",

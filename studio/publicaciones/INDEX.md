@@ -12,4 +12,6 @@ Cada carpeta = una pieza lista para subir (archivos + `caption.txt`). Las piezas
 | 2026-10-02 | vie | LinkedIn | Carrusel PDF «5 señales» | Listo | `2026-10-02_linkedin_carrusel-pdf-5-senales/` |
 | 2026-10-03 | sáb | Instagram | Stories «Sobre URPA» (14 tarjetas) | Listo | `2026-10-03_instagram_stories-sobre-urpa/` |
 | 2026-10-08 | jue | Instagram | Reel «¿Cómo convocas a tu equipo para el sábado?» | Listo sin música (con música: bloqueado por licencia) | `2026-10-08_instagram_reel-convocatorias/` |
+| 2026-10-12 | lun | LinkedIn | Carrusel PDF «Cómo organizar los equipos sin que dependa de una sola persona» | Listo | `2026-10-12_linkedin_carrusel-pdf-organizar-equipos/` |
+| 2026-10-15 | jue | Instagram | Carrusel «4 tipos de sesiones» (6 imágenes) | Listo | `2026-10-15_instagram_carrusel-4-tipos-sesiones/` |
 | 2026-10-17 | sáb | Instagram | Reel «¿Cuántas apps usas hoy para gestionar tu escuela?» | Listo sin música (con música: bloqueado por licencia) | `2026-10-17_instagram_reel-cuantas-apps/` |

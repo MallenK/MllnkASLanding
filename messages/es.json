@@ -19,7 +19,7 @@
     "howItWorks": "Cómo funciona",
     "faq": "Preguntas",
     "contact": "Contacto",
-    "demo": "Explorar demo en vivo",
+    "demo": "Agendar demo",
     "login": "Iniciar sesión",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
@@ -32,13 +32,13 @@
   },
   "hero": {
     "mockAlt": "Panel de administración de URPA Academy Software con calendario, alumnos activos y próximas clases",
-    "titleLine1": "La digitalización de tu academia,",
-    "titleHighlight": "centralizada en un panel.",
-    "description": "Alumnos, calendario, bonos, documentación y avisos, todo en el mismo sitio. La construí para una academia de fútbol en Barcelona porque no encontré nada que hiciera esto bien — y la sigo llevando yo: la desarrollo, la despliego y respondo si algo falla.",
-    "ctaPrimary": "Explorar demo en vivo",
+    "titleLine1": "La gestión de tu academia de fútbol,",
+    "titleHighlight": "sin WhatsApp ni Excel.",
+    "description": "Alumnos, calendario, bonos, comentarios del entrenador y archivos de vídeo, todo en el mismo sitio. La construí para una academia de tecnificación en Barcelona porque no encontré nada que hiciera esto bien — y la sigo llevando yo: la desarrollo, la despliego y respondo si algo falla.",
+    "ctaPrimary": "Reserva tu demo de 15 min",
     "ctaSecondary": "Ver la historia",
     "badgeLive": "En uso real en una academia de fútbol en Barcelona",
-    "badgeEmail": "Solo tu email para entrar",
+    "badgeEmail": "Demo guiada de 15 min",
     "badgeBot": "Te respondo yo, no un bot",
     "scrollHint": "Sigue bajando"
   },
@@ -79,6 +79,14 @@
       {
         "title": "Calendario de clases",
         "description": "Sesiones individuales y recurrentes, asignación de entrenadores y control de solapamientos, sin dobles reservas."
+      },
+      {
+        "title": "Observaciones del entrenador",
+        "description": "Comentarios y notas personales del entrenador por cada sesión. El historial de cada jugador queda registrado y accesible para dirección."
+      },
+      {
+        "title": "Vídeos y archivos",
+        "description": "Sube vídeos de entrenos o partidos para que el entrenador los revise con las familias o los jugadores. Todo organizado por equipo y sesión."
       },
       {
         "title": "Bonos y membresías",
@@ -158,8 +166,8 @@
     "description": "Sin implementaciones eternas ni comerciales de por medio: empiezas probando tú mismo.",
     "steps": [
       {
-        "title": "Explora la demo en vivo",
-        "description": "Deja tu email, entra como Dirección, Entrenador o Alumno, y elige el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal."
+        "title": "Agenda tu demo de 15 min",
+        "description": "Elige fecha y hora desde la web. Te enseño la plataforma en una sesión guiada adaptada a tu academia — sin acceso libre, para que veas el valor real desde el primer minuto."
       },
       {
         "title": "Configuramos tu academia",
@@ -167,10 +175,10 @@
       },
       {
         "title": "Empieza a operar",
-        "description": "Calendario, bonos, documentación y comunicación funcionando desde el día uno, con soporte directo de quien la construye."
+        "description": "Calendario, bonos, observaciones del entrenador, vídeos y comunicación funcionando desde el día uno, con soporte directo de quien la construye."
       }
     ],
-    "cta": "Empezar por el paso {number}: abrir la demo"
+    "cta": "Empezar por el paso {number}: agendar demo"
   },
   "socialProof": {
     "title": "Lo que cambió al dejar de improvisar",
@@ -208,17 +216,37 @@
     ]
   },
   "cta": {
-    "title": "Pruébalo tú mismo, sin hablar con nadie primero",
-    "description": "Deja tu email, entra en la demo en vivo, elige tu rol y el tipo de academia. Si encaja, hablamos directamente conmigo — sin comerciales de por medio.",
-    "primary": "Explorar demo en vivo",
+    "title": "Reserva tu demo de 15 minutos",
+    "description": "Te enseño la plataforma en una sesión guiada adaptada a tu academia. Sin comerciales de por medio — hablamos directamente.",
+    "primary": "Agendar demo",
     "secondary": "Escribirme directamente"
+  },
+  "webServices": {
+    "title": "También diseñamos y desarrollamos tu web",
+    "description": "Tu academia necesita más que un backoffice: necesita una presencia online profesional que transmita confianza a las familias. Nosotros la construimos.",
+    "items": [
+      {
+        "title": "Web profesional a medida",
+        "description": "Diseñada para tu academia, con tu marca y tu tono. No es una plantilla de WordPress: es un sitio rápido, moderno y optimizado para que te encuentren en Google."
+      },
+      {
+        "title": "Adaptada a móvil",
+        "description": "Más del 80 % de las familias te buscan desde el móvil. Tu web se verá perfecta en cualquier pantalla, con carga instantánea."
+      },
+      {
+        "title": "Lista para captar",
+        "description": "Formularios de contacto, integración con WhatsApp, SEO local y página de servicios. Todo para que las familias te encuentren y te escriban."
+      }
+    ],
+    "combo": "Plataforma de gestión + web profesional: la solución completa para tu academia.",
+    "cta": "Hablemos de tu web"
   },
   "faq": {
     "title": "Todo lo que necesitas saber",
     "items": [
       {
-        "question": "¿Puedo probarlo sin hablar con nadie primero?",
-        "answer": "Sí. Solo pedimos tu email para abrir la demo (así puedo avisarte si mejoro algo o ayudarte con la migración). A partir de ahí exploras la plataforma libremente como Dirección, Entrenador o Alumno, eligiendo el tipo de academia: fútbol, refuerzo escolar, idiomas o entrenamiento personal."
+        "question": "¿Cómo puedo ver la plataforma?",
+        "answer": "Agenda una demo guiada de 15 minutos desde la web. Te enseño la plataforma en una sesión adaptada a tu academia, para que veas cómo encaja con tu operativa real. Sin comerciales de por medio — hablamos directamente."
       },
       {
         "question": "¿Esto es una plantilla genérica o un producto real?",
@@ -235,6 +263,10 @@
       {
         "question": "¿Sirve para academias que no son de fútbol?",
         "answer": "Sí. La demo permite explorar cuatro verticales: academias de fútbol, refuerzo escolar, idiomas y entrenamiento personal. El modelo de roles, bonos y calendario se adapta a cada una."
+      },
+      {
+        "question": "¿También hacéis páginas web?",
+        "answer": "Sí. Diseñamos y desarrollamos webs profesionales para academias: rápidas, adaptadas a móvil, con SEO local y listas para captar familias. Si contratas la plataforma y la web juntas, tienes la solución completa sin depender de terceros."
       }
     ]
   },
@@ -272,10 +304,10 @@
     "accept": "Aceptar"
   },
   "demoGate": {
-    "title": "Antes de entrar a la demo",
-    "description": "Déjanos tu email y te abrimos la demo en vivo al momento. Sin spam: solo lo usamos para avisarte de novedades o ayudarte a migrar tu academia si te interesa.",
+    "title": "Reserva tu demo de 15 min",
+    "description": "Agenda una sesión guiada para ver la plataforma adaptada a tu academia. Sin spam: solo te contactamos para la demo y novedades.",
     "emailPlaceholder": "tu@email.com",
-    "submit": "Acceder a la demo",
+    "submit": "Agendar demo",
     "submitting": "Enviando...",
     "genericError": "No se pudo enviar. Inténtalo de nuevo.",
     "close": "Cerrar"

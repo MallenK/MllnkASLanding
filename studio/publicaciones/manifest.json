@@ -188,5 +188,53 @@
         "nombre": "reel-cuantas-apps_CON-MUSICA_bloqueado-por-licencia.mp4"
       }
     ]
+  },
+  {
+    "fecha": "2026-10-12",
+    "canal": "linkedin",
+    "slug": "carrusel-pdf-organizar-equipos",
+    "titulo": "Carrusel PDF «Cómo organizar los equipos sin que dependa de una sola persona»",
+    "estado": "Listo",
+    "caption": "Cómo organizar los equipos de tu escuela de fútbol sin que dependa de una sola persona (desliza) →\n\nSi hay una persona que «lo sabe todo» —quién juega dónde, quién paga, quién entrena a quién—, tu escuela tiene un punto único de fallo.\n\nCuatro cosas que ayudan a repartirlo. ¿Cuál de las 4 te falta hoy?\n\n#GestiónDeportiva #FútbolBase #EscuelasDeFútbol",
+    "archivos": [
+      {
+        "origen": "exports/li-organizar-equipos.pdf",
+        "nombre": "organizar-equipos-escuela-de-futbol.pdf"
+      }
+    ]
+  },
+  {
+    "fecha": "2026-10-15",
+    "canal": "instagram",
+    "slug": "carrusel-4-tipos-sesiones",
+    "titulo": "Carrusel «4 tipos de sesiones» (6 imágenes)",
+    "estado": "Listo",
+    "caption": "4 tipos de sesiones que cualquier escuela de fútbol debería poder gestionar (desliza) →\n\nEntrenos semanales, partidos, torneos y tecnificación. Si cada uno vive en un sitio distinto —un calendario, un grupo de WhatsApp, un Excel—, cuesta ver la semana completa.\n\n¿Cuántos gestionas hoy en el mismo sitio? Cuéntamelo en los comentarios.\n\n#EscuelaDeFútbol #FútbolBase #GestiónDeportiva #ClubesDeFútbol",
+    "archivos": [
+      {
+        "origen": "exports/ig-4-tipos-sesiones/01.png",
+        "nombre": "01.png"
+      },
+      {
+        "origen": "exports/ig-4-tipos-sesiones/02.png",
+        "nombre": "02.png"
+      },
+      {
+        "origen": "exports/ig-4-tipos-sesiones/03.png",
+        "nombre": "03.png"
+      },
+      {
+        "origen": "exports/ig-4-tipos-sesiones/04.png",
+        "nombre": "04.png"
+      },
+      {
+        "origen": "exports/ig-4-tipos-sesiones/05.png",
+        "nombre": "05.png"
+      },
+      {
+        "origen": "exports/ig-4-tipos-sesiones/06.png",
+        "nombre": "06.png"
+      }
+    ]
   }
 ]

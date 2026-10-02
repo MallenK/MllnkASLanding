@@ -7,7 +7,7 @@ precios inventados. Donde falta un dato, va entre `[CORCHETES]`.
 
 - Nombre: URPA Academy Software
 - URL: https://academiasoftware.vercel.app
-- Demo: se accede desde la web (pide un email)
+- Demo: agenda una sesión guiada de 15 min desde la web
 - Contacto: mllnkacademiasoftware@gmail.com
 - LinkedIn: https://www.linkedin.com/in/urpa-academia-software/
 - Instagram: https://www.instagram.com/urpaacademiasoftware/
@@ -25,11 +25,11 @@ formulario antes de pegar.
 
 **Nombre:** URPA Academy Software
 
-**Tagline (47 car., límite habitual 60):**
-Run your sports academy from a single dashboard
+**Tagline (60 car.):**
+Centralise your football academy — ditch WhatsApp and spreadsheets
 
-**Descripción corta (210 car., límite habitual 260):**
-Students, coaches, class calendar, session passes, documents and messaging in one place. Built for a real football academy in Barcelona, with separate access for admins, coaches and students. Try the live demo.
+**Descripción corta (260 car.):**
+URPA helps football academy directors manage students, coaches, class calendar, payments and communication from one dashboard — no more scattered WhatsApp groups and Excel files. Upload videos for coach review, add session notes, and track attendance. Built for a real academy in Barcelona.
 
 **Primer comentario (el del maker):**
 
@@ -40,19 +40,19 @@ Students, coaches, class calendar, session passes, documents and messaging in on
 > spreadsheets, paper and WhatsApp. Information got lost and nothing scaled.
 >
 > It now covers: students and coaches, a class calendar with recurring and
-> one-to-one sessions, passes that deduct themselves at roll call, documents
-> with per-folder permissions, internal messaging, notifications and a ticket
+> one-to-one sessions, passes that deduct themselves at roll call, coach notes
+> per session, video and file uploads for coach review, documents with
+> per-folder permissions, internal messaging, notifications and a ticket
 > system. There are separate roles for admins, coaches and students.
 >
 > On security: CSRF protection, login attempt limits and bcrypt-hashed
 > passwords from the first deployment.
 >
-> The site is in Spanish, English and Catalan, and the live demo needs only an
-> email. I still run it myself — I develop it, deploy it and answer if
-> something breaks.
+> We do guided 15-minute demos — no self-serve access, because we want to
+> understand your academy first and help you set it up properly.
 >
-> I'd love feedback from anyone who manages a sports academy or club:
-> what's missing for your day-to-day?
+> I'd love feedback from anyone who manages a sports academy or training
+> school: what's missing for your day-to-day?
 
 **Versión ES (por si publicas en comunidades hispanas):**
 
@@ -60,60 +60,68 @@ Students, coaches, class calendar, session passes, documents and messaging in on
 > academia de tecnificación de fútbol en Sant Vicenç dels Horts (Barcelona)
 > que llevaba alumnos, bonos y asistencia entre Excel, papel y WhatsApp.
 > Ahora centraliza alumnos y entrenadores, calendario de clases, bonos que se
-> descuentan solos al pasar lista, documentación con permisos, mensajería y
-> notificaciones. La demo en vivo solo pide un email. Me interesa el feedback
-> de quien gestione una academia o un club: ¿qué os falta en el día a día?
+> descuentan solos al pasar lista, comentarios del entrenador por sesión,
+> subida de vídeos para revisión, documentación con permisos, mensajería y
+> notificaciones. Hacemos demos guiadas de 15 min — sin acceso libre, porque
+> queremos entender tu academia primero. Me interesa el feedback de quien
+> gestione una escuela de fútbol: ¿qué os falta en el día a día?
 
 ---
 
 ## 2. BetaList
 
 **Pitch (una frase):**
-A single dashboard that replaces spreadsheets and WhatsApp for sports academies: students, class calendar, session passes and messaging.
+A single dashboard that replaces spreadsheets and WhatsApp for football academies: students, calendar, payments, coach notes and video uploads.
 
 **Descripción:**
 URPA Academy Software started from a real football academy in Barcelona that
 lost information between spreadsheets, paper and WhatsApp. It centralises
 students and coaches, a class calendar, passes that deduct themselves at roll
-call, permissioned documents, internal messaging and notifications. Roles for
-admins, coaches and students. A live demo is available with just an email.
+call, per-session coach notes, video and file uploads for coach review,
+permissioned documents, internal messaging and notifications. Roles for
+admins, coaches and students. We offer guided 15-minute demos to understand
+your academy before setup.
 
-**Qué busco de los early adopters:** academias, escuelas de tecnificación y
-clubes pequeños que hoy gestionen todo con hojas de cálculo. `[Si quieres:
-"Free setup for the first N academies"]`
+**Qué busco de los early adopters:** escuelas de fútbol y academias de
+tecnificación de 30 a 300 alumnos que gestionen con Excel/WhatsApp.
+`[Si quieres: "Free setup for the first N academies"]`
 
 ---
 
 ## 3. SaaSHub
 
 **Descripción corta (111 car.):**
-Management platform for sports academies: students, coaches, calendar, session passes, documents and messaging.
+Management platform for football academies: students, coaches, calendar, payments, coach notes and video uploads.
 
 **Descripción larga:**
-URPA Academy Software is a web platform to run a sports academy or training
-school. It brings students, coaches, a class calendar (recurring and
-one-to-one sessions), session passes that deduct automatically at roll call,
-documents with per-folder permissions, internal chat, notifications and a
-support ticket system into one panel. Access is role-based (admin, coach,
-student). Available in Spanish, English and Catalan. Built by a solo
-developer for a real football academy in Barcelona.
+URPA Academy Software is a web platform to run a football academy or training
+school without depending on WhatsApp groups and spreadsheets. It brings
+students, coaches, a class calendar (recurring and one-to-one sessions),
+session passes that deduct automatically at roll call, per-session coach
+observations, video and file uploads for review, documents with per-folder
+permissions, internal chat, notifications and a support ticket system into
+one panel. Access is role-based (admin, coach, student). Available in
+Spanish, English and Catalan. Built by a solo developer for a real football
+academy in Barcelona.
 
-**Alternativas a listar (las que cita el README como competencia):**
-SportMember, Playoff, Controla.Club
+**Alternativas a listar:**
+SportMember, Playoff, Controla.Club, aGora, Academity, Kydemy, Sporttia
 
 ---
 
 ## 4. AlternativeTo
 
-**Alternativa de:** SportMember, Playoff, Controla.Club
+**Alternativa de:** SportMember, Playoff, Controla.Club, aGora, Kydemy
 
 **Descripción corta (135 car.):**
-Management software for sports academies and training schools, built and run by its developer for a real football academy in Barcelona.
+Management software for football academies: centralise students, payments and communication — replace WhatsApp groups and Excel.
 
 **Características a marcar:**
 - Gestión de alumnos y entrenadores
 - Calendario de clases (recurrentes e individuales)
 - Bonos que se descuentan al pasar lista
+- Comentarios y observaciones del entrenador por sesión
+- Subida de vídeos y archivos para revisión del entrenador
 - Documentación con permisos por carpeta
 - Mensajería interna y notificaciones
 - Sistema de tickets de soporte
@@ -126,24 +134,28 @@ Management software for sports academies and training schools, built and run by 
 
 ## 5. Perfil de LinkedIn (página de empresa)
 
-**Tagline (92 car.):**
-Software de gestión para academias deportivas · Alumnos, bonos y calendario en un solo panel
+**Tagline (100 car.):**
+Software de gestión para escuelas de fútbol · Sin WhatsApp ni Excel · Demos guiadas de 15 min
 
 **Acerca de:**
 > URPA Academy Software nació en una academia de tecnificación de fútbol de
 > Sant Vicenç dels Horts (Barcelona) que llevaba alumnos, bonos y asistencia
 > entre Excel, papel y WhatsApp. Es una plataforma web que centraliza
 > alumnos y entrenadores, calendario de clases, bonos que se descuentan solos
-> al pasar lista, documentación con permisos, mensajería y notificaciones.
-> Roles para dirección, entrenadores y alumnos. Prueba la demo en vivo, solo
-> con tu email: https://academiasoftware.vercel.app
+> al pasar lista, comentarios del entrenador por sesión, subida de vídeos
+> para revisión, documentación con permisos, mensajería y notificaciones.
+> Roles para dirección, entrenadores y alumnos.
+>
+> Ayudamos a directores de academias de fútbol a centralizar la gestión,
+> pagos y comunicación sin depender de grupos de WhatsApp ni hojas de Excel.
+>
+> Agenda tu demo de 15 min: https://academiasoftware.vercel.app
 
 ## 6. Bio de Instagram (≤150 car. aprox.)
 
 ```
-Software de gestión para academias deportivas ⚽
-Alumnos · Bonos · Calendario en un panel
-Demo gratis 👇
+Software de gestión para escuelas de fútbol ⚽
+Sin WhatsApp ni Excel · Demo guiada 👇
 academiasoftware.vercel.app
 ```
 

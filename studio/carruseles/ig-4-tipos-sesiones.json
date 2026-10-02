@@ -1,0 +1,8 @@
+{ "pages": [
+  { "tipo": "cover", "texto": "4 tipos de sesiones que cualquier escuela de fútbol debería poder gestionar", "pie": "URPA · Gestión para escuelas de fútbol" },
+  { "tipo": "punto", "n": "1", "texto": "Entrenos semanales", "sub": "Mismo equipo, mismo campo, mismo horario." },
+  { "tipo": "punto", "n": "2", "texto": "Partidos", "sub": "Rival, campo, hora y convocatoria." },
+  { "tipo": "acento", "n": "3", "texto": "Torneos y jornadas", "sub": "Varios equipos, varios campos, un solo día." },
+  { "tipo": "punto", "n": "4", "texto": "Tecnificación", "sub": "Grupos reducidos, por nivel o por posición." },
+  { "tipo": "cierre", "texto": "¿Cuántos de estos 4 gestionas hoy en el mismo sitio?", "sub": "Sígueme para ver cómo lo centralizo todo.", "pie": "URPA · Gestión para escuelas de fútbol" }
+] }

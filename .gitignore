@@ -51,3 +51,6 @@ studio/**/.thumbnails/
 studio/**/assets/music-candidates/
 studio/**/render-log*.txt
 studio/publicaciones/**/*.mp4
+
+# prospeccion B2B (datos de contacto, no subir)
+/prospeccion/

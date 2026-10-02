@@ -2,6 +2,8 @@ import {
   UserGroupIcon,
   CalendarDaysIcon,
   TicketIcon,
+  ChatBubbleLeftEllipsisIcon,
+  VideoCameraIcon,
   FolderIcon,
   BellAlertIcon,
   ShieldCheckIcon,
@@ -15,6 +17,9 @@ export const SITE_SHORT_NAME = "URPA";
 // JSON-LD) se recalcula sola a partir de aquí.
 export const SITE_URL = "https://academiasoftware.vercel.app";
 export const DEMO_URL = "https://plataforma-jp-1.onrender.com/";
+// URL de agendado de demos en Cal.com. Cambia el slug si renombras el evento.
+// Formato: https://cal.com/<usuario>/<evento>
+export const CAL_BOOKING_URL = "https://cal.com/urpa-academy-software-kgpahx/15min";
 // Usada solo por los assets globales que no viven bajo /[locale] (manifest,
 // imagen OG/Twitter compartida): esos siguen siendo únicos para todo el
 // sitio, así que se quedan en español igual que el resto de la metadata base.
@@ -79,6 +84,8 @@ export const SOCIAL_LINKS = [
 export const FEATURE_ICONS: { id: string; icon: IconType }[] = [
   { id: "alumnos", icon: UserGroupIcon },
   { id: "calendario", icon: CalendarDaysIcon },
+  { id: "observaciones", icon: ChatBubbleLeftEllipsisIcon },
+  { id: "videos", icon: VideoCameraIcon },
   { id: "bonos", icon: TicketIcon },
   { id: "documentacion", icon: FolderIcon },
   { id: "notificaciones", icon: BellAlertIcon },

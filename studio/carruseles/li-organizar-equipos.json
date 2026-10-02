@@ -1,0 +1,8 @@
+{ "pages": [
+  { "tipo": "cover", "texto": "Cómo organizar los equipos de tu escuela sin que dependa de una sola persona", "pie": "URPA · Gestión para escuelas de fútbol" },
+  { "tipo": "punto", "n": "1", "texto": "Un responsable por equipo y un suplente, por escrito." },
+  { "tipo": "punto", "n": "2", "texto": "Una sola lista de jugadores, no un Excel personal." },
+  { "tipo": "punto", "n": "3", "texto": "Un único calendario de entrenos y partidos que vea todo el mundo." },
+  { "tipo": "punto", "n": "4", "texto": "Convocatorias y avisos siempre por el mismo canal." },
+  { "tipo": "cierre", "texto": "Si mañana faltara quien lo sabe todo, ¿seguiría funcionando tu escuela?", "sub": "¿Cuál de las 4 te falta hoy?", "pie": "URPA — el software de gestión para escuelas de fútbol." }
+] }

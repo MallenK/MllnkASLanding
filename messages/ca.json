@@ -19,7 +19,7 @@
     "howItWorks": "Com funciona",
     "faq": "Preguntes",
     "contact": "Contacte",
-    "demo": "Explora la demo en directe",
+    "demo": "Agenda demo",
     "login": "Inicia sessió",
     "openMenu": "Obre el menú",
     "closeMenu": "Tanca el menú"
@@ -32,13 +32,13 @@
   },
   "hero": {
     "mockAlt": "Panell d'administració d'URPA Academy Software amb calendari, alumnes actius i properes classes",
-    "titleLine1": "La digitalització de la teva acadèmia,",
-    "titleHighlight": "centralitzada en un panell.",
-    "description": "Alumnes, calendari, bons, documentació i avisos, tot en un mateix lloc. La vaig construir per a una acadèmia de futbol a Barcelona perquè no vaig trobar res que ho fes bé — i la continuo portant jo: la desenvolupo, la desplego i responc si alguna cosa falla.",
-    "ctaPrimary": "Explora la demo en directe",
+    "titleLine1": "La gestió de la teva acadèmia de futbol,",
+    "titleHighlight": "sense WhatsApp ni Excel.",
+    "description": "Alumnes, calendari, bons, comentaris de l'entrenador i arxius de vídeo, tot en un mateix lloc. La vaig construir per a una acadèmia de tecnificació a Barcelona perquè no vaig trobar res que ho fes bé — i la continuo portant jo: la desenvolupo, la desplego i responc si alguna cosa falla.",
+    "ctaPrimary": "Reserva la teva demo de 15 min",
     "ctaSecondary": "Llegeix la història",
     "badgeLive": "En ús real en una acadèmia de futbol a Barcelona",
-    "badgeEmail": "Només el teu email per entrar",
+    "badgeEmail": "Demo guiada de 15 min",
     "badgeBot": "Et responc jo, no un bot",
     "scrollHint": "Continua baixant"
   },
@@ -79,6 +79,14 @@
       {
         "title": "Calendari de classes",
         "description": "Sessions individuals i recurrents, assignació d'entrenadors i control de solapaments, sense dobles reserves."
+      },
+      {
+        "title": "Observacions de l'entrenador",
+        "description": "Comentaris i notes personals de l'entrenador per cada sessió. L'historial de cada jugador queda registrat i accessible per a direcció."
+      },
+      {
+        "title": "Vídeos i arxius",
+        "description": "Puja vídeos d'entrenaments o partits perquè l'entrenador els revisi amb les famílies o els jugadors. Tot organitzat per equip i sessió."
       },
       {
         "title": "Bons i membresies",
@@ -158,8 +166,8 @@
     "description": "Sense implementacions eternes ni comercials de per mig: comences provant-ho tu mateix.",
     "steps": [
       {
-        "title": "Explora la demo en directe",
-        "description": "Deixa el teu email, entra com a Direcció, Entrenador o Alumne, i tria el tipus d'acadèmia: futbol, reforç escolar, idiomes o entrenament personal."
+        "title": "Agenda la teva demo de 15 min",
+        "description": "Tria data i hora des de la web. T'ensenyo la plataforma en una sessió guiada adaptada a la teva acadèmia — sense accés lliure, perquè vegis el valor real des del primer minut."
       },
       {
         "title": "Configurem la teva acadèmia",
@@ -167,10 +175,10 @@
       },
       {
         "title": "Comença a operar",
-        "description": "Calendari, bons, documentació i comunicació funcionant des del dia u, amb suport directe de qui la construeix."
+        "description": "Calendari, bons, observacions de l'entrenador, vídeos i comunicació funcionant des del dia u, amb suport directe de qui la construeix."
       }
     ],
-    "cta": "Comença pel pas {number}: obre la demo"
+    "cta": "Comença pel pas {number}: agenda demo"
   },
   "socialProof": {
     "title": "El que va canviar en deixar d'improvisar",
@@ -208,17 +216,37 @@
     ]
   },
   "cta": {
-    "title": "Prova-ho tu mateix, sense parlar amb ningú primer",
-    "description": "Deixa el teu email, entra a la demo en directe, tria el teu rol i el tipus d'acadèmia. Si encaixa, parlem directament — sense comercials de per mig.",
-    "primary": "Explora la demo en directe",
+    "title": "Reserva la teva demo de 15 minuts",
+    "description": "T'ensenyo la plataforma en una sessió guiada adaptada a la teva acadèmia. Sense comercials de per mig — parlem directament.",
+    "primary": "Agenda demo",
     "secondary": "Escriu-me directament"
+  },
+  "webServices": {
+    "title": "També dissenyem i desenvolupem la teva web",
+    "description": "La teva acadèmia necessita més que un backoffice: necessita una presència online professional que transmeti confiança a les famílies. Nosaltres la construïm.",
+    "items": [
+      {
+        "title": "Web professional a mida",
+        "description": "Dissenyada per a la teva acadèmia, amb la teva marca i el teu to. No és una plantilla de WordPress: és un lloc ràpid, modern i optimitzat perquè et trobin a Google."
+      },
+      {
+        "title": "Adaptada a mòbil",
+        "description": "Més del 80 % de les famílies et busquen des del mòbil. La teva web es veurà perfecta a qualsevol pantalla, amb càrrega instantània."
+      },
+      {
+        "title": "Llesta per captar",
+        "description": "Formularis de contacte, integració amb WhatsApp, SEO local i pàgina de serveis. Tot perquè les famílies et trobin i t'escriguin."
+      }
+    ],
+    "combo": "Plataforma de gestió + web professional: la solució completa per a la teva acadèmia.",
+    "cta": "Parlem de la teva web"
   },
   "faq": {
     "title": "Tot el que necessites saber",
     "items": [
       {
-        "question": "Puc provar-ho sense parlar amb ningú primer?",
-        "answer": "Sí. Només demanem el teu email per obrir la demo (així et puc avisar si milloro alguna cosa o ajudar-te amb la migració). A partir d'aquí explores la plataforma lliurement com a Direcció, Entrenador o Alumne, triant el tipus d'acadèmia: futbol, reforç escolar, idiomes o entrenament personal."
+        "question": "Com puc veure la plataforma?",
+        "answer": "Agenda una demo guiada de 15 minuts des de la web. T'ensenyo la plataforma en una sessió adaptada a la teva acadèmia, perquè vegis com encaixa amb la teva operativa real. Sense comercials de per mig — parlem directament."
       },
       {
         "question": "Això és una plantilla genèrica o un producte real?",
@@ -235,6 +263,10 @@
       {
         "question": "Serveix per a acadèmies que no són de futbol?",
         "answer": "Sí. La demo permet explorar quatre verticals: acadèmies de futbol, reforç escolar, idiomes i entrenament personal. El model de rols, bons i calendari s'adapta a cadascuna."
+      },
+      {
+        "question": "També feu pàgines web?",
+        "answer": "Sí. Dissenyem i desenvolupem webs professionals per a acadèmies: ràpides, adaptades a mòbil, amb SEO local i llestes per captar famílies. Si contractes la plataforma i la web juntes, tens la solució completa sense dependre de tercers."
       }
     ]
   },
@@ -272,10 +304,10 @@
     "accept": "Accepta"
   },
   "demoGate": {
-    "title": "Abans d'entrar a la demo",
-    "description": "Deixa'ns el teu email i t'obrim la demo en directe a l'instant. Sense spam: només l'fem servir per avisar-te de novetats o ajudar-te a migrar la teva acadèmia si t'interessa.",
+    "title": "Reserva la teva demo de 15 min",
+    "description": "Agenda una sessió guiada per veure la plataforma adaptada a la teva acadèmia. Sense spam: només et contactem per a la demo i novetats.",
     "emailPlaceholder": "tu@email.com",
-    "submit": "Accedeix a la demo",
+    "submit": "Agenda demo",
     "submitting": "Enviant...",
     "genericError": "No s'ha pogut enviar. Torna-ho a provar.",
     "close": "Tanca"

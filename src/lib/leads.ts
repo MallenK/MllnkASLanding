@@ -3,6 +3,7 @@
 export type LeadMethod =
   | "contact_form"
   | "demo_gate"
+  | "demo_booking"
   | "whatsapp"
   | "email"
   | "phone";

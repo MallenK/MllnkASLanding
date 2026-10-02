@@ -38,9 +38,6 @@ export function Logo({ variant = "inline", className }: LogoProps) {
         sizes="(min-width: 640px) 102px, 88px"
         className="h-6 w-auto sm:h-7"
       />
-      <span className="hidden text-xs font-medium uppercase tracking-[0.2em] text-brand-gray sm:inline">
-        Academy Software
-      </span>
     </span>
   );
 }
