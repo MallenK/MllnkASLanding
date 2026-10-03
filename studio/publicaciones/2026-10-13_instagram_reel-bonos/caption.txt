@@ -1,0 +1,9 @@
+¿Sigues contando a mano las sesiones de bono?
+
+Cada jugador con su bono, sus sesiones y su caducidad en una lista. Filtras los agotados y los que están en su última sesión, y se descuentan al pasar lista.
+
+Te lo enseño en 15 minutos → escríbeme por DM o entra en el enlace del perfil.
+
+(Demo en vivo con datos ficticios.)
+
+#EscuelaDeFútbol #FútbolBase #GestiónDeportiva #EntrenadoresDeFútbol

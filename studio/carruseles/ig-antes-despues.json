@@ -1,0 +1,45 @@
+{
+ "pages": [
+  {
+   "tipo": "cover",
+   "texto": "Tu escuela hoy vs. con un sitio único",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  },
+  {
+   "tipo": "punto",
+   "n": "1",
+   "texto": "Hoy: la convocatoria vive en 4 grupos de WhatsApp",
+   "sub": "Con un sitio único: vive en la sesión."
+  },
+  {
+   "tipo": "punto",
+   "n": "2",
+   "texto": "Hoy: la asistencia, en papel o en un Excel",
+   "sub": "Con un sitio único: se marca en la sesión, jugador a jugador."
+  },
+  {
+   "tipo": "acento",
+   "n": "3",
+   "texto": "Hoy: cuentas las sesiones de bono a mano",
+   "sub": "Con un sitio único: se descuentan al pasar lista."
+  },
+  {
+   "tipo": "punto",
+   "n": "4",
+   "texto": "Hoy: te enteras tarde de quién se queda sin sesiones",
+   "sub": "Con un sitio único: alertas de bonos agotados o por vencer."
+  },
+  {
+   "tipo": "punto",
+   "n": "5",
+   "texto": "Hoy: cinco pestañas abiertas",
+   "sub": "Con un sitio único: una sola."
+  },
+  {
+   "tipo": "cierre",
+   "texto": "¿Cuál de las 5 te cuesta más hoy?",
+   "sub": "Cuéntamelo en los comentarios o por DM.",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+Por qué he decidido no construir un «ERP» para escuelas de fútbol.
+
+Un ERP promete cubrirlo todo. Para una escuela de 50 a 200 jugadores eso suele significar semanas de configuración, módulos que nadie abre y formación para todo el mundo.
+
+Lo que sí se usa cada semana es corto: equipos y jugadores, calendario, asistencia, bonos y avisos.
+
+Eso es lo que construyo en URPA. Si algo no se usa cada semana, todavía no entra.
+
+Te lo cuento porque cada decisión de producto es una renuncia, y prefiero que la veas.
+
+Si diriges una escuela: ¿qué funcionalidad crees que sobra en la mayoría de programas de gestión?
+
+#GestiónDeportiva #FútbolBase #EscuelasDeFútbol

@@ -6,6 +6,8 @@
  * Fuente de verdad: studio/publicaciones/manifest.json  (una entrada por pieza del calendario).
  * Uso:  node studio/scripts/ordenar-publicaciones.mjs
  * Solo COPIA (los proyectos hf-* y exports/ no se tocan) y no borra nada: avisa de carpetas huérfanas.
+ * PUERTA QA: no copia vídeos de un proyecto hf-* sin informe de diseño limpio y posterior a su última edición
+ * (node studio/qa/auditar.mjs hf-<pieza>; ver skill revisar-pieza). Salto consciente: --sin-qa.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -16,6 +18,17 @@ const DIR = path.join(STUDIO, "publicaciones");
 const manifest = JSON.parse(fs.readFileSync(path.join(DIR, "manifest.json"), "utf8"));
 const DOW = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
 const CANAL = { linkedin: "LinkedIn", instagram: "Instagram" };
+
+const SIN_QA = process.argv.includes("--sin-qa");
+const qaFallos = new Set();
+function qaOk(proj) {
+  const inf = path.join(STUDIO, "qa/informes", proj + ".json");
+  if (!fs.existsSync(inf)) return "sin informe QA";
+  const fuentes = ["index.html", "build.cjs"].map((f) => path.join(STUDIO, proj, f)).filter(fs.existsSync);
+  if (fuentes.some((f) => fs.statSync(f).mtimeMs > fs.statSync(inf).mtimeMs)) return "informe QA anterior a la última edición";
+  if (JSON.parse(fs.readFileSync(inf, "utf8")).problemas.some((x) => x.sev === "error")) return "el informe QA tiene errores";
+  return null;
+}
 
 const pieces = [...manifest].sort((a, b) => a.fecha.localeCompare(b.fecha) || a.canal.localeCompare(b.canal));
 const wanted = new Set();
@@ -30,6 +43,9 @@ for (const p of pieces) {
   for (const f of p.archivos || []) {
     const src = path.join(STUDIO, f.origen);
     if (!fs.existsSync(src)) { console.warn(`AVISO: no existe ${f.origen} (${folder})`); continue; }
+    const proj = /^(hf-[^/]+)\//.exec(f.origen)?.[1];
+    const fallo = proj && !SIN_QA ? qaOk(proj) : null;
+    if (fallo) { qaFallos.add(`${proj}: ${fallo}`); continue; }
     const dest = path.join(out, f.nombre);
     if (fs.existsSync(dest) && fs.statSync(dest).size === fs.statSync(src).size) { kept++; continue; }
     fs.copyFileSync(src, dest); copied++;
@@ -53,4 +69,5 @@ fs.writeFileSync(path.join(DIR, "INDEX.md"), index, "utf8");
 
 const orphans = fs.readdirSync(DIR, { withFileTypes: true }).filter((e) => e.isDirectory() && !wanted.has(e.name)).map((e) => e.name);
 console.log(`OK ${pieces.length} piezas · ${copied} archivos copiados · ${kept} ya estaban`);
+if (qaFallos.size) { console.error("✗ QA de diseño pendiente (no se copiaron estos vídeos). Ejecuta: node studio/qa/auditar.mjs <proyecto> --sheet\n  " + [...qaFallos].join("\n  ")); process.exitCode = 1; }
 if (orphans.length) console.warn("AVISO carpetas que ya no están en el manifest (no se borran):\n  " + orphans.join("\n  "));

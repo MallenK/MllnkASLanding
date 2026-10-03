@@ -1,0 +1,45 @@
+{
+ "pages": [
+  {
+   "tipo": "cover",
+   "texto": "Estamos construyendo URPA para escuelas de fútbol. Así va.",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  },
+  {
+   "tipo": "punto",
+   "n": "1",
+   "texto": "Un panel con lo importante",
+   "sub": "Alumnos, entrenadores y alertas de bonos, a la vista."
+  },
+  {
+   "tipo": "punto",
+   "n": "2",
+   "texto": "Calendario de clases",
+   "sub": "Sesiones puntuales y recurrentes, en vista de mes, semana y día."
+  },
+  {
+   "tipo": "acento",
+   "n": "3",
+   "texto": "Asistencia por sesión",
+   "sub": "El entrenador marca presentes y ausentes. El bono se descuenta."
+  },
+  {
+   "tipo": "punto",
+   "n": "4",
+   "texto": "Bonos y alertas",
+   "sub": "Quién se queda sin sesiones, antes de que pase."
+  },
+  {
+   "tipo": "punto",
+   "n": "5",
+   "texto": "Mensajes y documentos",
+   "sub": "Avisos y material, dentro de la misma plataforma."
+  },
+  {
+   "tipo": "cierre",
+   "texto": "¿Qué le falta a tu escuela?",
+   "sub": "Dímelo por DM. Lo que más se repite, lo construyo primero.",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  }
+ ]
+}

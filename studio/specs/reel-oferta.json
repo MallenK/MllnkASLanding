@@ -1,0 +1,28 @@
+{
+ "slug": "reel-oferta",
+ "formato": "reel",
+ "hook": "Busco 2 escuelas de fútbol para trabajar juntas",
+ "clip": null,
+ "escenas": [
+  {
+   "texto": "30 días con URPA, acompañado por mí",
+   "dur": 3.2,
+   "acento": true
+  },
+  {
+   "texto": "Cargamos tus equipos juntos el primer día",
+   "dur": 3.2
+  },
+  {
+   "texto": "Una llamada corta cada semana",
+   "dur": 3.0
+  },
+  {
+   "texto": "Al final decides si sigues, a precio de fundador",
+   "dur": 3.8,
+   "acento": true
+  }
+ ],
+ "cta": "Escríbeme por DM o reserva en el enlace del perfil",
+ "ctaDur": 3.4
+}

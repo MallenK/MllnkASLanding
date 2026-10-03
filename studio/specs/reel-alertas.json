@@ -1,0 +1,33 @@
+{
+ "slug": "reel-alertas",
+ "formato": "reel",
+ "hook": "Sabe quién se queda sin sesiones antes de que pase",
+ "clip": "alertas",
+ "desde": "inicio",
+ "hasta": 15.8,
+ "rate": 1.1,
+ "foco": {
+  "x": 840,
+  "y": 450,
+  "s": 1.22
+ },
+ "pasos": [
+  {
+   "marca": "inicio",
+   "texto": "Tu panel de control"
+  },
+  {
+   "marca": "alerta",
+   "texto": "Las alertas de bonos, a la vista"
+  },
+  {
+   "marca": "ultima",
+   "texto": "Quién está en su última sesión"
+  },
+  {
+   "marca": "agotados",
+   "texto": "Y quién ya se ha quedado sin bono"
+  }
+ ],
+ "cta": "¿Lo ves en tu escuela? Te lo enseño en 15 minutos → DM o enlace del perfil"
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1350">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root { --bg:#111111; --white:#ffffff; --cream:#f7f3e8; --gold:#ffd21f; --sans:"Montserrat", ui-sans-serif, system-ui, sans-serif; }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { margin:0; width:1080px; height:1350px; overflow:hidden; background:var(--bg); }
+      #root { width:100%; height:100%; position:relative; overflow:hidden; background:var(--bg); font-family:var(--sans); }
+      #bg { position:absolute; inset:0; overflow:hidden; }
+      .glow { position:absolute; border-radius:50%; }
+      #g1 { width:1400px; height:1400px; left:-700px; top:650px; background:radial-gradient(circle, rgba(255,210,31,0.20) 0%, rgba(255,210,31,0) 65%); }
+      #g2 { width:1100px; height:1100px; left:500px; top:-520px; background:radial-gradient(circle, rgba(247,243,232,0.07) 0%, rgba(247,243,232,0) 65%); }
+      #logo { position:absolute; left:100px; top:56px; width:190px; }
+      .scene { position:absolute; inset:0; opacity:0; }
+      .block { position:absolute; left:100px; width:840px; font-weight:800; letter-spacing:-0.02em; }
+      .hook { top:380px; font-size:80px; line-height:1.1; color:var(--white); }
+      .cta { top:430px; font-size:76px; line-height:1.12; color:var(--gold); }
+      .big { position:absolute; left:100px; width:840px; top:380px; font-weight:800; font-size:76px; line-height:1.12; letter-spacing:-0.02em; color:var(--white); }
+      .big.gold { color:var(--gold); }
+      .tag { position:absolute; left:100px; top:290px; padding:14px 30px; border-radius:999px; background:var(--gold); color:#000; font-weight:800; font-size:32px; letter-spacing:0.18em; text-transform:uppercase; }
+      .w { display:inline-block; }
+      .accent { color:var(--gold); }
+      .cap { position:absolute; left:60px; width:960px; top:168px; height:170px; display:flex; align-items:center; font-weight:800; font-size:54px; line-height:1.12; letter-spacing:-0.02em; color:var(--gold); opacity:0; }
+      #frame { position:absolute; left:40px; top:360px; width:1000px; height:740px; overflow:hidden; border-radius:28px; border:4px solid rgba(255,210,31,0.9); box-shadow:0 30px 90px rgba(0,0,0,0.55); background:#fff; opacity:0; }
+      #zoom { position:absolute; left:0; top:0; width:1440px; height:900px; transform-origin:0 0; }
+      #clip { position:absolute; left:0; top:0; width:1440px; height:900px; object-fit:cover; }
+      #note { position:absolute; left:40px; width:1000px; top:1130px; text-align:center; font-weight:700; font-size:28px; letter-spacing:0.06em; color:rgba(247,243,232,0.6); opacity:0; }
+      #sign { position:absolute; left:100px; top:960px; width:420px; }
+      
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="17.982" data-width="1080" data-height="1350">
+      <div id="bg" class="clip" data-layout-allow-overflow data-start="0" data-duration="17.982" data-track-index="0">
+        <div id="g1" class="glow"></div>
+        <div id="g2" class="glow"></div>
+      </div>
+      <div id="logowrap" class="clip" data-start="0" data-duration="17.982" data-track-index="2"><img id="logo" src="assets/brand/urpa-logo.png" alt="URPA"></div>
+      <div id="content" class="clip" data-start="0" data-duration="17.982" data-track-index="1">
+        <div id="hook" class="scene">
+          <div class="tag">Escuelas de fútbol</div>
+          <h1 class="block hook"><span class="w">Crear</span> <span class="w">una</span> <span class="w">clase</span> <span class="w">recurrente,</span> <span class="w">en</span> <span class="w">segundos</span></h1>
+        </div>
+        
+        <div id="cta" class="scene">
+          <p class="block cta"><span class="w">¿Quieres</span> <span class="w">verlo</span> <span class="w">con</span> <span class="w">tu</span> <span class="w">escuela?</span> <span class="w">Reserva</span> <span class="w">una</span> <span class="w">demo</span> <span class="w">de</span> <span class="w">15</span> <span class="w">minutos</span></p>
+          <img id="sign" src="assets/brand/urpa-logo.png" alt="URPA">
+        </div>
+      </div>
+      
+      <div id="frame">
+        <div id="zoom">
+          <video id="clip" src="assets/clip.mp4" muted playsinline data-start="2.4" data-duration="12.582" data-media-start="3.34" data-playback-rate="1.1" data-track-index="3"></video>
+        </div>
+      </div>
+      <p id="note">Demo en vivo con datos ficticios</p>
+      <div id="caps">
+        <p class="cap" id="cap0"><span><span class="w">Desde</span> <span class="w">el</span> <span class="w">panel:</span> <span class="w">«Nueva</span> <span class="w">clase»</span></span></p>
+        <p class="cap" id="cap1"><span><span class="w">Ponle</span> <span class="w">nombre</span></span></p>
+        <p class="cap" id="cap2"><span><span class="w">Elige</span> <span class="w">«Recurrente»:</span> <span class="w">horario,</span> <span class="w">lugar</span> <span class="w">y</span> <span class="w">objetivo</span></span></p>
+      </div>
+      <audio id="sfx1" src="assets/sfx/whoosh-short.mp3" data-start="2.2" data-duration="0.575" data-track-index="20" data-volume="0.5"></audio>
+      <audio id="sfx2" src="assets/sfx/pop.mp3" data-start="2.55" data-duration="0.72" data-track-index="21" data-volume="0.35"></audio>
+      <audio id="sfx3" src="assets/sfx/pop.mp3" data-start="6.5" data-duration="0.72" data-track-index="22" data-volume="0.35"></audio>
+      <audio id="sfx4" src="assets/sfx/pop.mp3" data-start="10.482" data-duration="0.72" data-track-index="23" data-volume="0.35"></audio>
+      <audio id="sfx5" src="assets/sfx/whoosh-short.mp3" data-start="14.782" data-duration="0.575" data-track-index="24" data-volume="0.5"></audio>
+      <audio id="sfx6" src="assets/sfx/chime.mp3" data-start="15.782" data-duration="2" data-track-index="25" data-volume="0.4"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const HOOK = 2.4, FOOT_END = 14.982, TOTAL = 17.982;
+      const show = (sel, t0, t1) => { tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, t0); tl.to(sel, { opacity: 0, duration: 0.18, ease: "power1.in" }, t1 - 0.18); };
+      const words = (sel, t0) => tl.fromTo(sel + " .w", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.36, ease: "power3.out", stagger: 0.04 }, t0 + 0.05);
+
+      show("#hook", 0, HOOK); words("#hook", 0);
+      tl.fromTo("#hook .tag", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.05);
+      
+      // Grabación: marco que entra tras el gancho y zoom sobre la zona útil
+      tl.set("#zoom", { scale: 0.868, x: -125, y: -20.625 }, 0);
+      tl.fromTo("#frame", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, HOOK - 0.1);
+      tl.fromTo("#note", { opacity: 0 }, { opacity: 1, duration: 0.4 }, HOOK + 0.3);
+      
+      tl.to("#frame", { opacity: 0, y: -40, duration: 0.25, ease: "power1.in" }, FOOT_END - 0.25);
+      tl.to("#note", { opacity: 0, duration: 0.2 }, FOOT_END - 0.25);
+      show("#cap0", 2.5, 6.4); words("#cap0", 2.5);
+      show("#cap1", 6.45, 10.382); words("#cap1", 6.45);
+      show("#cap2", 10.432, 14.882); words("#cap2", 10.432);
+      
+      
+
+      // Cierre
+      tl.fromTo("#cta", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, FOOT_END);
+      words("#cta", FOOT_END);
+      tl.fromTo("#sign", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, FOOT_END + 0.5);
+
+      // Revisión QA: el logo fijo de arriba se retira cuando entra la firma de cierre (sin logo duplicado)
+      tl.to("#logo", { opacity: 0, duration: 0.3, ease: "power1.in" }, FOOT_END + 0.5 - 0.1);
+      tl.fromTo("#logo", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.05);
+      tl.fromTo("#g1", { scale: 1, x: 0 }, { scale: 1.25, x: 80, duration: TOTAL, ease: "none" }, 0);
+      tl.fromTo("#g2", { scale: 1, y: 0 }, { scale: 1.15, y: 90, duration: TOTAL, ease: "none" }, 0);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

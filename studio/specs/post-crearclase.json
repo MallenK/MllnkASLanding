@@ -1,0 +1,31 @@
+{
+ "slug": "post-crearclase",
+ "formato": "post",
+ "hook": "Crear una clase recurrente, en segundos",
+ "clip": "crearclase",
+ "desde": "inicio",
+ "hasta": "fin",
+ "rate": 1.1,
+ "foco": {
+  "x": 720,
+  "y": 450,
+  "s": 1.25
+ },
+ "hookDur": 2.4,
+ "ctaDur": 3.0,
+ "pasos": [
+  {
+   "marca": "inicio",
+   "texto": "Desde el panel: «Nueva clase»"
+  },
+  {
+   "marca": "titulo",
+   "texto": "Ponle nombre"
+  },
+  {
+   "marca": "recurrente",
+   "texto": "Elige «Recurrente»: horario, lugar y objetivo"
+  }
+ ],
+ "cta": "¿Quieres verlo con tu escuela? Reserva una demo de 15 minutos"
+}

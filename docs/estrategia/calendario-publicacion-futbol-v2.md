@@ -57,30 +57,30 @@ Estados: 🟢 lista para publicar · 🟡 lista, bloqueada · ✍️ texto por e
 | Jue 1 oct | Instagram | B | **Carrusel "5 cosas"** (imágenes) | 🟢 Caption abajo |
 | Vie 2 | LinkedIn | B | **Carrusel PDF "5 señales"** | 🟢 Caption abajo |
 | Sáb 3 | Instagram | — | **Stories "Sobre URPA"** (14 tarjetas) | 🟢 |
-| Dom 4 | LinkedIn | B | Texto/diagrama "Los 3 indicadores que debería mirar cada semana el responsable de una escuela de fútbol" | ✍️ |
+| Dom 4 | LinkedIn | B | **Carrusel PDF** "Los 3 indicadores que debería mirar cada semana el responsable de una escuela de fútbol" | 🟢 Listo (2 oct) |
 
 ### Semana 3 (5 – 11 oct)
 
 | Día | Canal | Pilar | Pieza | Estado |
 |---|---|---|---|---|
-| Lun 5 | LinkedIn | A | Texto "Qué pasa cuando falta un entrenador y nadie tiene la vista completa de los equipos" (conecta con señal 2 del reel) | ✍️ |
-| Mar 6 | Instagram | C | Reel "Así controla un entrenador la asistencia desde el móvil" | 🎬 |
-| Mié 7 | LinkedIn | C | Captura/GIF "Así creas un equipo nuevo en 15 segundos" | 🎬 |
+| Lun 5 | LinkedIn | A | Texto "Qué pasa cuando falta un entrenador y nadie tiene la vista completa de los equipos" | 🟢 Texto listo (2 oct) |
+| Mar 6 | Instagram | C | **Reel "Así pasa lista un entrenador en URPA"** (grabado del demo en escritorio; no se dice "desde el móvil") | 🟢 Sin música (2 oct) |
+| Mié 7 | LinkedIn | C | **Vídeo 4:5** "Crear una clase recurrente, en segundos" | 🟢 Sin música (2 oct) |
 | Jue 8 | Instagram | A | Reel "¿Cómo convocas a tu equipo para el sábado?" (convocatorias por WhatsApp) | 🟢 Versión sin música · Caption abajo |
-| Vie 9 | LinkedIn | D | Texto "Por qué decidí no construir un 'ERP' para escuelas (y qué construyo en su lugar)" | ✍️ |
-| Sáb 10 | Instagram | D | Carrusel "Estamos construyendo esto para escuelas de fútbol reales. Así va." | 🛠️ |
+| Vie 9 | LinkedIn | D | Texto "Por qué decidí no construir un 'ERP' para escuelas (y qué construyo en su lugar)" | 🟢 Texto listo (revisar: es tu opinión) |
+| Sáb 10 | Instagram | D | **Carrusel** "Estamos construyendo URPA para escuelas de fútbol. Así va." (7 imágenes) | 🟢 Listo (2 oct) |
 
 ### Semana 4 (12 – 18 oct)
 
 | Día | Canal | Pilar | Pieza | Estado |
 |---|---|---|---|---|
 | Lun 12 | LinkedIn | B | Carrusel PDF "Cómo organizar los equipos de tu escuela sin que dependa de una sola persona" | 🟢 Lista · Caption abajo |
-| Mar 13 | Instagram | C | Reel "Así cobras la cuota del mes sin perseguir a las familias por WhatsApp" | 🎬 |
-| Mié 14 | LinkedIn | A | Texto "Tu escuela de fútbol no necesita más Excel. Necesita un sitio único." | ✍️ |
+| Mar 13 | Instagram | C | **Reel "¿Sigues contando a mano las sesiones de bono?"** (sustituye al de cobro de cuota: el demo no gestiona cobros, sí bonos) | 🟢 Sin música (2 oct) |
+| Mié 14 | LinkedIn | A | Texto "Tu escuela de fútbol no necesita más Excel. Necesita un sitio único." | 🟢 Texto listo (2 oct) |
 | Jue 15 | Instagram | B | Carrusel "4 tipos de sesiones que cualquier escuela debería poder gestionar" (6 imágenes) | 🟢 Lista · Caption abajo |
-| Vie 16 | LinkedIn | D | Texto "Lo que estoy aprendiendo hablando con responsables de escuelas de fútbol" | ✍️ |
+| Vie 16 | LinkedIn | D | Texto "Las 3 preguntas que hago a cada responsable de escuela" (sustituye al de «lo que estoy aprendiendo», que exigía datos reales) | 🟢 Texto listo (2 oct) |
 | Sáb 17 | Instagram | A | Reel "¿Cuántas apps usas hoy para gestionar tu escuela de fútbol?" | 🟢 Versión sin música · Caption abajo |
-| Dom 18 | LinkedIn | C | Captura "Así controla un entrenador la asistencia de su equipo, desde el móvil" | 🎬 |
+| Dom 18 | LinkedIn | C | **Vídeo 4:5** "Pasar lista sin papel ni Excel" | 🟢 Sin música (2 oct) |
 
 **Lun 19 – Mar 20 oct (buffer):** sin pieza nueva. Responder comentarios, comentar en 5–10 posts de responsables de escuelas y clubes, revisar qué funcionó y planificar el ciclo 2.
 
@@ -225,4 +225,4 @@ Visitas al perfil · DMs recibidos · demos solicitadas · guardados y compartid
 
 ## Siguiente ciclo (2)
 
-Empieza el 21 oct. Si en ese tiempo se cierra el primer piloto, activar el pilar E (casos reales). No inventar casos hasta entonces.
+Detallado en `estrategia-cierre-2-clientes-21-31-oct.md` (21–31 oct, con todas las piezas ya producidas). Prospectos en `prospectos-tecnificacion-futbol-oct.md`. Empieza el 21 oct. Si en ese tiempo se cierra el primer piloto, activar el pilar E (casos reales). No inventar casos hasta entonces.

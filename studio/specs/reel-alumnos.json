@@ -1,0 +1,29 @@
+{
+ "slug": "reel-alumnos",
+ "formato": "reel",
+ "hook": "Toda tu escuela en un solo listado",
+ "clip": "alumnos",
+ "desde": "inicio",
+ "hasta": 15.5,
+ "rate": 1.1,
+ "foco": {
+  "x": 840,
+  "y": 450,
+  "s": 1.22
+ },
+ "pasos": [
+  {
+   "marca": "inicio",
+   "texto": "Todos tus jugadores, en un sitio"
+  },
+  {
+   "marca": "lista",
+   "texto": "Estado y ficha de cada uno"
+  },
+  {
+   "marca": "ficha",
+   "texto": "Abre cualquier ficha con un clic"
+  }
+ ],
+ "cta": "¿Lo ves en tu escuela? Te lo enseño en 15 minutos → DM o enlace del perfil"
+}

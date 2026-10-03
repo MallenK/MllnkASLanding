@@ -1,0 +1,37 @@
+{
+ "slug": "reel-asistencia",
+ "formato": "reel",
+ "hook": "Así pasa lista un entrenador en URPA",
+ "clip": "asistencia",
+ "desde": "inicio",
+ "hasta": 25.6,
+ "rate": 1.25,
+ "foco": {
+  "x": 840,
+  "y": 450,
+  "s": 1.22
+ },
+ "pasos": [
+  {
+   "marca": "inicio",
+   "texto": "Abre la sesión del día"
+  },
+  {
+   "marca": "gestionar",
+   "texto": "Entra en «Gestionar asistencia»"
+  },
+  {
+   "marca": "marcar",
+   "texto": "Presentes y ausentes, un clic"
+  },
+  {
+   "marca": "nota",
+   "texto": "Añade una nota si hace falta"
+  },
+  {
+   "marca": "guardar",
+   "texto": "Guardas y el bono se descuenta"
+  }
+ ],
+ "cta": "¿Lo ves en tu escuela? Te lo enseño en 15 minutos → DM o enlace del perfil"
+}

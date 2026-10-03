@@ -1,0 +1,35 @@
+{
+ "slug": "post-dashboard",
+ "formato": "post",
+ "hook": "Tu escuela, en una pantalla",
+ "clip": "dashboard",
+ "desde": "inicio",
+ "hasta": 14.5,
+ "rate": 1.1,
+ "foco": {
+  "x": 840,
+  "y": 450,
+  "s": 1.1
+ },
+ "hookDur": 2.4,
+ "ctaDur": 3.0,
+ "pasos": [
+  {
+   "marca": "inicio",
+   "texto": "Alumnos, entrenadores y alertas"
+  },
+  {
+   "marca": "semana",
+   "texto": "Vista de semana"
+  },
+  {
+   "marca": "dia",
+   "texto": "Vista de día"
+  },
+  {
+   "marca": "mes",
+   "texto": "Y el mes completo"
+  }
+ ],
+ "cta": "¿Quieres verlo con tu escuela? Reserva una demo de 15 minutos"
+}

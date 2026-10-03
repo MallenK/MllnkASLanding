@@ -54,3 +54,14 @@ studio/publicaciones/**/*.mp4
 
 # prospeccion B2B (datos de contacto, no subir)
 /prospeccion/
+
+# Estudio de contenido: grabaciones y sesiones temporales del demo
+studio/_rec/
+studio/hf-*/snapshots/
+.agents/skills/ig-*
+.claude/skills/ig-*
+
+# QA de diseño: informes y fotogramas generados
+studio/qa/node_modules/
+studio/qa/informes/
+studio/**/*.prev.mp4

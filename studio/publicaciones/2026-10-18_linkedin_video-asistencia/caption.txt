@@ -1,0 +1,9 @@
+Pasar lista sin papel ni Excel.
+
+El entrenador abre la sesión, marca presente o ausente, añade una nota si hace falta y guarda. El bono del jugador se descuenta.
+
+(Demo en vivo con datos ficticios.)
+
+¿Cómo pasan lista hoy tus entrenadores?
+
+#GestiónDeportiva #FútbolBase #EscuelasDeFútbol

@@ -1,0 +1,9 @@
+Tu escuela, en una pantalla.
+
+Alumnos activos, entrenadores y alertas de bonos arriba. Debajo, el calendario en vista de mes, de semana o de día.
+
+(Demo en vivo con datos ficticios.)
+
+¿Qué es lo primero que miras cada lunes para saber cómo va tu escuela?
+
+#GestiónDeportiva #FútbolBase #EscuelasDeFútbol

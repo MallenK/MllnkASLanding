@@ -1,0 +1,37 @@
+{
+ "slug": "reel-bonos",
+ "formato": "reel",
+ "hook": "¿Sigues contando a mano las sesiones de bono?",
+ "clip": "bonos",
+ "desde": "inicio",
+ "hasta": 19.0,
+ "rate": 1.2,
+ "foco": {
+  "x": 840,
+  "y": 450,
+  "s": 1.22
+ },
+ "pasos": [
+  {
+   "marca": "inicio",
+   "texto": "Todos los bonos activos, en una lista"
+  },
+  {
+   "marca": "lista",
+   "texto": "Cada jugador, sus sesiones y su caducidad"
+  },
+  {
+   "marca": "agotados",
+   "texto": "Filtra los bonos agotados"
+  },
+  {
+   "marca": "ultima",
+   "texto": "Y los que están en su última sesión"
+  },
+  {
+   "marca": "activos",
+   "texto": "Se descuentan solos al pasar lista"
+  }
+ ],
+ "cta": "¿Lo ves en tu escuela? Te lo enseño en 15 minutos → DM o enlace del perfil"
+}

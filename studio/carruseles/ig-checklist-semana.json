@@ -1,0 +1,51 @@
+{
+ "pages": [
+  {
+   "tipo": "cover",
+   "texto": "Checklist: tu escuela de fútbol organizada en 1 semana",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  },
+  {
+   "tipo": "punto",
+   "n": "1",
+   "texto": "Día 1 · Equipos y jugadores",
+   "sub": "La lista de cada equipo, con su entrenador."
+  },
+  {
+   "tipo": "punto",
+   "n": "2",
+   "texto": "Día 2 · Calendario",
+   "sub": "Entrenos semanales y partidos, en un solo calendario."
+  },
+  {
+   "tipo": "acento",
+   "n": "3",
+   "texto": "Día 3 · Asistencia",
+   "sub": "Un único sitio donde el entrenador marca quién viene."
+  },
+  {
+   "tipo": "punto",
+   "n": "4",
+   "texto": "Día 4 · Bonos",
+   "sub": "Quién tiene sesiones y a quién le caducan."
+  },
+  {
+   "tipo": "punto",
+   "n": "5",
+   "texto": "Día 5 · Comunicación",
+   "sub": "Avisos a familias y entrenadores desde el mismo sitio."
+  },
+  {
+   "tipo": "punto",
+   "n": "6",
+   "texto": "Días 6 y 7 · Revisión",
+   "sub": "Mira el panel: qué falló y qué se repite."
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Guárdalo para el lunes",
+   "sub": "¿Quieres que te ayude a montarlo? Escríbeme por DM.",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  }
+ ]
+}

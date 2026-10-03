@@ -1,0 +1,33 @@
+{
+ "pages": [
+  {
+   "tipo": "cover",
+   "texto": "Los 3 indicadores que debería mirar cada semana el responsable de una escuela de fútbol",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  },
+  {
+   "tipo": "punto",
+   "n": "1",
+   "texto": "Asistencia por equipo",
+   "sub": "¿Qué equipos pierden jugadores, sesión a sesión?"
+  },
+  {
+   "tipo": "punto",
+   "n": "2",
+   "texto": "Bonos y cuotas pendientes",
+   "sub": "¿Quién se queda sin sesiones o tiene algo por cobrar?"
+  },
+  {
+   "tipo": "acento",
+   "n": "3",
+   "texto": "Plazas libres y lista de espera",
+   "sub": "¿Dónde puedes crecer sin abrir otro grupo?"
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Si para saber alguno tienes que preguntar, buscar en un Excel o escribir a alguien, falta un sitio único.",
+   "sub": "¿Cuál de los 3 sabes hoy sin preguntar a nadie?",
+   "pie": "URPA · Gestión para escuelas de fútbol"
+  }
+ ]
+}

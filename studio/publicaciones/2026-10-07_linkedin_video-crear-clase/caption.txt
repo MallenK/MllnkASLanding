@@ -1,0 +1,9 @@
+Crear una clase recurrente, en segundos.
+
+Desde el panel: Nueva clase, nombre, horario, lugar y objetivo del entrenamiento. Una vez, y la sesión se repite como la hayas definido.
+
+(Demo en vivo con datos ficticios.)
+
+¿Cuántas veces al mes recreas a mano la misma sesión?
+
+#GestiónDeportiva #FútbolBase #EscuelasDeFútbol

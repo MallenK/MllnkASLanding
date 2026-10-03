@@ -1,0 +1,13 @@
+Un mes hablando de escuelas de fútbol en público. Este es el balance.
+
+Lo que he hecho: [nº] conversaciones con responsables de escuelas y [nº] demos.
+
+Lo que ya funciona en URPA: panel, calendario, asistencia por sesión, bonos con alertas, mensajes y documentos.
+
+Lo que he aprendido sobre cómo se habla de esto: el problema se entiende rápido (convocatorias, asistencia, bonos) y la solución se entiende mejor viéndola que leyéndola. Por eso la demo es de 15 minutos y en directo.
+
+Lo que viene: seguir con escuelas piloto y construir lo que más se repita en las conversaciones.
+
+Si quieres entrar como escuela piloto, escríbeme.
+
+#GestiónDeportiva #FútbolBase #EscuelasDeFútbol

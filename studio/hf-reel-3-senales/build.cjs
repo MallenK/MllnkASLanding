@@ -140,6 +140,8 @@ ${SFX_HTML}
       // Cierre: firma y flecha
       tl.fromTo("#sign2", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, ${(CTA0 + 1.1).toFixed(2)});
       tl.fromTo("#sign", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, ${(CTA0 + 0.8).toFixed(2)});
+      // Revisión QA: el logo fijo de arriba se retira cuando entra la firma de cierre (sin logo duplicado)
+      tl.to("#logo", { opacity: 0, duration: 0.3, ease: "power1.in" }, ${(CTA0 + 0.7).toFixed(2)});
       tl.fromTo("#arrow", { x: 0 }, { x: 22, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 3 }, ${(CTA0 + 0.7).toFixed(2)});
 
       // Logo fijo: entra al inicio y se queda todo el vídeo
