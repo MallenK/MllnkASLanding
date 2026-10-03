@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "URPA Academy Software — La plataforma de gestión para tu academia deportiva",
-    "description": "Software de gestión para academias deportivas: alumnos, calendario de clases, bonos y comunicación en un solo panel. Nacido en una academia de fútbol real, en producción desde el primer día.",
+    "title": "Software de gestión para academias de fútbol | URPA",
+    "description": "Organiza alumnos, clases, asistencia y bonos de tu academia de fútbol en un solo panel. En uso real en Barcelona. Solicita una demo guiada.",
     "keywords": [
       "software gestión academia deportiva",
       "software gestión academia de fútbol",
@@ -22,7 +22,8 @@
     "demo": "Agendar demo",
     "login": "Iniciar sesión",
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "skipToContent": "Saltar al contenido principal"
   },
   "languageSwitcher": {
     "label": "Idioma",
@@ -32,9 +33,9 @@
   },
   "hero": {
     "mockAlt": "Panel de administración de URPA Academy Software con calendario, alumnos activos y próximas clases",
-    "titleLine1": "La gestión de tu academia de fútbol,",
+    "titleLine1": "Software de gestión para tu academia de fútbol,",
     "titleHighlight": "sin WhatsApp ni Excel.",
-    "description": "Alumnos, calendario, bonos, comentarios del entrenador y archivos de vídeo, todo en el mismo sitio. La construí para una academia de tecnificación en Barcelona porque no encontré nada que hiciera esto bien — y la sigo llevando yo: la desarrollo, la despliego y respondo si algo falla.",
+    "description": "URPA Academy Software centraliza alumnos, calendario de clases, asistencia, bonos y comunicación en un solo panel. Nació en una academia de tecnificación de Barcelona, donde sigue en uso a diario; la desarrollo y la mantengo yo.",
     "ctaPrimary": "Reserva tu demo de 15 min",
     "ctaSecondary": "Ver la historia",
     "badgeLive": "En uso real en una academia de fútbol en Barcelona",
@@ -267,6 +268,14 @@
       {
         "question": "¿También hacéis páginas web?",
         "answer": "Sí. Diseñamos y desarrollamos webs profesionales para academias: rápidas, adaptadas a móvil, con SEO local y listas para captar familias. Si contratas la plataforma y la web juntas, tienes la solución completa sin depender de terceros."
+      },
+      {
+        "question": "¿Cómo se contrata y cuánto cuesta?",
+        "answer": "El precio depende del tamaño de tu academia y de lo que haya que configurar, así que no publico una tarifa cerrada. En la demo de 15 minutos hablamos de tu caso y te explico cómo funciona la contratación."
+      },
+      {
+        "question": "¿Pueden acceder los entrenadores y los alumnos?",
+        "answer": "Sí. La plataforma tiene roles para dirección, entrenadores y alumnos, cada uno con los permisos que le corresponden. En la demo te enseño qué ve cada perfil."
       }
     ]
   },

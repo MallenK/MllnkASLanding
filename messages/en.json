@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "URPA Academy Software — The management platform for your sports academy",
-    "description": "Management software for sports academies: students, class schedules, session passes and communication in a single dashboard. Born inside a real football academy, in production from day one.",
+    "title": "Football Academy Management Software | URPA",
+    "description": "Manage students, classes, attendance and session passes for your football academy in one dashboard. In real use in Barcelona. Book a guided demo.",
     "keywords": [
       "sports academy management software",
       "football academy management software",
@@ -22,7 +22,8 @@
     "demo": "Book demo",
     "login": "Log in",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to main content"
   },
   "languageSwitcher": {
     "label": "Language",
@@ -32,9 +33,9 @@
   },
   "hero": {
     "mockAlt": "URPA Academy Software admin dashboard showing the calendar, active students and upcoming classes",
-    "titleLine1": "Your football academy,",
+    "titleLine1": "Management software for your football academy,",
     "titleHighlight": "without WhatsApp or spreadsheets.",
-    "description": "Students, schedules, passes, coach notes and video files, all in one place. I built it for a football academy in Barcelona because nothing out there did this well — and I still run it myself: I develop it, deploy it, and answer if something breaks.",
+    "description": "URPA Academy Software brings students, class schedules, attendance, passes and communication into a single dashboard. It was born in a football training academy in Barcelona, where it is still used day to day; I develop and maintain it myself.",
     "ctaPrimary": "Book your 15-min demo",
     "ctaSecondary": "Read the story",
     "badgeLive": "Actually running a football academy in Barcelona",
@@ -267,6 +268,14 @@
       {
         "question": "Do you also build websites?",
         "answer": "Yes. We design and develop professional websites for academies: fast, mobile-first, with local SEO and ready to attract families. If you get the platform and the website together, you have the complete solution with no third parties involved."
+      },
+      {
+        "question": "How does pricing work?",
+        "answer": "The price depends on the size of your academy and what needs to be set up, so I don't publish a fixed rate. In the 15-minute demo we go through your case and I explain how signing up works."
+      },
+      {
+        "question": "Can coaches and students log in?",
+        "answer": "Yes. The platform has roles for management, coaches and students, each with the permissions that fit them. In the demo I show you what each profile sees."
       }
     ]
   },
